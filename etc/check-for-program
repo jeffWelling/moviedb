@@ -1,0 +1,45 @@
+#!/bin/sh
+# Ugly way to find if a command exists.
+# (This may even be erroneous in one special case: if $value holds a
+# filename without a directory part (for instance 'zcat'), and you don't
+# have '.' in your path and a file named 'zcat' exists in the current
+# directory.)
+#
+# By Philippe Queinnec <queinnec@dgac.fr> 19-Dec-93
+
+trap "exit 1" 1 2 15
+
+var=$1
+value=$2
+IFS=' '
+set $value
+value=$1
+
+if [ -x /bin/sh ]; then
+  xopt='-x'
+else
+  echo "Your broken system doesn't know of test -x. Using test -f to check for program."
+  xopt='-f'
+fi
+
+if [ -n "$value" ]; then 
+  [ $xopt "$value" ] && exit 0
+  IFS=':'
+  for path in $PATH; do
+      [ $xopt "$path/$value" ] && exit 0
+  done
+fi
+
+echo ''
+echo "It seems to me that the configuration variable $var has"
+echo " an invalid value ($value)."
+echo ''
+echo 'This may come from three reasons:'
+echo '  - you have not read the installation documentation'
+echo '  - you have made a typo in the makefile'
+echo ''
+echo 'Please (re-)read the documentation, check the Makefile,'
+echo ' and if this checker is still complaining, have a look in the Makefile'
+echo ' at the section SYSTEM SPECIFICS'.
+echo ''
+exit 1

@@ -1,0 +1,40 @@
+#!/bin/sh
+#
+# Six arguments: the database (without .data), the list (with the .list), the
+# command to run (mkdb -acr), the extension for compressed databases ($ZDBSEXT)
+# the extension for compressed list ($ZLISTEXT), the make command to use (gnumake).
+
+
+base=$1.data
+list=$2
+command=$3
+zdbsext=$4
+zlistext=$5
+makecmd=$6
+
+dependon=''             # On which list does the database depend?
+target=$base            # What are we building?
+
+make="/tmp/make.$$"
+
+trap "rm -f $make; exit 1" 1 2 15
+
+if [ -n "$zdbsext" -a -f $base$zdbsext ]; then
+        target="$base$zdbsext"
+fi
+
+if [ -f $list$zlistext ]; then
+        dependon=$list$zlistext
+elif [ -f $list ]; then
+        dependon=$list
+fi
+
+if [ -n "$dependon" ]; then
+        echo "$target : $dependon" >>$make
+        echo "	$command" >>$make
+        $makecmd -f $make
+        rm -f $make
+
+else
+        echo "No way to update $base."
+fi

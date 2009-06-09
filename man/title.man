@@ -1,0 +1,80 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH TITLE 1 "RELEASEDATE" " " "The Internet Movie Database vVERSIONNUMBER"
+.SH NAME
+title \- generates information about a specific movie\-title.
+.SH SYNOPSIS
+.B
+title \-t "title" <output\-options> [\-t "title" <output\-options>] <misc options>
+.SH DESCRIPTION
+The
+.B title
+program searches the database for all the information relating
+to a specific title. The basic option is
+.B
+-t "title"
+which specifies the movie to search for.
+.SH OPTIONS
+Options are divided into two groups:
+.B output-options
+and
+.BR "miscellaneous options" .
+.SS OUTPUT-OPTIONS
+.TP
+.B \-aka
+Add any alternative titles.  ("aka" means Also Known As)
+.TP
+.B \-mrr
+Add movie ratings report data.
+.TP
+.B \-yr
+Add year of release and any title attributes.
+.TP
+.B \-pl
+Add plot summary.
+.TP
+.B \-chr
+Add character names to cast lists.
+.TP
+.B \-trivia
+Add movie trivia, crazy credits, goofs, quotes, soundtrack information,
+certificates, color information, countries, genres, production companies,
+running times and sound mix.
+.TP
+.B \-full
+Combines all of the above options.
+.SS EXAMPLES ON OUTPUT-OPTIONS
+.TP
+List all information for "2001: A Space Odyssey"
+.B
+title \-t "2001: A Space Odyssey" \-full
+.TP
+List details of both the 1962 and 1991 version of "Cape Fear"
+.B
+title \-t "Cape Fear"
+.TP
+List details for only the 1991 version of "Cape Fear"
+.B
+title \-t "Cape Fear (1991)"
+.SS MISCELLANEOUS OPTIONS
+.TP
+.B \-i
+Case sensitive search: normally searches are not case sensitive.
+.TP
+.B \-s
+Substring: match on substring rather than whole title.
+.SS EXAMPLES ON MISCELLANEOUS OPTIONS
+title -t "Thin Man" -full -s
+.SH Multiple Title Searches
+Any number of
+.B \-t
+options may be combined in the same query to generate a 
+list of people that worked on each and every one of the movies.
+.SS EXAMPLES ON Multiple Title Searches
+title -t "Ghostbusters" -t "Ghostbusters II"

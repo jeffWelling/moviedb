@@ -1,0 +1,8 @@
+#!/bin/sh
+#############################################################################
+#
+#  Script that creates plain ASCII-text files from manualpages.
+#
+
+cat $1 | sed -e 's/.//g' > `basename $1 .cat`.txt;
+

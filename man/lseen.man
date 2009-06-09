@@ -1,0 +1,99 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH LSEEN 1 "RELEASEDATE" " " "The Internet Movie Database vVERSIONNUMBER"
+.SH NAME
+lseen \- for use in conjunction with movie ratings report voting support scripts.
+.SH SYNOPSYS
+lseen
+.SH DESCRIPTION
+This script is for use in conjunction with my
+movie ratings report voting support scripts.
+This program counts/sorts/formats lists, extracting films you have
+seen based on data from your votelog file.
+.PP
+If you don't use voting support scripts, they are available via
+anonymous ftp from cathouse.org in the directory /pub/cathouse/movies/database/tools/voting_scripts.Z.
+.PP
+If you'd like a copy of your votelog file from the movie ratings
+database, contact col@imdb.com via email, and he'll send it
+to you.
+.SH OPTIONS
+There are
+.BR database-options ,
+.B output-options
+and
+.BR control-options .
+.SS DATABASE-OPTIONS
+.TP
+.B \-acr
+Use actors database.
+.TP
+.B \-acs
+Use actresses database.
+.TP
+.B \-dir
+Use directors database.
+.TP
+.B \-write
+Use writers database.
+.TP
+.B \-comp
+Use composers database.
+.TP
+.B \-cine
+Use cinematographers database.
+.TP
+.B \-edit
+Use editors database.
+.TP
+.B \-prodes
+Use production-designers database.
+.TP
+.B \-costdes
+Use costume-designers database.
+.TP
+.B \-prdcr
+Use producers database.
+.TP
+.B \-misc
+Use miscellaneous database.
+.SS OUTPUT-OPTIONS
+.TP
+.B \-us
+unsorted; don't sort data by total movies you have seen.
+.TP
+.B \-yr
+Add the year of release to each title, and sort chronologically.
+.TP
+.B \-yru
+Add the year of release, but leave unsorted.
+.TP
+.B \-mrr
+Add movie ratings report info.
+.TP
+.B \-smrr
+Add movie ratings report, sorted by average ratings.
+.TP
+.B \-vmrr
+Add movie ratings report, sorted by number of votes.
+.SS CONTROL-OPTIONS
+.TP
+.B \-min <val>
+Limit output to people you've seen at least
+.BR <val> of their movies.
+.SH EXAMPLES
+.TP
+Count directors:
+.B
+lseen \-dir
+.TP
+Count actors and display ratings report and year of release info for
+each movie:
+.B
+lseen \-acr \-mrr \-yr

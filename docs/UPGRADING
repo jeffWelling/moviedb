@@ -1,0 +1,76 @@
+UPGRADING FROM VERSION 3.3
+==========================
+
+This file is extracted from the main documentation file (INSTRUCTIONS) and 
+contains details on upgrading from version 3.1.
+
+Contact the author, Col Needham <col@imdb.com>, if you're still having
+problems *after* reading the documentation.
+
+13.1 Upgrading to version 3.4
+=============================
+
+There are two upgrade options:
+
+(1) If you have all the .list files
+    -------------------------------
+
+   (i) follow steps (1), (2), (3) and (4) in section 1.2
+
+  (ii) copy all the list files (.list extenstions) and the 'filesizes' file
+       from moviedb-3.3/lists to the directory moviedb-3.4/lists. 
+
+ (iii) to compile all the programs, fetch the new/updated list files and create 
+       the databases run:
+
+          make install
+
+       from the top level moviedb-3.4 directory.
+
+  (iv) the search programs will be installed in the moviedb-3.4/bin directory,
+       therefore you need to either add this directory to your path or run
+       all the programs from this directory.
+
+   (v) if all goes well you can now delete the old moviedb-3.3 directory
+
+If the automatic FTP fetching script fails to work in step (iii) you will need
+to manually get the new and updated files from one of the FTP sites, put
+them in the lists directory and do 'make install-local' from the top-level
+moviedb-3.4 directory.
+
+(2) If you just have the database files
+    -----------------------------------
+
+   (i) follow steps (1), (2), (3) and (4) in section 1.2
+
+  (ii) copy all the database files (everything in moviedb-3.3/dbs *except* the
+       file moviedb-3.3/dbs/Makefile - you MUST delete or rename this file 
+       before issuing the copy command) to the directory moviedb-3.4/dbs. 
+
+ (iii) copy the file moviedb-3.3/lists/filesizes to moviedb-3.4/lists/filesizes
+
+  (iv) to compile all the programs, fetch the new/updated list files and create 
+       the databases run:
+
+          make install
+
+       from the top level moviedb-3.4 directory.
+
+   (v) force a rebuild of a couple of changed databases:
+
+          cd moviedb-3.4/etc
+          ./mkdb -bio -create
+
+  (vi) the search programs will be installed in the moviedb-3.4/bin directory,
+       therefore you need to either add this directory to your path or run
+       all the programs from this directory.
+
+ (vii) if all goes well you can now delete the old moviedb-3.3 directory
+
+If the automatic FTP fetching script fails to work in step (iv) you will need
+to manually get the new and updated files from one of the FTP sites, put
+them in the lists directory and do 'make install-local' from the top-level
+moviedb-3.4 directory.
+
+See section 12 for details on how to maintain the databases in this version.
+

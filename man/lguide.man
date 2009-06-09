@@ -1,0 +1,58 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH LGUIDE 1 "RELEASEDATE" " " "The Internet Movie Database vVERSIONNUMBER"
+.SH NAME
+lguide \- guide you through a list of movies.
+.SH SYNOPSIS
+.B
+lguide -f <filename> [<options>]
+.SH DESCRIPTION
+This program works like
+.B title
+except that it takes a list of titles from a file and searches for
+information on each one. I find lguide really useful for
+generating a little movie guide to accompany the TV schedules for the local 
+movie channels. To use the program simply type the titles into a file, one on 
+each line and enter:
+.br
+lguide -f <filename>
+.SH OPTIONS
+.TP
+.B \-yr
+Adds year of release information.
+.TP
+.B \-mrr
+Adds movie ratings report information.
+.TP
+.B \-pl
+Adds plot summary and formats results.
+.TP
+.B \-trivia
+Add movie trivia, crazy credits, goofs, quotes, soundtrack information,
+certificates, color information, countries, genres, production companies
+and sound mix.
+.TP
+.B \-chr
+Add character names.
+.TP
+.B \-aka
+Lists any alternative titles.
+.TP
+.B \-full
+Combines all above options.
+.SH EVEN MORE OPTIONS
+.TP
+.B \-i
+Case sensitive search.
+.SH EXAMPLES
+If you have read the manpages for
+.BR list (1)
+and
+.BR title (1)
+you don't need any examples.  If you haven't, do it now.

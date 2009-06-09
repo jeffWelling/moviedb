@@ -1,0 +1,188 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH LIST 1 "RELEASEDATE" " " "The Internet Movie Database vVERSIONNUMBER"
+.SH NAME
+list \- generates filmographies for people in the movie-database.
+.SH SYNOPSIS
+.B
+list <searchmode> "name" [<searchmode> "name"] [<options>]
+.SH DESCRIPTION
+.B list
+is a program that will search through the specified filmography lists
+for information about some person, and output what it managed to find.
+.SH OPTIONS
+Options are divided into three groups:
+.BR searchmode-options ,
+.B output-options
+and
+.BR control-options .
+.SS SEARCHMODES
+.TP
+.B \-name
+This option will searches all of the filmography lists for information.
+This is rather inefficient if you know which list the person will be on.
+If you know which list, you should use one of the other options.
+.TP
+.B \-cast
+Search both cast databases.
+.TP
+.B \-acr
+Search actors database.
+.TP
+.B \-acs
+Search actresses database.
+.TP
+.B \-dir
+Search directors database.
+.TP
+.B \-write
+Search writers database.
+.TP
+.B \-comp
+Search composers database.
+.TP
+.B \-cine
+Search cinematographers database.
+.TP
+.B \-edit
+Search editors database.
+.TP
+.B \-prodes
+Search production designers database.
+.TP
+.B \-costdes
+Search costume designers database.
+.TP
+.B \-prdcr
+Search producers database.
+.TP
+.B \-misc
+Search miscellaneous filmographies database.
+.SS EXAMPLES ON SEARCHMODES
+list \-acr "Bogart, Humphrey"
+.br
+list \-acr "Biehn, Michael"
+.br
+list \-acs "Hepburn, Katharine"
+.br
+list \-dir "Cameron, James"
+.SS OUTPUT-OPTIONS
+.TP
+.B \-yr
+Add the year of release to each title, and sort chronologically.
+.TP
+.B \-yru
+Add the year of release, but leave unsorted.
+.TP
+.B \-mrr
+Adds movie ratings report information to each title.
+.TP
+.B \-smrr
+Adds adds movie ratings report information, and sort by average rating.
+.TP
+.B \-vmrr
+Adds movie ratings report information, and sort by number of votes.
+.TP
+.B \-chr
+For cast lists, adds character names in []'s where available.
+.TP
+.B \-aka
+Add alternative titles to the output.
+.TP
+.B \-bio
+Include information from biographies list and formats output neatly.
+.TP
+.B \-full
+Combines
+.BR \-yr ,
+.BR \-chr ,
+.B \-aka
+and
+.BR \-bio .
+.SS EXAMPLES ON OUTPUT\-OPTIONS
+list \-acr "Grant, Cary" \-yr \-chr
+.br
+list \-dir "Hitchcock, Alfred" \-smrr
+.SS CONTROL\-OPTIONS
+.TP
+.B \-m
+Movies only: ignores TV\-series and mini\-series.
+.TP
+.B \-i
+Case sensitive search: normally searches are not case sensitive.
+.TP
+.B \-genre <s>
+Only include titles with a genre equal to
+.BR <s> .
+.TP
+.B \-time <s>
+Only include titles with a time equal to
+.BR <s> .
+.TP
+.B \-prodco <s>
+Only include titles with a production company equal to
+.BR <s> .
+.TP
+.B \-cert <s>
+Only include titles with a certificate equal to
+.BR <s> .
+.TP
+.B \-mix <s>
+Only include titles with a sound mix equal to
+.BR <s> .
+.TP
+.B \-cntry <s>
+Only include titles with a country equal to
+.BR <s> .
+.TP
+.B \-rel <s>
+Only include titles with a release date equal to
+.BR <s> .
+.TP
+.B \-loc <s>
+Only include titles with a location equal to
+.BR <s> .
+.TP
+.B \-tech <s>
+Only include titles with technical info equal to
+.BR <s> .
+.SS EXAMPLES ON CONTROL\-OPTIONS
+list -dir "Hitchcock, Alfred" -prodco Selznick
+.br
+list -dir "Hitchcock, Alfred" -mix Silent
+.br
+list -dir "Lang, Fritz" -genre Film-Noir -full -color "Black and White"
+.SH Substring and Approximate Matching
+Ordinarily, the program requires an exact match in order to locate the 
+information on a person. In some cases the exact spelling may not be known.
+There are two classes of options which can help locate the specific person:
+the first is substring matching, which treats the name you provided with the 
+database option as a substring. The option to trigger this is
+.BR \-s .
+.PP
+The second class is approximate matching, which enables names with a limited 
+number of character differences to still match. The options to trigger this 
+are \-1 \-2 \-3 \-4 \-5 \-6 \-7 \-8 and \-9 where the larger the number, the
+larger the number of differences allowed for a match. 
+.PP
+The use of any of these options automatically switches on the raw output
+mode (\-r) since you will need to see which names have been matched.
+.SS EXAMPLES ON Substring and Approximate Matching"
+list \-cast "Barrymore" \-s \-full
+.br
+list \-acr "rGant, Cary" \-2 \-full
+.SH Multiple Name Queries
+Any number of database and name options may be combined in the same query
+to generate a list of movies that all the people worked on together. 
+.SS EXAMPLES ON "Multiple Name Queries"
+list \-dir "Hitchcock, Alfred" \-acr "Grant, Cary" 
+.br
+list \-acs "Hepburn, Katharine" \-acr "Tracy, Spencer" \-yr
+.br
+list \-acr "Sheen, Charlie" \-acr "Estevez, Emilio"

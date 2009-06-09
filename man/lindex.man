@@ -1,0 +1,180 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH LINDEX 1 "RELEASEDATE" " " "The Internet Movie Database vVERSIONNUMBER"
+.SH NAME
+lindex \- generate lists of names or lists of titles.
+.SH SYNOPSYS
+.B
+lindex [options]
+.SH DESCRIPTION
+This program can be used to either to generate lists of names that appear
+on filmography lists or to generate lists of titles from the movies list.
+It's uses include finding exact spellings of names or titles on the lists;
+finding names/titles containing a particular substring; and finding titles
+released between a range of years or in a particular year.
+.SH GENERAL OPTIONS
+Note that if you do not specify any database options, the default is to search
+all the lists in name mode.
+.SS NAME MODE
+.TP
+.B \-acr
+actors database
+.TP
+.B \-acs
+actresses database
+.TP
+.B \-dir
+directors database
+.TP
+.B \-write
+writers database
+.TP
+.B \-comp
+composers database
+.TP
+.B \-cine
+cinematographers database
+.TP
+.B \-edit
+editors database
+.TP
+.B \-prodes
+production designers database
+.TP
+.B \-costdes
+costume designers database
+.TP
+.B \-misc
+miscellaneous database
+.TP
+.B \-prdcr
+producers database
+.SS TITLE MODE
+.TP
+.B \-title
+This will toggle title\-mode on.
+.TP
+.B \-yr
+Adds the year of release and sorts in chronological order.
+.TP
+.B \-yru
+Adds the year of release, but leaves in alphabetical order.
+.TP
+.B \-yrfrom <yr>
+Limit search to titles released during or after
+.BR <yr> .
+.TP
+.B \-yrto <yr>
+Limit search to titles released before
+.BR <yr> .
+.TP
+.B \-yreq <yr>
+Limit search to titles released in
+.BR <yr> .
+.TP
+.B \-mrr
+Add ratings report data.
+.TP
+.B \-smrr
+Add ratings report data and sort by average ratings.
+.TP
+.B \-vmrr
+Add ratings report data and sort by number of votes.
+.TP
+.B \-match
+Limit search to movies with entry in ratings database.
+.TP
+.B \-veq <votes>
+Limit search to movies with
+.BR <votes> votes.
+.TP
+.B \-vmin <votes>
+Limit search to movies with a minimum of
+.BR <votes> votes.
+.TP
+.B \-vmax <votes>
+Limit search to movies with a maximum of
+.BR <votes> votes.
+.TP
+.B \-m
+Limit search to movies only, i.e. no TV-series.
+.TP
+.B \-genre <s>
+Limit search to titles with a genre equal to
+.BR <s> .
+.TP
+.B \-time <s>
+Limit search to titles with time equal to
+.BR <s> .
+.TP
+.B \-prodco <s>
+Limit search to titles with a production company equal to
+.BR <s> .
+.TP
+.B \-cert <s>
+Limit search to titles with a certificate equal to
+.BR <s> .
+.TP
+.B \-mix <s>
+Limit search to titles with a sound mix equal to
+.BR <s> .
+.TP
+.B \-cntry <s>
+Limit search to titles with a country equal to
+.BR <s> .
+.TP
+.B \-rel <s>
+Limit search to titles with a releasedate equal to
+.BR <s> .
+.TP
+.B \-loc <s>
+Limit search to titles with a location equal to
+.BR <s> .
+.TP
+.B \-tech
+Limit search to titles with technical info equal to
+.BR <s> .
+.SH MISCELLANEOUS OPTIONS
+.TP
+.B \-s <substring>
+Restrict search to names/titles containing
+.BR <substring> .
+.TP
+.B \-i
+Become case sensitive with
+.BR \-s .
+.SH EXAMPLES
+.TP
+Generate list of all names on the cast lists:
+.B
+lindex \-acr \-acs \-name
+.TP
+Generate list of actors containing the substring "Michael":
+.B
+lindex \-acr \-s "Michael" \-name
+.TP
+Generate list of all movie/tv titles containing "Alien":
+.B
+lindex \-title \-s "Alien"
+.TP
+List all titles in database released in 1945:
+.B
+lindex \-title \-yr \-yreq 1945
+.TP
+Sort all movies released in the 1990s by average rating:
+.B
+lindex \-title \-yr \-yrfrom 1990 \-yrto 1996 \-smrr
+.TP
+List film noirs made for RKO
+.B
+lindex \-title \-genre Film\-Noir \-prodco RKO
+.TP
+List all color MGM movies released up to 1940
+.B
+lindex \-title \-prodco MGM \-color Color \-yrto 1940

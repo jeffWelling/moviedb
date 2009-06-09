@@ -1,0 +1,1 @@
+void logProgram ( char *progName ) ;

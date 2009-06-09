@@ -1,0 +1,13 @@
+#!/bin/sh
+#############################################################################
+#
+#  Script that creates manualpages from the sources in this directory.
+#
+
+# makeman <manpage> <dbs-dir> <release-date> <version> <list-dir>
+
+sed -e "s@^DBDIR/@$2@g" \
+    -e "s@RELEASEDATE@$3@g" \
+    -e "s@VERSIONNUMBER@$4@g" \
+    -e "s@LISTDIR/@$5@g" $1 bottom.man > `basename $1 .man`.1;
+

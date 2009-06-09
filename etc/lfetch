@@ -1,0 +1,424 @@
+#!/bin/sh
+
+#-----------------------------------------------------------------------------
+#
+# Script: lfetch
+#
+# Purpose: Update list files from ftp server
+#
+# Authors: C J Needham <col@imdb.com> based on a script by
+#          Robert Hartill <robh@imdb.com>
+#
+# Version: 3.23
+#
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+#
+# Valid options:
+#
+# Control options:
+#
+#  -auto         automatic update of any lists newer than local copies
+#  -force        update regardless of whether local & remote are the same
+#  -user <addr>  specify e-mail address for anonymous ftp access
+#  -n            list the actions that would be taken but don't actually 
+#                 perform them
+#
+# File options (specifying no file options implies update all files)
+#
+#  -acr     update actors list
+#  -acs     update actress list
+#  -dir     update directors list
+#  -write   update writers list
+#  -cine    update cinematographers list
+#  -comp    update composers list
+#  -movie   update movie list
+#  -aka     update aka list
+#  -plot    update plot list
+#  -triv    update trivia list
+#  -mrr     update ratings list
+#  -bio     update biographies list
+#  -crazy   update crazy credits list
+#  -edit    update editors list
+#  -prodes  update production designers list
+# -costdes  update costume designers list
+# -quote    update quotes list
+# -goof     update goofs list
+# -prdcr    update producers list
+# -strack   update soundtracks list
+# -time     update running times list
+# -misc     update miscellaneous filmography list
+# -naka     update alternative names list
+# -cert     update certificates list
+# -genre    update genres list
+# -keyword  update keywords list
+# -prodco   update production companies list
+# -mix      update sound mix list
+# -color    update color information list
+# -cntry    update countries list
+# -castcom  update complete cast list
+# -tag      update tag lines list
+# -tech     update technical list
+# -lit      update literature list
+# -loc      update locations list
+# -links    update movie links list
+# -release  update release dates list
+# -alt      update alternate versions list
+# -lang     update languages list
+# -sfxco    update special effects companies list
+# -businfo  update business information list
+# -ld       update laserdisc list
+# -crewcom  update complete crew list
+# -dist     update distributor list
+#
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+#
+# LOCAL CONFIGURATION VARIABLES
+#
+ftpcmd=ftp                           # ftp command (eg ftp, gate-ftp)
+ftpopts="-i -n -v"                   # ftp options 
+ftphost=ftp.funet.fi                 # ftp host
+ftpdir=pub/mirrors/ftp.imdb.com/pub  # lists directory on host
+ftpuser=anonymous                    # ftp userid
+#
+#-----------------------------------------------------------------------------
+
+trap "rm -f $remlists $getlists $tmp; exit 1" 1 2 15
+
+# temporary files
+if [ -z "$MOVIESTMPDIR" ]; then
+  if [ -z "$TMPDIR" ]; then
+    MOVIESTMPDIR="."
+  else
+    MOVIESTMPDIR="$TMPDIR"
+  fi
+fi
+
+remlists=$MOVIESTMPDIR/$$tmp.1
+getlists=$MOVIESTMPDIR/$$tmp.2
+tmp=$MOVIESTMPDIR/$$tmp.3
+filesizes=filesizes
+zlistext=".gz"
+
+# list files
+acr=actors.list
+acs=actresses.list
+dir=directors.list
+write=writers.list
+comp=composers.list
+cine=cinematographers.list
+movie=movies.list
+aka=aka-titles.list
+plot=plot.list
+triv=trivia.list
+mrr=ratings.list
+bio=biographies.list
+crazy=crazy-credits.list
+edit=editors.list
+prodes=production-designers.list
+costdes=costume-designers.list
+goof=goofs.list
+quote=quotes.list
+prdcr=producers.list
+strack=soundtracks.list
+times=running-times.list
+misc=miscellaneous.list
+naka=aka-names.list
+cert=certificates.list
+genre=genres.list
+keyword=keywords.list
+prodco=production-companies.list
+mix=sound-mix.list
+color=color-info.list
+cntry=countries.list
+castcom=complete-cast.list
+tag=taglines.list
+tech=technical.list
+lit=literature.list
+loc=locations.list
+link=movie-links.list
+release=release-dates.list
+versions=alternate-versions.list
+lang=language.list
+sfxco=special-effects-companies.list
+businfo=business.list
+ld=laserdisc.list
+dist=distributors.list
+crewcom=complete-crew.list
+
+ftpnames="$acr $acs $dir $write $cine $comp $movie $aka\
+          $plot $triv $mrr $bio $crazy $edit $prodes $costdes $goof $quote\
+          $prdcr $strack $times $misc $naka $cert $genre $keyword $prodco $mix \
+          $color $cntry $castcom $tag $tech $lit $loc $link $versions $release \
+          $lang $sfxco $businfo $ld $dist $crewcom"
+
+# any options?
+if [ $# -eq 0 ]
+then
+  err=yes
+else
+  err=no
+fi
+
+# reset variables
+ffiles=""
+auto=y
+newfiles=0
+nodo=""
+
+# interpret options
+while [ -n "$1" ]
+do case $1 in
+   -acr) ffiles="$ffiles $acr"
+	 shift ;;
+   -acs) ffiles="$ffiles $acs"
+	 shift ;;
+   -dir) ffiles="$ffiles $dir"
+	 shift ;;
+ -write) ffiles="$ffiles $write"
+	 shift ;;
+  -comp) ffiles="$ffiles $comp"
+	 shift ;;
+  -cine) ffiles="$ffiles $cine"
+	 shift ;;
+ -movie) ffiles="$ffiles $movie"
+	 shift ;;
+   -aka) ffiles="$ffiles $aka"
+	 shift ;;
+  -plot) ffiles="$ffiles $plot"
+	 shift ;;
+  -triv) ffiles="$ffiles $triv"
+	 shift ;;
+   -mrr) ffiles="$ffiles $mrr"
+	 shift ;;
+   -bio) ffiles="$ffiles $bio"
+	 shift ;;
+ -crazy) ffiles="$ffiles $crazy"
+	 shift ;;
+  -edit) ffiles="$ffiles $edit"
+	 shift ;;
+-prodes) ffiles="$ffiles $prodes"
+	 shift ;;
+-costdes) ffiles="$ffiles $costdes"
+	 shift ;;
+  -goof) ffiles="$ffiles $goof"
+	 shift ;;
+ -quote) ffiles="$ffiles $quote"
+	 shift ;;
+-strack) ffiles="$ffiles $strack"
+	 shift ;;
+  -time) ffiles="$ffiles $times"
+	 shift ;;
+ -cntry) ffiles="$ffiles $cntry"
+	 shift ;;
+ -prdcr) ffiles="$ffiles $prdcr"
+	 shift ;;
+ -misc) ffiles="$ffiles $misc"
+	 shift ;;
+ -naka) ffiles="$ffiles $naka"
+	 shift ;;
+ -cert) ffiles="$ffiles $cert"
+	 shift ;;
+-prodco) ffiles="$ffiles $prodco"
+	 shift ;;
+   -mix) ffiles="$ffiles $mix"
+         shift ;;
+ -color) ffiles="$ffiles $color"
+         shift ;;
+-genre) ffiles="$ffiles $genre"
+	 shift ;;
+-keyword) ffiles="$ffiles $keyword"
+	 shift ;;
+-castcom) ffiles="$ffiles $castcom"
+         shift ;;
+  -tech) ffiles="$ffiles $tech"
+         shift ;;
+   -lit) ffiles="$ffiles $lit"
+         shift ;;
+   -loc) ffiles="$ffiles $loc"
+         shift ;;
+  -link) ffiles="$ffiles $link"
+         shift ;;
+-release) ffiles="$ffiles $release"
+         shift ;;
+   -alt) ffiles="$ffiles $versions"
+         shift ;;
+  -lang) ffiles="$ffiles $lang"
+         shift ;;
+ -sfxco) ffiles="$ffiles $sfxco"
+	 shift ;;
+-businfo) ffiles="$ffiles $businfo"
+	 shift ;;
+    -ld) ffiles="$ffiles $ld"
+	 shift ;;
+  -dist) ffiles="$ffiles $dist"
+	 shift ;;
+-crewcom) ffiles="$ffiles $crewcom"
+	 shift ;;
+  -user) ftppass=$2
+	 shift
+	 shift ;;
+  -auto) auto=y
+	 shift ;;
+ -force) auto=n
+	 shift ;;
+     -n) nodo=y
+	 shift ;;
+   -ext) zlistext=$2
+         shift 
+         shift ;;
+      *) echo "$1: unrecognized option"
+         shift
+         err=yes ;;
+esac
+done
+
+if [ -z "$ftppass" ]
+then
+  echo "lfetch: must specify e-mail address for FTP password"
+  err=y
+fi
+
+# error?
+if [ $err = yes ]
+then
+ echo "usage: lfetch [-auto] [-force] [-n] -user <e-mail addr> [-ext <extension>]"
+ echo "              [-acr] [-acs] [-dir] [-write] [-comp] [-cine] [-movie] [-aka]"
+ echo "              [-plot] [-triv] [-mrr] [-crazy] [-bio] [-mix] [-color] [-alt]"
+ echo "              [-edit] [-prodes] [-costdes] [-goof] [-quote] [-prdcr] [-cntry]"
+ echo "              [-strack] [-time] [-misc] [-naka] [-cert] [-genre] [-keyword]"
+ echo "              [-prodco] [-castcom] [-tag] [-tech] [-lit] [-loc] [-link]"
+ echo "              [-release] [-lang] [-sfxco] [-businfo] [-ld] [-crewcom] [-dist]"
+ exit 1
+fi
+
+# if filesizes file doesn't exist, create it
+if [ ! -r $filesizes ]
+then
+  for dbase in $ftpnames
+  do
+    dbase=$dbase$zlistext
+    if [ -r $dbase ]
+    then
+      localsize=`wc -c $dbase | awk '{print $1}'`
+      echo "$dbase $localsize" >> $filesizes
+    else
+      echo "$dbase 0" >> $filesizes
+    fi
+  done
+fi
+
+# no file options specified? default to all
+if [ -z "$ffiles" ]
+then
+  ffiles=$ftpnames
+fi
+
+# create ftp script to get files
+cat <<Get_lists_setup > $getlists
+user $ftpuser $ftppass
+cd $ftpdir
+binary
+Get_lists_setup
+
+# create ftp script to get directory listing
+cat <<Check_lists > $tmp
+  user $ftpuser $ftppass
+  cd $ftpdir
+  dir
+Check_lists
+
+# get the remote directory listing
+$ftpcmd $ftpopts $ftphost < $tmp > $remlists
+
+if [ "X`grep 'Not connected' $remlists 2>/dev/null`" = X ]
+then 
+  cp $filesizes $filesizes.old
+  for dbase in $ffiles
+  do
+    dbase=$dbase$zlistext
+    localsize=`grep "^$dbase" $filesizes | awk '{print $2}'`
+    ftpsize=`grep " ${dbase}$" $remlists | awk '{print $5}'`
+    if [ -z "$localsize" ]
+    then
+      if [ -z "$ftpsize" ]
+      then
+        echo "Local and remote copies of $dbase missing, ignored"
+      else
+        echo "Local size of $dbase unknown, will fetch"
+        echo "get "$dbase >> $getlists
+	if [ -z "$nodo" ]
+	then
+          newfiles=1
+          grep -v "^$dbase" $filesizes > $tmp
+          echo "$dbase $ftpsize" >> $tmp
+          cp $tmp $filesizes
+	fi
+      fi
+    elif [ -z "$ftpsize" ]
+    then
+      echo "Remote copy of $dbase missing, ignored"
+    elif [ $localsize -ne $ftpsize ] 
+    then
+      echo "$dbase is newer than local file"
+      echo "get "$dbase >> $getlists
+      if [ -z "$nodo" ]
+      then
+        newfiles=1
+        grep -v "^$dbase" $filesizes > $tmp
+        echo "$dbase $ftpsize" >> $tmp
+        cp $tmp $filesizes
+      fi
+    elif [ $ftpsize -eq 0 ] 
+    then
+      echo "unable to extract size of $dbase will fetch just in case"
+      echo "WARNING: this could be fetching files unnecessarily (if you already"
+      echo "         have the latest .list files)"
+      echo "get "$dbase >> $getlists
+      if [ -z "$nodo" ]
+      then
+        newfiles=1
+        grep -v "^$dbase" $filesizes > $tmp
+        echo "$dbase $ftpsize" >> $tmp
+        cp $tmp $filesizes
+      fi
+    elif [ $auto = "n" ]
+    then
+      echo "Forced get of $dbase even though filesizes equal"
+      echo "get "$dbase >> $getlists
+      if [ -z "$nodo" ]
+      then
+        newfiles=1
+        grep -v "^$dbase" $filesizes > $tmp
+        echo "$dbase $ftpsize" >> $tmp
+        cp $tmp $filesizes
+      fi
+    else
+      echo "$dbase is up to date"
+    fi
+  done
+else
+  rm -f $remlists $getlists $tmp
+  exit 1
+fi
+
+# Get files
+if [ $newfiles -eq 1 ]
+then
+  $ftpcmd $ftpopts $ftphost < $getlists
+elif [ -n "$nodo" ]
+then
+  echo
+  echo "Files will not be fetched, but here is the FTP script:"
+  echo
+  cat $getlists
+  echo
+else 
+  touch $filesizes
+fi
+
+# remove the temporary files
+rm -f $remlists $getlists $tmp

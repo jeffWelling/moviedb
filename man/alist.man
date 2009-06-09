@@ -1,0 +1,131 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH ALIST 1 "RELEASEDATE" " " "The Internet Movie Database vVERSIONNUMBER"
+.SH NAME
+alist \- search the attribute fields of all the databases in the movie database.
+.SH SYNOPSYS
+.B
+alist [options]
+.SH DESCRIPTION
+This program searches the attribute fields of all the databases. Examples
+of the kind of queries you can construct include:
+.PP
+.TP
+* search for details of all best actor academy award winners
+.TP
+* search for all movies nominated for best picture
+.TP
+* search for all movies narrated by a particular person
+.TP
+* search for all plays by a particular writer that have been filmed
+.SH DATABASE OPTIONS
+The program can be run in title-mode and in name-mode.
+For title-mode just use:
+.TP
+.B \-title
+.PP
+In name-mode,
+.B one
+of the following options can be used:
+.TP
+.B \-acr
+actors database
+.TP
+.B \-acs
+actresses database
+.TP
+.B \-cast
+both cast databases
+.TP
+.B \-dir
+directors database
+.TP
+.B \-write
+writers database
+.TP
+.B \-comp
+composers database
+.TP
+.B \-cine
+cinematographers database
+.TP
+.B \-edit
+editors database
+.TP
+.B \-prodes
+production designers database
+.TP
+.B \-costdes
+costume designers database
+.TP
+.B \-prdcr
+producers database
+.TP
+.B \-misc
+miscellaneous database
+.SH SEARCH OPTIONS
+.TP
+.B \-aa
+academy award winners
+.TP
+.B \-aan
+academy award nominees
+.TP
+.B \-gg
+golden globe winners
+.TP
+.B \-ggn
+golden globe nominees
+.TP
+.B \-attr <pattern>
+values matching
+.B <pattern>
+.PP
+These options can be used to limit the search in various ways:
+.TP
+.B \-m
+Restrict search to movies only.
+.TP
+.B \-yrfrom <yr>
+Restrict search to titles released during or after
+.B <yr>
+.TP
+.B \-yrto <yr>
+Restrict search to titles released before
+.B <yr>
+.TP
+.B \-yreq <yr>
+Restrict search to titles released in
+.B <yr>
+.SH MISCELLANEOUS OPTIONS
+.TP
+.B \-s
+Substring: allow partial matches with
+.BR \-attr .
+.TP
+.B \-i
+Become case sensitive in
+.B \-attr
+searches.
+.TP
+.B \-yr
+Adds year of release to titles and group results by year.
+.SH EXAMPLES
+.TP
+Search directors database for academy award winners/nominees and sort by year.
+.B
+alist \-dir \-aa \-aan \-yr
+.TP
+Search for best picture academy award winners/nominees and sort by year.
+.B
+alist \-title \-aa \-aan \-yr
+.TP
+Lists all best director oscar winners of the 1940s by year.
+.B
+alist \-aa \-dir \-yr \-yrfrom 1940 \-yrto 1949

@@ -1,0 +1,354 @@
+-------Version 3.4 Released---------------------
+
+Sun Mar 29 22:40:37 BST 1998
+
+ * biographies list offset fields increased to 4 bytes following overflow
+ * various constants updated
+
+-------Version 3.3c Released---------------------
+
+Sat Apr 26 06:51:19 BST 1997
+
+ * added support for crew completion list
+ * added support for distributors list
+ * adapted mkdbs for more robust processing of filmography lists
+ * added support for new business list tag
+
+-------Version 3.3b Released---------------------
+
+Sat Mar 15 08:09:50 GMT 1997
+
+ * added support for ISO-Latin-1
+
+-------Version 3.3 Released---------------------
+
+Wed Oct 16 22:28:54 BST 1996
+
+ * added support for AKA attributes
+ * added support for writers ordering
+ * moved misc section to after case in title output
+ * added support for business list
+ * added support for laserdisc list
+ * fixed tagline bug
+ * diplays URL of web page for name/title
+
+-------Version 3.2h Released---------------------
+
+Tue Oct  8 14:24:21 BST 1996
+
+ * added support for special effects companies list
+ * updated various system constants
+ * added new movie link types 'edited into' & 'edited from'
+ * added extra checks to avoid title/attribute key file corruption in mkdbs.c
+
+-------Version 3.2f Released---------------------
+
+Mon Jun 24 22:04:46 GMT 1996
+
+ * added support for language list
+
+-------Version 3.2e Released---------------------
+
+Sat Mar 16 08:09:39 GMT 1996
+
+ * added support for alternate versions list
+ * added bio keys IT & AT
+
+-------Version 3.2d Released---------------------
+
+Tue Aug 15 23:23:47 GMT 1995
+
+ * switched TitleID to unsigned long to handle >65K titles
+ * fixed bug in display of literature and genre data
+ * added bio key WN
+
+-------Version 3.2c Released---------------------
+
+Sun May 14 23:00:14 GMT 1995
+
+ * raised MAXFILMOGRAPHIES constant to handle larger no. of entries
+
+-------Version 3.2 Released---------------------
+
+Sun Jan 29 22:40:08 GMT 1995
+
+ * added full support for title searching without year/TV/V info
+
+Tue Jan  3 23:00:45 GMT 1995
+
+ * replaced 'biodefs' file
+ * fixed bug when looking for common titles with people using -name
+
+Mon Jan  2 21:52:08 GMT 1995
+
+ * log file support
+ * better separation of search/display code
+
+Wed Dec 14 21:43:57 GMT 1994
+
+ * fixed bug in 'title' for miscellaneous section
+ * added support for the movie links list
+
+Tue Dec 13 22:06:44 GMT 1994
+ 
+ * noted when cast in credits output
+ * fixed name ordering problem for names with (I)/(II) marker
+ * display Actor/Actress in list -name where appropriate
+
+Wed Dec  7 21:19:19 GMT 1994
+
+ * added support for tag lines & complete cast list
+ * put spaces around "." in cast results
+ * standardized number of dashes printed out in 'title' / 'list'
+
+Mon Dec  5 21:19:42 GMT 1994
+
+ * multi-country productions displayed on same line
+
+Wed Nov 30 18:14:16 GMT 1994
+
+ * switched to new IMDB license
+ * updated 'lfetch' to get new lists
+ * fixed "No plot summaries message"
+ * simplified MRR processing in mkdb
+ * added support for locations & release date lists
+ * switched 'Reviews' marker for clarity
+ * added support for technical & literature lists
+
+Mon Oct 31 21:42:03 GMT 1994
+ 
+-------Version 3.1 Released---------------------
+
+Mon Oct 17 19:04:26 GMT 1994
+ 
+ * 3.1 code frozen
+ * minor bug fixes with lindex
+
+Sun Oct  9 18:37:14 GMT 1994
+
+ * added support for countries list
+
+Tue Oct  4 21:27:53 GMT 1994
+
+ * added support for cast ordering info
+
+Sun Oct  2 23:02:59 GMT 1994
+
+ * added support for color info and sound mix lists
+ * added constraint options to 'list'
+ * standardized list options
+
+Wed Sep 28 22:22:56 GMT 1994
+
+ * re-ordered title info printing plus separated genres list
+ * print genres on one line
+
+Mon Sep 26 21:53:47 GMT 1994
+
+ * added support for production companies list
+
+Sun Sep 25 22:02:07 GMT 1994
+
+ * added constraint options to 'lindex'
+
+Tue Sep  6 20:09:52 GMT 1994
+
+ * added support for certificates & genres list
+ * fixed mkballot bug with -ar option
+
+Tue Aug 23 20:08:04 GMT 1994
+
+ * added support for miscellaneous filmographies list
+
+Tue May 24 19:13:47 GMT 1994
+
+ * moviedb-3.0 completed
+
+Thu May 19 22:35:12 GMT 1994
+
+ * switched to merged character names scheme
+
+Tue May 17 21:09:45 GMT 1994
+
+ * new 'mkdb' eliminating need for large array to hold name keys
+ * removed duplicate aka titles in 'title -s -aka' queries
+
+Wed May 11 22:11:59 GMT 1994
+
+ * made upperCase a macro for increased speed
+ * switched to Phil's new Makefiles
+
+Wed May  4 17:46:08 GMT 1994
+
+ * mapped case of titles/names to match key files
+ * added support for running times list
+ * lguide error messages
+
+Tue May  3 21:38:30 GMT 1994
+ 
+ * added support for Phil's imoviedb package
+ * expanded compression support
+
+Thu Apr 28 19:51:52 GMT 1994
+
+ * finished rewrite to use new database representation
+
+-------Version 2.9 Released---------------------
+
+Wed Mar 16 21:39:40 GMT 1994
+
+ * added support for producers list
+ * added support for soundtracks list
+ * added support for generic aka lists
+
+Tue Mar 15 23:47:46 GMT 1994
+
+ * replaced -crazy and -triv options with -trivia (also includes goofs & quotes)
+ * added support for quotes list
+ * added support for goofs list
+ * handled -full error messages correctly
+ * correct conditions for printing of missing plot summaries message
+ * fixed lindex to search all lists when no list options given
+ * -mrr no longer implies -m
+
+Mon Mar 14 21:48:21 GMT 1994
+
+ * new version of check-for-program
+ * passed $MAKE variable to make subprocesses
+ * lfetch modified to match full filenames
+ * added 'keepchars' option for CLEANLISTS
+
+-------Version 2.8 Released---------------------
+
+Wed Dec  1 21:58:21 GMT 1993
+
+ * man pages added to package
+ * LaTeX documentation added to package
+
+Sat Nov 27 20:53:40 GMT 1993
+
+ * 2.8 code finished!
+
+Thu Nov 25 18:17:00 GMT 1993
+
+ * ported lseen to C
+
+Tue Nov 23 19:16:48 GMT 1993
+
+ * added gendb -votes option
+
+Mon Nov 22 23:54:58 GMT 1993
+
+ * ported lformat to C
+ * removed yrf.c file
+
+Wed Nov 17 22:36:44 GMT 1993
+
+ * fixed attribute field reading bug in readrecord
+
+Tue Nov 16 17:18:39 GMT 1993
+
+ * generic support for trivia/crazy credits list for future expansion
+ * check movies.dbs for title -full searches to save wasted searches
+ * added -nocheck option to overide movies.dbs check
+
+Sun Nov 14 16:37:48 GMT 1993
+
+ * replaced 'akafile' with 'aka-titles.list'
+ * merged search definition records in dblib
+ * added support for movies.list
+
+Thu Nov 11 23:01:05 GMT 1993
+
+ * introduced searchparams to control title searches
+ * fixed memory leak in multiple title searches
+
+Tue Nov  9 23:02:36 GMT 1993
+
+ * switched to binary search to add aka info to title data
+ * movies.c & movies.h files created
+ * switched to binary search to add year info to title data
+ * added gendb -idx option
+ * switched to binary search to add plot, trivia and crazy credits info
+    to title data
+ 
+Mon Nov  8 22:00:16 GMT 1993
+
+ * new structure for title searches
+ * ratings.c & ratings.h files created
+ * aka.c & aka.h files created
+ * removed -noattr option from title
+ 
+Wed Nov  3 21:37:08 GMT 1993
+
+ * moviedb_error to report all database errors
+
+Tue Nov  2 22:47:44 GMT 1993
+
+ * new directory structure and Makefile
+ * fixed memory leak in combining list results for multiple queries
+ * introduced searchparams to control name searches
+ * optimized multiple name queries by only looking up aka years etc. on
+    first name results
+
+Mon Nov  1 19:00:37 GMT 1993
+
+ * switched to binary search for ratings list
+ * added index files for biographies, ratings and aka lists
+
+Sat Oct 30 14:57:41 GMT 1993
+
+ * added index file for movies list
+ * switched to binary search for biographies list
+
+Fri Oct 29 19:57:41 GMT 1993
+
+ * grouped file searches together for disk caching
+ * switched to binary search for movies list
+ 
+Thu Oct 28 22:05:22 GMT 1993
+
+ * added aka support to list program
+ * modified list -full to include -aka -chr
+ * deleted akaprint script
+ * added FUTURES file to package
+ * added support for new name_search format to listall
+ * added -aka to listall
+ * modified listall -full to include -aka -chr
+
+Tue Oct 26 21:59:36 GMT 1993
+
+ * removed -noattr option from list
+ * passed chopt into search engine for future use
+
+Sun Oct 24 23:40:55 GMT 1993
+
+ * list -full includes -chr option
+ * new structure to 'name_search' records
+ * cleaner separation between creating, searching and displaying in listlib
+ * list stops searching cast databases once a match is found
+
+Sat Oct 23 12:36:20 GMT 1993
+
+ * used readrecord procedure throughout listlib
+ * gendb maps MRR titles to movies.dbs format
+ * introduced void type to appropriate functions
+
+Fri Oct 22 22:55:12 BST 1993
+
+ * lfetch: added $ftpopts and $zext configuration options
+ * lfetch: touch filesizes if no lists were fetched
+
+Thu Oct 21 19:40:42 BST 1993
+ 
+ * added support for editors, production designers and costume designers
+
+Tue Oct 19 19:02:03 BST 1993
+
+ * removed raw flag from process_list_chain
+ * replaced yr_rec struct with integer year throughout code
+ * bug fix in addchar for SGI machines
+
+Fri Oct 15 19:57:06 BST 1993
+
+ * ChangeLog file created

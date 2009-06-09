@@ -1,0 +1,31 @@
+
+* -compact option to reduce empty space in output
+    . Put aka titles on the same line (when there's room)
+    . In a listall, don't list people with no other data
+    . Omit the no plot/no bio blurbs
+    . Put short data on the same line with title (name, dates, tech credits)
+    . Merge filmographies for people taking on multiple roles
+      (producer/director, writer/director, etc.) in a listall
+    . Remove certain blank lines
+
+* represent title info data in a key format
+
+* lindex -aka
+
+* replace lguide/ltrace/listall with options on list/title + add -f option
+   for name searches from a file
+
+* add vote displaying options 
+
+* fuzzy matching for titles & names
+
+* lseen lists/counts films you haven't seen!
+
+* -yrto/-yrfrom/-yreq options to narrow search
+
+* -votemin/-votemax/-ratemin/-ratemax options to narrow search
+
+* allow searches for names without (I)/(II)/etc. and return list of
+   matches
+
+* search database for character names and by plot / trivia

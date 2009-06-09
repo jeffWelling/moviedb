@@ -1,0 +1,95 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH LFORMAT 1 "RELEASEDATE" " " "The Internet Movie Database vVERSIONNUMBER"
+.SH NAME
+lformat \- a program for formatting lists 
+.SH SYNOPSYS
+.B
+lformat [options]
+.SH DESCRIPTION
+This program provides a number of features for formatting whole databases,
+combining the information with the movies list or the movie ratings report. 
+.SH DATABASE OPTIONS
+These options specify which database you would like to format:
+.TP
+.B \-acr
+actors database
+.TP
+.B \-acs
+actresses database
+.TP
+.B \-dir
+directors database
+.TP
+.B \-write
+writers database
+.TP
+.B \-comp
+composers database
+.TP
+.B \-cine
+cinematographers database
+.TP
+.B \-edit
+editors database
+.TP
+.B \-prodes
+production designers database
+.TP
+.B \-costdes
+costume designers database
+.TP
+.B \-prdcr
+producers database
+.TP
+.B \-misc
+miscellaneous database
+.SH FORMAT OPTIONS
+.TP
+.B \-yr
+Adds the year of release information and sorts each person's entries
+into chronological order.
+.TP
+.B \-yru
+Adds the year of release information, but leaves entries in
+alphabetical order.
+.TP
+.B \-mrr
+Adds the information from the movie ratings report to each title.
+.TP
+.B \-smrr
+Adds the information from the movie ratings report to each title and
+sorts each person's entries by average rating.
+.TP
+.B \-vmrr
+Adds the information from the movie ratings report to each title and
+sorts each person's entries by number of votes.
+.PP
+If no format option is given, the program formats the results in the style of
+the published lists.
+.SH OUTPUT OPTIONS
+.TP
+.B \-r
+Raw mode, don't format results.
+.TP
+.B \-m
+Movies only, ignores TV-series.
+.SH EXAMPLES
+.TP
+Regenerate published form of actors list:
+.B
+lformat -acr
+.TP
+Format directors database and add year information:
+.B
+lformat -dir -yr
+.TP
+Format actress list and add ratings report information:
+.B
+lformat -acs -mrr

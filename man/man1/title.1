@@ -1,0 +1,231 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH TITLE 1 "10th August 1995" " " "The Internet Movie Database v3.2d"
+.SH NAME
+title \- generates information about a specific movie\-title.
+.SH SYNOPSIS
+.B
+title \-t "title" <output\-options> [\-t "title" <output\-options>] <misc options>
+.SH DESCRIPTION
+The
+.B title
+program searches the database for all the information relating
+to a specific title. The basic option is
+.B
+-t "title"
+which specifies the movie to search for.
+.SH OPTIONS
+Options are divided into two groups:
+.B output-options
+and
+.BR "miscellaneous options" .
+.SS OUTPUT-OPTIONS
+.TP
+.B \-aka
+Add any alternative titles.  ("aka" means Also Known As)
+.TP
+.B \-mrr
+Add movie ratings report data.
+.TP
+.B \-yr
+Add year of release and any title attributes.
+.TP
+.B \-pl
+Add plot summary.
+.TP
+.B \-chr
+Add character names to cast lists.
+.TP
+.B \-trivia
+Add movie trivia, crazy credits, goofs, quotes, soundtrack information,
+certificates, color information, countries, genres, production companies,
+running times and sound mix.
+.TP
+.B \-full
+Combines all of the above options.
+.SS EXAMPLES ON OUTPUT-OPTIONS
+.TP
+List all information for "2001: A Space Odyssey"
+.B
+title \-t "2001: A Space Odyssey" \-full
+.TP
+List details of both the 1962 and 1991 version of "Cape Fear"
+.B
+title \-t "Cape Fear"
+.TP
+List details for only the 1991 version of "Cape Fear"
+.B
+title \-t "Cape Fear (1991)"
+.SS MISCELLANEOUS OPTIONS
+.TP
+.B \-i
+Case sensitive search: normally searches are not case sensitive.
+.TP
+.B \-s
+Substring: match on substring rather than whole title.
+.SS EXAMPLES ON MISCELLANEOUS OPTIONS
+title -t "Thin Man" -full -s
+.SH Multiple Title Searches
+Any number of
+.B \-t
+options may be combined in the same query to generate a 
+list of people that worked on each and every one of the movies.
+.SS EXAMPLES ON Multiple Title Searches
+title -t "Ghostbusters" -t "Ghostbusters II"
+.\" 3.2
+.SH FILES
+*.list
+.br
+/home/cn/listdb/versions/v3.3a/moviedb-3.3/dbs/*.data
+.br
+/home/cn/listdb/versions/v3.3a/moviedb-3.3/dbs/*.names
+.br
+/home/cn/listdb/versions/v3.3a/moviedb-3.3/dbs/*.index
+.br
+/home/cn/listdb/versions/v3.3a/moviedb-3.3/dbs/*.key
+.br
+/home/cn/listdb/versions/v3.3a/moviedb-3.3/dbs/*.titles
+.SH SEE ALSO
+.BR list (1),
+.BR title (1),
+.BR listall (1),
+.BR lguide (1),
+.BR ltrace (1),
+.BR lindex (1),
+.BR alist (1), 
+.BR mkballot (1),
+.BR lformat (1)
+and
+.BR lseen (1).
+.SH BUGS
+They are features!
+.SH AUTHORS
+.SS PROGRAMMERS
+.PP
+Colin Needham                           <cn@ibmpcug.co.uk>
+.rj 1
+.B most of the programming
+.PP
+Philippe Queinnec                       <queinnec@dgac.fr>
+.rj 1
+.B Makefiles
+.PP
+Lars J Aas               <larsa@colargol.stud.idb.hist.no>
+.rj 1
+.B some usage-logging code
+.PP
+Timo Lamminjoki                 <lamminjo@pcu.helsinki.fi>
+.rj 1
+.B compressed database support
+.PP
+Mark Harding                            <ccsmh@bath.ac.uk>
+.rj 1
+.B text justification routines
+.SS LIST MAINTAINERS
+.PP
+Lars J Aas               <larsa@colargol.stud.idb.hist.no>
+.rj 2
+.B Genres
+.B Quotes
+.PP
+Andre Bernhardt                 <ujad@rz.uni-karlsruhe.de>
+.rj 1
+.B Producers
+.PP
+Murray Chapman                        <muzzle@cs.uq.oz.au>
+.rj 1
+.B Trivia
+.PP
+Michel Hafner                        <hafner@ifi.unizh.ch>
+.rj 5
+.B Alternative Names
+.B Alternative Titles
+.B Cinematographers
+.B Composers
+.B Movies
+.PP
+Mark Harding                            <ccsmh@bath.ac.uk>
+.rj 8
+.B Biographies
+.B Certificates
+.B Color Information
+.B Countries
+.B Crazy Credits
+.B Release Dates
+.B Running Times
+.B Sound Mix
+.PP
+Robert Hartill                         <movie@cm.cf.ac.uk>
+.rj 3
+.B Locations
+.B Production Companies
+.B Tag Lines
+.PP
+Ron Higgins                     <rhiggins@carroll1.cc.edu>
+.rj 1
+.B Soundtracks
+.PP
+Harald Mayr                       <marvin@bike.augusta.de>
+.rj 3
+.B Costume Designers
+.B Editors
+.B Production Designers
+.PP
+Col Needham                             <cn@ibmpcug.co.uk>
+.rj 8
+.B Actors
+.B Actresses
+.B Cast Completion
+.B Directors
+.B Goofs
+.B Misc. Filmography
+.B Movie Links
+.B Ratings
+.PP
+Joachim Polzer                 <polzer@zedat.fu-berlin.de>
+.rj 2
+.B Literature
+.B Technical Info
+.PP
+Jon Reeves                            <reeves@zk3.dec.com>
+.rj 1
+.B Writers
+.PP
+Colin Tinto                          <colint@spider.co.uk>
+.rj 1
+.B Plot Summaries
+.SS CONTRIBUTORS
+.PP
+Lars J Aas               <larsa@colargol.stud.idb.hist.no>
+.rj 1
+.B UNIX manpages
+.PP
+Teemu Antti-Poika                <anttipoi@cc.helsinki.fi>
+.rj 1
+.B LaTeX documentation
+.PP
+Robert Hartill                         <movie@cm.cf.ac.uk>
+.rj 1
+.B the script lfetch is based on
+.PP
+Philippe Queinnec                   <queinnec@enseeiht.fr>
+.rj 1
+.B imoviedb package (distributed separately)
+.PP
+ ...and last but not least all of you who send us information either directly
+or via the email-server at movie@ibmpcug.co.uk.  Use "Subject: HELP ADD FULL" 
+for information about how to use it.
+.\"
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"

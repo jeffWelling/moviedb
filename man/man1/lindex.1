@@ -1,0 +1,331 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH LINDEX 1 "10th August 1995" " " "The Internet Movie Database v3.2d"
+.SH NAME
+lindex \- generate lists of names or lists of titles.
+.SH SYNOPSYS
+.B
+lindex [options]
+.SH DESCRIPTION
+This program can be used to either to generate lists of names that appear
+on filmography lists or to generate lists of titles from the movies list.
+It's uses include finding exact spellings of names or titles on the lists;
+finding names/titles containing a particular substring; and finding titles
+released between a range of years or in a particular year.
+.SH GENERAL OPTIONS
+Note that if you do not specify any database options, the default is to search
+all the lists in name mode.
+.SS NAME MODE
+.TP
+.B \-acr
+actors database
+.TP
+.B \-acs
+actresses database
+.TP
+.B \-dir
+directors database
+.TP
+.B \-write
+writers database
+.TP
+.B \-comp
+composers database
+.TP
+.B \-cine
+cinematographers database
+.TP
+.B \-edit
+editors database
+.TP
+.B \-prodes
+production designers database
+.TP
+.B \-costdes
+costume designers database
+.TP
+.B \-misc
+miscellaneous database
+.TP
+.B \-prdcr
+producers database
+.SS TITLE MODE
+.TP
+.B \-title
+This will toggle title\-mode on.
+.TP
+.B \-yr
+Adds the year of release and sorts in chronological order.
+.TP
+.B \-yru
+Adds the year of release, but leaves in alphabetical order.
+.TP
+.B \-yrfrom <yr>
+Limit search to titles released during or after
+.BR <yr> .
+.TP
+.B \-yrto <yr>
+Limit search to titles released before
+.BR <yr> .
+.TP
+.B \-yreq <yr>
+Limit search to titles released in
+.BR <yr> .
+.TP
+.B \-mrr
+Add ratings report data.
+.TP
+.B \-smrr
+Add ratings report data and sort by average ratings.
+.TP
+.B \-vmrr
+Add ratings report data and sort by number of votes.
+.TP
+.B \-match
+Limit search to movies with entry in ratings database.
+.TP
+.B \-veq <votes>
+Limit search to movies with
+.BR <votes> votes.
+.TP
+.B \-vmin <votes>
+Limit search to movies with a minimum of
+.BR <votes> votes.
+.TP
+.B \-vmax <votes>
+Limit search to movies with a maximum of
+.BR <votes> votes.
+.TP
+.B \-m
+Limit search to movies only, i.e. no TV-series.
+.TP
+.B \-genre <s>
+Limit search to titles with a genre equal to
+.BR <s> .
+.TP
+.B \-time <s>
+Limit search to titles with time equal to
+.BR <s> .
+.TP
+.B \-prodco <s>
+Limit search to titles with a production company equal to
+.BR <s> .
+.TP
+.B \-cert <s>
+Limit search to titles with a certificate equal to
+.BR <s> .
+.TP
+.B \-mix <s>
+Limit search to titles with a sound mix equal to
+.BR <s> .
+.TP
+.B \-cntry <s>
+Limit search to titles with a country equal to
+.BR <s> .
+.TP
+.B \-rel <s>
+Limit search to titles with a releasedate equal to
+.BR <s> .
+.TP
+.B \-loc <s>
+Limit search to titles with a location equal to
+.BR <s> .
+.TP
+.B \-tech
+Limit search to titles with technical info equal to
+.BR <s> .
+.SH MISCELLANEOUS OPTIONS
+.TP
+.B \-s <substring>
+Restrict search to names/titles containing
+.BR <substring> .
+.TP
+.B \-i
+Become case sensitive with
+.BR \-s .
+.SH EXAMPLES
+.TP
+Generate list of all names on the cast lists:
+.B
+lindex \-acr \-acs \-name
+.TP
+Generate list of actors containing the substring "Michael":
+.B
+lindex \-acr \-s "Michael" \-name
+.TP
+Generate list of all movie/tv titles containing "Alien":
+.B
+lindex \-title \-s "Alien"
+.TP
+List all titles in database released in 1945:
+.B
+lindex \-title \-yr \-yreq 1945
+.TP
+Sort all movies released in the 1990s by average rating:
+.B
+lindex \-title \-yr \-yrfrom 1990 \-yrto 1996 \-smrr
+.TP
+List film noirs made for RKO
+.B
+lindex \-title \-genre Film\-Noir \-prodco RKO
+.TP
+List all color MGM movies released up to 1940
+.B
+lindex \-title \-prodco MGM \-color Color \-yrto 1940
+.\" 3.2
+.SH FILES
+*.list
+.br
+/home/cn/listdb/versions/v3.3a/moviedb-3.3/dbs/*.data
+.br
+/home/cn/listdb/versions/v3.3a/moviedb-3.3/dbs/*.names
+.br
+/home/cn/listdb/versions/v3.3a/moviedb-3.3/dbs/*.index
+.br
+/home/cn/listdb/versions/v3.3a/moviedb-3.3/dbs/*.key
+.br
+/home/cn/listdb/versions/v3.3a/moviedb-3.3/dbs/*.titles
+.SH SEE ALSO
+.BR list (1),
+.BR title (1),
+.BR listall (1),
+.BR lguide (1),
+.BR ltrace (1),
+.BR lindex (1),
+.BR alist (1), 
+.BR mkballot (1),
+.BR lformat (1)
+and
+.BR lseen (1).
+.SH BUGS
+They are features!
+.SH AUTHORS
+.SS PROGRAMMERS
+.PP
+Colin Needham                           <cn@ibmpcug.co.uk>
+.rj 1
+.B most of the programming
+.PP
+Philippe Queinnec                       <queinnec@dgac.fr>
+.rj 1
+.B Makefiles
+.PP
+Lars J Aas               <larsa@colargol.stud.idb.hist.no>
+.rj 1
+.B some usage-logging code
+.PP
+Timo Lamminjoki                 <lamminjo@pcu.helsinki.fi>
+.rj 1
+.B compressed database support
+.PP
+Mark Harding                            <ccsmh@bath.ac.uk>
+.rj 1
+.B text justification routines
+.SS LIST MAINTAINERS
+.PP
+Lars J Aas               <larsa@colargol.stud.idb.hist.no>
+.rj 2
+.B Genres
+.B Quotes
+.PP
+Andre Bernhardt                 <ujad@rz.uni-karlsruhe.de>
+.rj 1
+.B Producers
+.PP
+Murray Chapman                        <muzzle@cs.uq.oz.au>
+.rj 1
+.B Trivia
+.PP
+Michel Hafner                        <hafner@ifi.unizh.ch>
+.rj 5
+.B Alternative Names
+.B Alternative Titles
+.B Cinematographers
+.B Composers
+.B Movies
+.PP
+Mark Harding                            <ccsmh@bath.ac.uk>
+.rj 8
+.B Biographies
+.B Certificates
+.B Color Information
+.B Countries
+.B Crazy Credits
+.B Release Dates
+.B Running Times
+.B Sound Mix
+.PP
+Robert Hartill                         <movie@cm.cf.ac.uk>
+.rj 3
+.B Locations
+.B Production Companies
+.B Tag Lines
+.PP
+Ron Higgins                     <rhiggins@carroll1.cc.edu>
+.rj 1
+.B Soundtracks
+.PP
+Harald Mayr                       <marvin@bike.augusta.de>
+.rj 3
+.B Costume Designers
+.B Editors
+.B Production Designers
+.PP
+Col Needham                             <cn@ibmpcug.co.uk>
+.rj 8
+.B Actors
+.B Actresses
+.B Cast Completion
+.B Directors
+.B Goofs
+.B Misc. Filmography
+.B Movie Links
+.B Ratings
+.PP
+Joachim Polzer                 <polzer@zedat.fu-berlin.de>
+.rj 2
+.B Literature
+.B Technical Info
+.PP
+Jon Reeves                            <reeves@zk3.dec.com>
+.rj 1
+.B Writers
+.PP
+Colin Tinto                          <colint@spider.co.uk>
+.rj 1
+.B Plot Summaries
+.SS CONTRIBUTORS
+.PP
+Lars J Aas               <larsa@colargol.stud.idb.hist.no>
+.rj 1
+.B UNIX manpages
+.PP
+Teemu Antti-Poika                <anttipoi@cc.helsinki.fi>
+.rj 1
+.B LaTeX documentation
+.PP
+Robert Hartill                         <movie@cm.cf.ac.uk>
+.rj 1
+.B the script lfetch is based on
+.PP
+Philippe Queinnec                   <queinnec@enseeiht.fr>
+.rj 1
+.B imoviedb package (distributed separately)
+.PP
+ ...and last but not least all of you who send us information either directly
+or via the email-server at movie@ibmpcug.co.uk.  Use "Subject: HELP ADD FULL" 
+for information about how to use it.
+.\"
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"

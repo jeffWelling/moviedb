@@ -1,0 +1,60 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH MKBALLOT 1 "RELEASEDATE" " " "The Internet Movie Database vVERSIONNUMBER"
+.SH NAME
+mkballot \- generate movie rating ballots for all movies a person has been involved with.
+.SH SYNOPSYS
+.B
+mkballot [<options>] "name"
+.SH DESCRIPTION
+This program generates a movie rating ballot for all the movies a 
+particular person has been involved with.
+The results should be redirected to a file where you can add in votes for
+the movies you have seen and then mail the file to the vote tabulator. For
+further details on taking part in the movie ratings poll see the weekly
+postings in rec.arts.movies.
+.SH OPTIONS
+.TP
+.B \-acr
+actor
+.TP
+.B \-acs
+actress
+.TP
+.B \-dir
+director
+.TP
+.B \-write
+writer
+.TP
+.B \-comp
+composer
+.TP
+.B \-cine
+cinematographer
+.TP
+.B \-edit
+editor
+.TP
+.B \-prodes
+production designer
+.TP
+.B \-costdes
+costume designer
+.TP
+.B \-prdcr
+producer
+.TP
+.B \-misc
+miscellaneous
+.SH EXAMPLE
+.TP
+Generate a ballot for all Bogie's movies:
+.B
+mkballot -acr "Bogart, Humphrey"

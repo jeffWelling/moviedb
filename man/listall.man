@@ -1,0 +1,59 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH LISTALL 1 "RELEASEDATE" " " "The Internet Movie Database vVERSIONNUMBER"
+.SH NAME
+listall \- for all persons involved in a movie, list all the movies they have been involved with.
+.SH SYNOPSYS
+.B
+listall -t "title" [<options>]
+.SH DESCRIPTION
+.B listall
+takes a movie title as an argument and for each person involved in 
+that movie, lists all the other movies they have worked in.
+.SH OPTIONS
+.TP
+.B \-yr
+Add year of release to titles and sort chronologically.
+.TP
+.B \-yru
+Add year of release, but leave in alphabetical order.
+.TP
+.B \-mrr
+Add movie ratings report information.
+.TP
+.B \-smrr
+Add movie ratings report and sort by average ratings.
+.TP
+.B \-vmrr
+Add movie ratings report and sort by votes.
+.TP
+.B \-chr
+Add character names where available.
+.TP
+.B \-bio
+Add any biography data.
+.TP
+.B \-aka
+Add any alternative titles (and check if title is an aka title).
+.TP
+.B \-full
+Combine
+.BR \-aka ,
+.BR \-bio ,
+.B \-chr
+and
+.BR \-yr .
+.TP
+.B \-i
+Case sensitive search.
+.TP
+.B \-m
+Restrict search to movies only.
+.SH EXAMPLE
+listall -t "Abyss, The" -full

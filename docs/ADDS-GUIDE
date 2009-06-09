@@ -1,0 +1,5130 @@
+HELP ADD FULL                                                      28 July 1997
+===============================================================================
+
+  This is a complete guide to submitting information to the Internet Movie 
+  Database (IMDb) via our mail-server interface. It's long but is intended 
+  to cover everything.
+
+| = New/updated entries
+
+CONTENTS
+========
+
+  Background
+  The Easy Template Based Interface
+  Introduction to the Keyword Interface
+  Keywords
+  Title and Name Formats
+| Titlelock
+  Actors and Actresses Sections
+  Completing Cast Information for a Movie
+  Directors Section
+  Writers Section
+  Composers Section
+  Cinematographers Section
+  Production Designers Section
+  Costume Designers Section
+  Editors Section
+  Producers Section
+  Miscellaneous Crew Section
+| Guest Appearance Section
+  Titles Section
+  Alternative Titles Section
+  German Alternative Titles Section
+  Italian Alternative Titles Section
+  Alternative Names Section
+  Running Times Section
+  Certificates Section
+  Release Dates Section
+  Country of Origin Section
+  Languages Section
+  Color Information Section
+  Sound Mix Section
+  Genres Section
+  Production Companies Section
+| Distribution Companies Section
+  Special Effects Companies Section
+| Miscellaneous Companies Section
+  Locations Section
+  Movie Links Section
+  Technical Section
+  Plot Summaries Section
+  Biographies Section
+  Literature Section
+  Trivia Section
+  Goofs Section
+  Quotes Section
+  Crazy Credits Section
+  Soundtracks Section
+  Tag Lines Section
+  External URLs Section (reviews, home pages, images etc)
+  Laserdisc Section
+  Alternate Versions Section
+  Business Information Section
+  Marking the End of Your Data
+  Submitting Corrections, Deletions and Comments
+  Foreign Language Movie Credits
+  Complete Keyword Example
+  Keyword Summary
+
+                      -------------------
+
+BACKGROUND
+==========
+
+The Internet Movie Database (IMDb) is an international organization whose 
+objective is to provide useful and up to date movie information *freely* 
+available on-line, across as many systems and platforms as possible. It 
+currently covers over 110,000 movies with over 1,500,000 filmography entries
+and is expanding continuously. For more information on the IMDb as a whole, 
+send e-mail with the subject "HELP FAQ" to <mail-server@imdb.com>
+
+The information in the database comes entirely from official sources, press
+kits, agents and most importantly from its users. If you find the service 
+useful, the best way to show your appreciation is to add more movie information
+to the database. We need your help to enable the IMDb to grow and keep it up 
+to date with the latest releases as well as  to fill in some of the gaps for 
+older movies.
+
+This is a guide to submitting information to the database via the mail-server
+interface. This gives you one address to which send your additions across the
+whole database and a choice of two formats depending on how familiar you are
+with the system.
+
+The WWW front-end to the database provides a form filling interface to the 
+additions system. The completed forms are mailed to the same central collection
+address so this guide also serves as a useful explanation of the WWW forms.
+
+|Comments on this guide are welcome and should be directed to the IMDb
+|help desk <help@imdb.com>
+
+                      -------------------
+
+THE EASY TEMPLATE BASED INTERFACE
+=================================
+
+This section gives details of the simplest way to submit additions to the
+database. There are two forms of the templates interface: one for adding on a 
+title by title basis and one on a name by name basis. There are no complicated
+formats to learn and hopefully everything is self-explanatory. If you have a 
+small number of additions or aren't familiar with the organization of the 
+database, this is the interface for you.
+
+
+Title Template Interface
+------------------------
+
+If you have copies of your favourite movies at home, why not help to complete 
+the information on them directly from credits of your copy? Just take a look 
+at the instructions below, enter the missing information in the format 
+described and send it off.
+
+To submit title data using the interface, follow these simple instructions:
+
+ (1) the first thing you need is a template containing the current details of
+     the movie you wish to submit additions for. You can request a template by 
+     sending e-mail with the subject or body containing lines of the form:
+
+TEMPL TITLE <title>
+
+     to <mail-server@imdb.com>
+
+For example,
+
+TEMPL TITLE Vertigo (1958)
+TEMPL TITLE Four Weddings and a Funeral (1994)
+
+ (2) load the returned template into your favourite editor and follow the
+     instructions contained in the template to add your data. There are no 
+     complicated formats to learn, just follow the comments and add your data!
+
+ (3) once you have finished editing the template, mail it back to the server -
+     the reply address and subject are already set-up to do this, but in case
+     you lose the mail-headers, just set the subject to "UPDATE TITLE" and
+     send the file to <mail-server@imdb.com>
+
+That's all there is to it! 
+
+
+Name Template Interface
+-----------------------
+
+To submit data for a person using the new interface, follow these simple 
+instructions:
+
+ (1) the first thing you need is a template containing the current details of
+     the person for whom you wish to submit additions. You can request a 
+     template by sending e-mail with the subject or body containing lines of 
+     the form:
+
+TEMPL NAME <surname>, <firstname>
+
+     to <mail-server@imdb.com>
+
+For example,
+
+TEMPL NAME Grant, Cary
+TEMPL NAME Davis, Geena
+TEMPL NAME Hitchcock, Alfred
+
+ (2) load the returned template into your favourite editor and follow the
+     instructions given in the template to add your data. There are no 
+     complicated formats to learn, just follow the comments and add your data!
+
+ (3) once you have finished editing the template, mail it back to the server -
+     the reply address and subject are already set-up to do this, but in case
+     you lose the mail-headers, just set the subject to "UPDATE NAME" and
+     send the file to <mail-server@imdb.com>.
+
+Again, that's all there is to it! 
+
+                      -------------------
+
+INTRODUCTION TO THE KEYWORD INTERFACE
+=====================================
+
+The keyword interface is the most flexible additions interface but can be 
+difficult to master if you aren't familiar with the organization of the
+database. If you have a small number of additions you may find the template 
+or web based interfaces easier to use.
+
+Additions are mailed to the movie mail-server where they are batched up and
+forwarded to the IMDb team for processing every Thursday. You will receive a 
+receipt summarising your data and listing any lines which don't conform to 
+the required format.
+
+To use this interface your message should be sent to the additions address:
+
+   <add@imdb.com>
+
+and contain lines in the formats described below. Please support the database 
+by sending in any information which you notice is missing. 
+
+If submitting an entry that is too long to fit on one line then split
+it across multiple lines and place a continution marker as the very last
+character on a line. The marker is the \ character. The additions interface
+will then reconstruct the line for you - without such markers data will be
+corrupt and therefore rejected. 
+
+Wrapped line example: 
+
+GUEST
+De Jesus, Wanda|"Spider-Man" (1995)|Dr. Silvia Lopez|\
+(voice)|Spot, The|1996|
+
+Note: Without the continuation marker the above will be rejected. 
+
+If this guide appears too complex please consider the template based interface
+described in the previous section, however, if you do decide to use this 
+interface, please take the time to read this guide and follow the formats 
+described. Data which does not conform to the standard format is likely to be 
+rejected, although the server will let you know if this happens.
+
+Finally, please note that the data has to be processed by the team member(s)
+responsible for the section(s) you've added to so there will be some delay
+before it is included. In most cases this will be about 1 week after we 
+receive the data, but it does vary so please be patient.
+
+Details of when each section was last updated are available on-line in the
+web interface at:
+
+  http://us.imdb.com/update_info
+
+                      -------------------
+
+KEYWORDS
+========
+
+Each group of additions should be preceeded by a keyword to indicate which
+section of the database they are for - keywords include ACTOR, ACTRESS,
+CAST, DIRECTOR and PLOTS. Each keyword should be on a line of its own and 
+subsequent lines will be extracted by the relevant database manager.
+
+You will receive an acknowledgment from the server on receipt of your data 
+which will show how many lines for each keyword were received. The bottom
+of the acknowledgment will list any lines which did not conform to the formats
+and hence were rejected.
+
+IMPORTANT NOTE:  If your message contains a signature it can confuse the
+mail server.  Please ensure that your message contains the keyword, END or
+QUIT, before any signatures.
+
+                              -------------------
+
+TITLE AND NAME FORMATS
+======================
+
+Names
+-----
+|Names in additions for the filmography and biography sections should generally
+|be given in <surname>, <first name> order. For example:
+|
+|  Grant, Cary
+|  Hitchcock, Alfred
+|  De Niro, Robert
+
+This is also true for Japanese, Chinese and other names that usually are
+written <surname> <first name> and therefore need only a comma in between,
+but no switching. For example:
+
+  Gong, Li ( not <Li, Gong> although credits read <Gong Li> )
+
+Here are further example names to illustrate some special cases:
+ 
+  Name                 | Comments
+  ---------------------|------------------------------------------------------
+  Cobb, Randall 'Tex'  | If a person is credited with a nickname we use single
+                       | not double quotes around the nickname
+  ---------------------|------------------------------------------------------
+  Robards Jr., Jason   | Don't forget the final "." after Jr and Sr. Also no
+                       | comma before Jr./Sr.
+  ---------------------|------------------------------------------------------
+  Clive, E.E.          | No space between double initials
+  ---------------------|------------------------------------------------------
+  Riva, J. Michael     | One space between single initial and name
+  ---------------------|------------------------------------------------------
+| van Ackeren, Robert  | For multi-part names please use the capitalization 
+| Van Dyke, Dick       | used in the credits on a name by name basis.
+| ---------------------|------------------------------------------------------
+| Bont, Jan de         | Split multi-part names into the ordered prefered in
+|                      | their country of origin. 'Jan de Bont' is Dutch where
+|                      | the local convention is 'Bont, Jan de'
+| ---------------------|------------------------------------------------------
+
+Titles
+------
+All titles should include their initial year of release have leading 
+articles ("the", "a", "an" in English) moved to the end in order to allow 
+correct alphabetical sorting. For example:
+
+  Pulp Fiction (1994)
+  Room with a View, A (1986)
+  Terminator, The (1984)
+  Affair to Remember, An (1957)
+
+The same rule applies for all other languages. For example:
+
+  Alleinseglerin, Die (1987)        ->  German
+  Momento della Verità, Il (1965)   ->  Italian
+  Amor brujo, El (1967)             ->  Spanish
+  Bandeirantes, Os (1960)           ->  Portugese
+  Ergostasio, To (1982)             ->  Greek
+
+also watch for abbreviations of articles:
+
+  Atalante, L' (1934)               ->  French
+
+All titles are assumed to be movies unless otherwise indicated as follows:
+
+  "xxxxx"        = a television series, e.g. "Twin Peaks" (1990)
+  "xxxxx" (mini) = a television mini-series, e.g. "Lonesome Dove" (1989) (mini)
+  (TV)           = TV movie, or made for cable movie, e.g. Duel (1971) (TV)
+  (V)            = made for video movie, e.g. Steve Martin Live (1986) (V)
+
+
+Name/Title Duplication
+----------------------
+In rare cases two movies with the same title have been released in the 
+same year. In such cases we include (19XX/I) for the movie released first and
+(19XX/II) for the one released second. For example:
+
+  Black Rain (1989/I)
+  Black Rain (1989/II)
+
+Similarly, if two different people have the same name, we use Roman numerals
+to distinguish between them. For example:
+
+  Williams, John (I)   is the actor from the 1950s
+  Williams, John (II)  is the composer (often scores Spielberg's movies)
+
+
+Uncredited Contributions
+------------------------
+If a person is not listed in the credits of the movie (eg: a cameo appearance
+for actors or a role too small to be listed) please use the attribute:
+
+  (uncredited)
+
+For example:
+
+  ACTOR
+  Abraham, F. Murray|Bonfire of the Vanities, The (1990)|(uncredited)|Abe Weiss|
+
+Also if someone is billed under a different name, please use the attribute:
+
+  (as name)
+
+For example:
+
+  ACTOR
+  Fishburne, Laurence|Cadence (1991)|(as Larry Fishburne)|Stokes|15
+
+
+Character Sets
+--------------
+|The IMDb now supports full ISO-Latin-1 character sets as well as the standard
+|ASCII set.  In order to submit ISO extended characters, ie e acute (é)
+|you should configure your mailer to support the QUOTED PRINTABLE standard.
+|If you are unsure how to acvhieve this please contact your local support.
+|
+|If you cannot configure your mailer to support ISO characters then you
+|can still submit ISO data by using the standard HTML markup for ISO
+|characters, ie to submit e acute, put  &eacute; in your text and we'll
+|map it to the correct character.  Please refer to
+|
+|  http://www.imdb.com/News/iso_switch
+|
+|for the full HTML -> ISO markup table.
+
+                      -------------------
+
+ACTORS AND ACTRESSES SECTIONS
+=============================
+
+Keywords
+--------
+
+ ACTOR   = actors additions 
+ ACTRESS = actress additions
+ CAST    = actor or actress additions
+ CHARA   = character name additions for entries already in the database ONLY
+ ORDER   = cast order information for entries already in the database ONLY
+
+Format for ACTOR/ACTRESS/CAST
+-----------------------------
+
+ <name>|<title>|<attributes>|<character name>|<order>
+
+where:
+
+ <name> is the actors name in <surname>, <firstname> order. Please note
+        the space after the comma as in: "Grant, Cary". 
+
+ <title> is the title of the movie or TV-series in which the actor 
+         appeared, please include the year of release as part of the title
+         (see examples below).
+
+ <attributes> records any award nominations or wins and other notes. Example 
+              attributes include:
+
+   (voice)        =  only a voice contribution (eg for animated movies)
+   (uncredited)   =  no on-screen credit given
+   (as ....)      =  credited under a different name
+   (AA)           =  academy award winner (best actor)
+   (AAN)          =  academy award nominee (best actor)
+   (S:AA)         =  academy award winner (best supporting actor)
+   (S:AAN)        =  academy award nominee (best supporting actor)
+   (GG)           =  golden globe winner (best drama actor)
+   (GGN)          =  golden globe nominee (best drama actor)
+
+ <character name>  is the character name of the actor.
+
+ <order> is a number to record the position in which the actor appears in
+         the credits (1=star billing)
+
+Notes
+-----
+
+ - Apart from the <name> and <title> all these fields are optional, but please 
+   leave the "|" separator for any blank fields, otherwise the some of the data
+   may be lost.
+
+ - Please split additions for actors and actresses into two separate sections
+   with the appropriate keywords. If you aren't sure of someone's gender, use
+   the CAST keyword instead. 
+
+ - Guest appearances in TV-series are NOT eligible for the main actors and
+   actresses list. The person must have played a recurring role across a 
+   number of episodes in order to be included. See the section describing the 
+   guest appearance section for an alternative method of adding this type of 
+   information.
+
+ - Please only credit individual names. For example, if all the members of
+   a particular rock group appeared in a movie then include them under their
+   individual names and not the name of the whole group.
+
+ - The actors and actresses sections are for people only. No animals.
+
+ - Remember the rules above about the (uncredited) and (as ...) attributes
+
+ - To add an attribute to an existing entry, just re-add the entry and 
+   include the attribute (ie: there is no need to delete the existing entry
+   first)
+
+
+Examples
+--------
+
+ ACTOR
+ Brando, Marlon|Godfather, The (1972)|(AA) (GG)|Don Vito Corleone|1
+ Grant, Cary|North by Northwest (1959)||Roger Thornhill|1
+ Grant, Cary|Awful Truth, The (1937)|||1
+ Grant, Cary|Philadelphia Story, The (1940)|||
+ Hopkins, Anthony|Silence of the Lambs, The (1990)|(AA)||
+ Connors, Mike|Stagecoach (1966)|(as Michael Connors)|Henderson|3
+ ACTRESS
+ Moore, Demi|Hunchback of Notre Dame, The (1996)|(voice)|Esmeralda|2
+ Hepburn, Katharine|Bringing Up Baby (1938)||Susan Vance|2
+ Hepburn, Katharine|Philadelphia Story, The (1940)|||
+ Hepburn, Katharine|African Queen, The (1952)|(AAN)||2
+ Foster, Jodie|Silence of the Lambs, The (1990)|(AA)||
+
+Format for CHARA
+----------------
+
+ To add character names to *existing* entries in the database only, use the 
+ keyword CHARA. The format is:
+
+  <name>|<title>|<char>
+
+ If the entry for which you wish to submit a character name information
+ is not already in the database you MUST use the ACTOR/ACTRESS/CAST keyword
+ instead, otherwise the data will be lost!
+
+ Please do not supply character names all in lowercase or all in uppercase
+ as they do not read very well when displayed, ie use:
+
+  CHARA
+  Travolta, John|Pulp Fiction (1994)|Vincent Vega
+   
+ *not*
+
+  Travolta, John|Pulp Fiction (1994)|VINCENT VEGA
+
+ *nor*
+
+  Travolta, John|Pulp Fiction (1994)|vincent vega
+
+
+Format for ORDER
+----------------
+
+ To add order information to *existing* entries in the database only, use the 
+ keyword ORDER. The format is:
+
+  <name>|<title>|<order>
+
+ If the entry for which you wish to submit a character name information
+ is not already in the database you MUST use the ACTOR/ACTRESS/CAST keyword
+ instead, otherwise the data will be lost!
+
+ To remove an order (ie: if the person was not actually billed in the cast
+ list in the credits), submit an ACTOR/ACTRESS entry with the attribute:
+ "(uncredited)" as in:
+
+    Hanks, Tom|Radio Flyer (1992)|(uncredited)
+
+                      -------------------
+
+COMPLETING CAST INFORMATION FOR A MOVIE
+=======================================
+
+Keywords
+--------
+
+ CASTCOM = cast has been completed
+ CASTVER = cast has been verified as already complete
+
+Format
+------
+
+ <title>|<your name and e-mail address>
+
+Description
+-----------
+
+ We are trying to track the movies for which we have complete cast information
+ in the database. This means that all the actors and actresses listed on screen
+ in the credits of the movie (along with their character names if given) have 
+ been entered into the database. If you complete the information for a title,
+ please indicate this with the CASTCOM keyword. If you find the information is
+ already complete please indicate this with the CASTVER keyword.
+
+Example
+-------
+
+CASTCOM
+Vertigo (1958)|Col Needham <col@imdb.com>
+
+Notes
+-----
+ - See the earlier section on use of the "(uncredited)" attribute for cases
+   where the cast members are not credited on screen.
+
+                      -------------------
+
+COMPLETING CREW INFORMATION FOR A MOVIE
+=======================================
+
+Keywords
+--------
+
+ CREWCOM = crew has been completed
+ CREWVER = crew has been verified as already complete
+
+Format
+------
+
+ <title>|<your name and e-mail address>
+
+Description
+-----------
+
+ We are trying to track the movies for which we have complete crew information
+ in the database. This means that all non-cast (wider definition of crew
+ there, including directors, writers and producers) listed on screen in the 
+ credits of the movie have been entered into the database. If you complete the 
+ information for a title, please indicate this with the CREWCOM keyword. If 
+ you find the information is already complete please indicate this with 
+ the CREWVER keyword.
+
+Example
+-------
+
+CREWCOM
+Vertigo (1958)|Col Needham <col@imdb.com>
+
+                      -------------------
+
+DIRECTORS SECTION
+=================
+
+Keyword
+-------
+
+ DIRECTOR
+
+Format
+------
+
+ <name>|<title>|<attributes>
+
+where:
+
+ <name> is the directors name in <surname>, <firstname> order. Please note
+        the space after the comma as in: "Hitchcock, Alfred". 
+
+ <title> is the title of the movie or TV-series which the person directed.
+         Please include the year of release as part of the title (see 
+         examples below).
+
+ <attributes> records any award nominations or wins. Example attributes 
+              include:
+
+   (uncredited)   =  no on-screen credit given
+   (as ....)      =  credited under a different name
+
+   (AA)           =  academy award winner (best director)
+   (AAN)          =  academy award nominee (best director)
+   (GG)           =  golden globe winner (best director)
+   (GGN)          =  golden globe nominee (best director)
+
+Examples
+--------
+
+ DIRECTOR
+ Hitchcock, Alfred|Spellbound (1945)|
+ Hitchcock, Alfred|Vertigo (1958)|
+ Hitchcock, Alfred|Birds, The (1963)|
+ Hitchcock, Alfred|Psycho (1960)|(AAN)
+
+                      -------------------
+
+WRITERS SECTION
+===============
+
+Keyword
+-------
+
+ WRITER
+
+Notes
+-----
+ - TV-series writing credits are not eligible for inclusion in this list.
+
+Format
+------
+
+ <name>|<title>|<attributes>|<sequence>
+
+where:
+
+ <name> is the writers name in <surname>, <firstname> order. Please note
+        the space after the comma as in: "Hecht, Ben". 
+
+ <title> is the title of the movie which the person wrote. Please include 
+         the year of release as part of the title (see examples below).
+
+ <attributes> records any award nominations or wins and also the type of
+              contribution made to the script. Example attributes include:
+               
+   (song)      =  The writer is the author (composer?) of a song on
+                  which the screenplay was based.
+   (story)     =  The writer contributed on the story for the
+                  screenplay only or the writer is the author of a
+                  story on which the movie was based.
+   (play)      =  The writer is the author of the play on which the
+                  screenplay was based.
+   (novel)     =  The writer is the author of the novel on which the
+                  screenplay was based.
+   (novel XXX) =  The writer is the author of the novel on which the
+                  screenplay was based, but the novel is not the same
+                  title as the movie.
+   (book)      =  The writer is the author of the book on which the
+                  screenplay was based.
+   (article)   =  The writer is the author of the article on which the
+                  screenplay was based.
+   (operetta)  =  The writer is the author of the operetta on which the
+                  screenplay was based.
+   (also XXX)  =  The writer was involved in some other aspect than just
+                  writing the screenplay.  They may have authored the novel
+                  the screenplay was based on, or developed the story, etc.
+   (A:AA)      =  Academy Award for Best Adaptation
+   (A:AAN)     =  Academy Award Nomination for Best Adaptation
+   (DS:AA)     =  Academy Award for Best Screenplay Written Directly for the 
+                  Screen
+   (DS:AAN)    =  Academy Award Nomination for Best Screenplay Written Directly
+                  for the Screen
+   (MPS:AA)    =  Academy Award for Best Motion Picture Story
+   (MPS:AAN)   =  Academy Award Nomination for Best Motion Picture Story
+   (S:AA)      =  Academy Award for Best Screenplay
+   (S:AAN)     =  Academy Award Nomination for Best Screenplay
+   (SA:AA)     =  Academy Award for Best Screenplay - Adapted
+   (SA:AAN)    =  Academy Award Nomination for Best Screenplay - Adapted
+   (SAM:AA)    =  Academy Award for Best Screenplay - based on Another Medium
+   (SAM:AAN)   =  Academy Award Nomination for Best Screenplay - based on
+                  another medium
+   (SAO:AA)    =  Academy Award for Best Screenplay Adapted from Other Material
+   (SAO:AAN)   =  Academy Award Nomination for Best Screenplay Adapted from 
+                  other material
+   (SO:AA)     =  Academy Award for Best Screenplay - Original
+   (SO:AAN)    =  Academy Award Nomination for Best Screenplay - Original
+   (SS:AA)     =  Academy Award for Best Story and Screenplay
+   (SS:AAN)    =  Academy Award Nomination for Best Story and Screenplay
+   (SSF:AA)    =  Academy Award for Best Story and Screenplay - based on 
+                  factual material or material not previously published or 
+                  produced
+   (SSF:AAN)   =  Academy Award Nomination for Best Story and Screenplay - 
+                  based on factual material or material not prev. published or
+                  produced
+   (SSS:AA)    =  Academy Award for Best Story and Screenplay - written 
+                  directly for the Screen
+   (SSS:AAN)   =  Academy Award Nomination for Best Story and Screenplay - 
+                  written directly for the Screen
+   (StO:AA)    =  Academy Award for Best Story - Original
+   (StO:AAN)   =  Academy Award Nomination for Best Story - Original
+   (T:AA)      =  Academy Award for Title Writing
+   (T:AAN)     =  Academy Award Nomination for Title Writing
+   (WA:AA)     =  Academy Award for Writing Acheivement
+   (WA:AAN)    =  Academy Award Nomination for Writing Acheivement
+|  (BA)        =  British Academy of Film and Television Arts for Best
+|                  Screenplay
+|  (G)         = Genie for Best Screenplay
+|  (GG)        = Golden Globe for Best Screenplay
+|
+|  Entries are not accepted for "(characters)" or "(idea)".
+|
+| <sequence>
+|
+|   Screenwriting credits are tightly controlled; we have added
+|   sequence numbers to represent the fine details in the listings.  These
+|   are still being updated on older titles.  Specifically:
+|
+|   1.  "&" vs. "and" in screenwriting credits: in WGAw parlance, a
+|   writing team with names linked by an ampersand ("&") is considered a
+|   writing unit, and wrote their contribution to the screenplay in
+|   collaboration.  Writers separated by "and" were not in direct
+|   collaboration, and in all likelihood are writers of successive drafts
+|   of the screenplay.  It is virtually certain that they never even met,
+|   let alone talked about the script.
+|
+|   2.  First and second (and third, etc.) writing credit.  According to
+|   WGAw guidelines, the first writing unit to appear in the credits is
+|   the one which has had the most effect on the finished product, then
+|   the next most important, etc.
+|
+|   The sequence number is three numbers, separated by commas.  When the
+|   first two numbers are the same, the writers are connected with "&"; when
+|   the first number is the same and the second number is different, the
+|   writers are connected with "and".  The first number is used to separate
+|   different attributes (story, segments, etc.)  For example, at this writing
+|   the credits on Chairman of the Board (1997) read "Story by Turi Meyer & Al
+|   Septien; screenplay by Turi Meyer & Al Septien and Alex Zamm".
+|
+|   This shows up in the database as:
+|
+|   Meyer, Turi|Chairman of the Board (1997)|(story)|1,1,1
+|   Septien, Al|Chairman of the Board (1997)|(story)|1,1,2
+|   Meyer, Turi|Chairman of the Board (1997)||2,1,1
+|   Septien, Al|Chairman of the Board (1997)||2,1,2
+|   Zamm, Alex|Chairman of the Board (1997)||2,2,1
+
+Examples
+--------
+
+ WRITER
+ Hecht, Ben|Notorious (1946)||
+ McDonell, Gordon|Shadow of a Doubt (1943)|(story)|
+ Buchan, John|39 Steps, The (1935)|(novel)|
+ Hamilton, Patrick|Rope (1948)|(play)|
+ Crichton, Michael|Jurassic Park (1993)|(also novel)|
+
+                      -------------------
+
+COMPOSERS SECTION
+=================
+
+Keyword
+-------
+
+ COMPOSER
+
+Format
+------
+
+ <name>|<title>|<attributes>
+
+where:
+
+ <name> is the composers name in <surname>, <firstname> order. Please note
+        the space after the comma as in: "Herrmann, Bernard". 
+
+ <title> is the title of the movie or TV-series on which the composer worked.
+         Please include the year of release as part of the title (see examples
+         below).
+
+ <attributes> records any award nominations or wins. Example attributes 
+              include:
+
+   (A:AA)   =  Academy Award for best score adapted from another musical source
+   (A:AAN)  =  Academy Award Nomination for best score adapted from another 
+               musical source
+   (AA)     =  Academy Award
+   (AAA)    =  Australian Film Institute Award
+   (AAN)    =  Academy Award Nomination
+   (BFA)    =  British Academy Award ( = British Film Award )
+   (César)  =  French Academy Award
+|  (CésarN) =  French Academy Award Nomination
+|  (DC:AA)  =  Academy Award for best score in a drama or a comedy
+|  (DC:AAN) =  Academy Award Nomination for best score in a drama or a comedy
+   (D:AA)   =  Academy Award for best score in a drama
+   (D:AAN)  =  Academy Award Nomination for best score in a drama
+   (David)  =  Italian Academy Award
+   (Felix)  =  European Academy Award ( = European Film Award )
+|  (Emmy)   =  Emmy Award
+|  (EmmyN)  =  Emmy Award Nomination
+   (GG)     =  Golden Globe
+   (GGN)    =  Golden Globe Nomination
+   (M:AA)   =  Academy Award for best score in a musical
+   (M:AAN)  =  Academy Award Nomination for best score in a musical
+|  (MC:AA)  =  Academy Award for best score in a musical or comedy
+|  (MC@AAN) =  Academy Award Nomination for best score in a musical or comedy
+   (O:AA)   =  Academy Award for best original score
+   (O:AAN)  =  Academy Award Nomination for best original score
+|  (BS:AA)  =  Academy Award for best song
+|  (BS:AAN) =  Academy Award Nomination for best song
+|  (Golden Horse) =  Taiwanese Golden Horse Award
+|  (HKFA)   =  Hong Kong Film Award
+|  (HKFAN)  =  Hong Kong Film Award Nomination
+
+Examples
+--------
+
+ COMPOSER
+ Herrmann, Bernard|Vertigo (1958)|
+ Herrmann, Bernard|Trouble with Harry, The (1955)|
+ Herrmann, Bernard|Obsession (1976)|(O:AAN)
+
+                      -------------------
+
+CINEMATOGRAPHERS SECTION
+========================
+
+Keyword
+-------
+
+ CINE
+
+Format
+------
+
+ <name>|<title>|<attributes>
+
+where:
+
+ <name> is the cinematographers name in <surname>, <firstname> order. Please 
+        note the space after the comma as in: "Zsigmond, Vilmos". 
+
+ <title> is the title of the movie or TV-series on which the person worked.
+         Please include the year of release as part of the title (see examples
+         below).
+
+ <attributes> records any award nominations or wins. Example attributes 
+              include:
+
+   (AA)     =  Academy Award for best cinematography
+   (AAN)    =  Academy Award Nomination for best cinematography
+|  (C:AA)   =  Academy Award for best color cinematography
+|  (C:AAN)  =  Academy Award Nomination for best color cinematography
+|  (BW:AA)  =  Academy Award for best black and white cinematography
+|  (BW:AAN) =  Academy Award Nomination for best black and white color
+|              cinematography
+   (AAA)    =  Australian Film Institute Award for best cinematography
+   (BFA)    =  British Academy Award  for best cinematography
+   (César)  =  French Academy Award for best cinematography
+   (CésarN) =  French Academy Award Nomination for best cinematography
+   (David)  =  Italian Academy Award for best cinematography
+   (Felix)  =  European Academy Award for best cinematography
+   (GG)     =  Golden Globe for best cinematography
+   (GGN)    =  Golden Globe Nomination for best cinematography
+|  (Golden Horse) = Taiwanese Golden Horse Award
+|  (ACE)    =  Ace Award (Cable Award)
+|  (ACEN)   =  Ace Award (Cable Award) Nomination
+|  (Emmy)   =  Emmy Award
+|  (EmmyN)  =  Emmy Award Nomination
+|  (ASCN)   =  American Society of Cinematographers Award Nomination
+|  (ASC)    =  American Society of Cinematographers Award
+|  (KGP)    =  Kodak's Golden Pen Award Pula Film Festival
+|  (HKFA)   =  Hong Kong Film Award
+|  (HKFAN)  =  Hong Kong Film Award Nomination
+
+Examples
+--------
+
+ CINE
+ Burks, Robert|Vertigo (1958)|
+ Burks, Robert|Strangers on a Train (1951)|(AAN)
+ Burks, Robert|Dial M for Murder (1954)|
+
+                      -------------------
+
+EDITORS SECTION
+===============
+
+Keyword
+-------
+
+ EDITOR
+
+Format
+------
+
+ <name>|<title>|<attributes>
+
+where:
+
+ <name> is the editors name in <surname>, <firstname> order. Please note the 
+        space after the comma as in: "Tomasini, George". 
+
+ <title> is the title of the movie or TV-series on which the person worked.
+         Please include the year of release as part of the title (see examples
+         below).
+
+ <attributes> records any award nominations or wins. Example attributes 
+              include:
+
+   (AA)    =  academy award winner (editing)
+   (AAN)   =  academy award nominee (editing)
+   (GG)    =  golden globe winner (editing)
+   (GGN)   =  golden globe nominee (editing)
+
+Examples
+--------
+
+ EDITOR
+ Tomasini, George|Psycho (1960)|
+ Tomasini, George|Birds, The (1963)|
+ Schoonmaker, Thelma|GoodFellas (1990)|(AAN)
+ Warth, Theron|Notorious (1946)|
+
+                      -------------------
+
+PRODUCTION DESIGNERS SECTION
+============================
+
+Keyword
+-------
+
+ DESIGN
+
+Format
+------
+
+ <name>|<title>|<attributes>
+
+where:
+
+ <name> is the production designers name in <surname>, <firstname> order. 
+        Please note the space after the comma as in: "Boyle, Robert F.". 
+
+ <title> is the title of the movie or TV-series on which the person worked.
+         Please include the year of release as part of the title (see examples
+         below).
+
+ <attributes> records any award nominations or wins. Example attributes 
+              include:
+
+   (AA)    =  academy award winner (best production design)
+   (AAN)   =  academy award nominee (best production design)
+   (GG)    =  golden globe winner (best production design)
+   (GGN)   =  golden globe nominee (best production design)
+
+Examples
+--------
+
+ DESIGN
+ Riva, J. Michael|Color Purple, The(1985)|(AAN)
+ Riva, J. Michael|Dave (1993)|
+ Riva, J. Michael|Few Good Men, A (1992)|
+ Riva, J. Michael|Golden Child, The (1986)|
+
+Notes
+-----
+
+ - Please do not confuse production designer and art director credits. The
+   latter should be added to the miscellaneous crew section.
+
+                      -------------------
+
+COSTUME DESIGNERS SECTION
+=========================
+
+Keyword
+-------
+
+ COSTUME
+
+Format
+------
+
+ <name>|<title>|<attributes>
+
+where:
+
+ <name> is the costume designers name in <surname>, <firstname> order. 
+        Please note the space after the comma as in: "Head, Edith". 
+
+ <title> is the title of the movie or TV-series on which the person worked.
+         Please include the year of release as part of the title (see examples
+         below).
+
+ <attributes> records any award nominations or wins. Example attributes 
+              include:
+
+   (AA)    =  academy award winner (best costume design)
+   (AAN)   =  academy award nominee (best costume design)
+   (GG)    =  golden globe winner (best costume design)
+   (GGN)   =  golden globe nominee (best costume design)
+
+Examples
+--------
+
+ COSTUME
+ Head, Edith|Double Indemnity (1944)|
+ Head, Edith|Notorious (1946)|
+ Head, Edith|Place in the Sun, A (1951)|(AA)
+ Head, Edith|Vertigo (1958)|
+
+                      -------------------
+
+PRODUCERS SECTION
+=================
+
+Keyword
+-------
+
+ PRODUCER
+
+Format
+------
+
+ <name>|<title>|<attributes>
+
+where:
+
+ <name> is the producers name in <surname>, <firstname> order. 
+        Please note the space after the comma as in: "Thalberg, Irving". 
+
+ <title> is the title of the movie or TV-series on which the person worked.
+         Please include the year of release as part of the title (see examples
+         below).
+
+ <attributes> records the type of contribution. Valid attributes are:
+
+   (executive)      =  executive producer
+   (associate)      =  associate producer
+   (line)           =  line producer
+   (co-producer)    =  co-producer
+   (also exective)  =  performed the role of producer and excutive producer
+
+Examples
+--------
+
+ PRODUCER
+ Broccoli, Albert|Goldfinger (1964)|
+ Broccoli, Albert|Licence to Kill (1989)|
+ Broccoli, Albert|Living Daylights, The (1987)|
+ Broccoli, Albert|Man with the Golden Gun, The (1974)|
+ Broccoli, Albert|Moonraker (1979)|
+
+                      -------------------
+
+MISCELLANEOUS CREW SECTION
+==========================
+
+The miscellaneous crew database records filmographies for anyone not covered by
+the other filmography sections. 
+
+Keyword
+-------
+
+ MISC
+
+Format
+------
+
+ <name>|<title>|<attributes>
+
+where:
+
+ <name> is the name in <surname>, <firstname> order. Please note the space
+        after the comma as in: "Bass, Saul". 
+
+ <title> is the title of the movie or TV-series on which the person worked. 
+         Please include the year of release as part of the title (see 
+         examples below).
+
+ <attributes> is used to record the type of contribution the person made
+              to the movie. It must always be included in ()'s. This field
+              must be filled in or the data cannot be accepted. Examples
+              include:
+
+       (art director)                (assistant director)    (hair styles)
+       (make-up)                     (music supervisor)      (foley editor)
+       (recording director)          (script supervisor)     (set decoration)
+       (sound effects editing)       (sound)                 (special effects)
+       (technical advisor)           (title design)          (casting)
+       (stunts)                      (production manager)    (gaffer)
+
+Notes
+-----
+
+ - The attribute field records the occupation of the person concerned and 
+   *must* be present on each line you submit for this section.
+
+ - The occupation attributes should consist of only lowercase characters.
+
+ - All types of producers: executive, associate, co-producer and line are
+   stored in the producers section, *not* the miscellaneous section.
+
+ - Please submit credits for individuals only. No company names.
+
+ - If someone performed more than one role on a movie, include both as 
+   separate entries:
+
+     Stanton, Andrew|Toy Story (1995)|(character design)
+     Stanton, Andrew|Toy Story (1995)|(story artist)
+
+ - The attributes field should also be used for awards details. The award
+   should be listed after the occupation attribute as in:
+
+     Gibbons, Cedric|Random Harvest (1942)|(art director) (AAN)
+
+
+Examples
+--------
+
+ MISC
+ Bass, Saul|Vertigo (1958)|(title design)
+ Bumstead, Henry|Vertigo (1958)|(art direction)
+ Comer, Sam|Vertigo (1958)|(set decoration)
+ Fulton, John P.|Vertigo (1958)|(special effects)
+ Leverett, Winston|Vertigo (1958)|(sound)
+ Lewis, Harold|Vertigo (1958)|(sound)
+ Westmore, Wally|Vertigo (1958)|(make-up)
+
+                      -------------------
+
+GUEST APPEARANCE SECTION
+========================
+
+The guest appearance section records actors and actresses that have 
+appeared briefly in any TV series.
+
+Format:
+
+  name|title|character name|attributes|original air date|episode title
+
+  where: 
+
+    <name> is the actors name in surname, first name(s) order. 
+
+    <title> is the title TV-series in which the actor appeared. Note that
+       regular on-going appearances are not eligible, they should be recorded
+       under the ACTOR, or ACTRESS, sections; this section is for one-off,
+       or special occasional, guest appearences in a TV-series. 
+
+    <character name> is the character name of the actor. Do not include
+       descriptive text about the character, simply the
+       name of the character. If unknown, leave the section empty. 
+
+    <attributes> records any special notes but in most cases will be empty.
+       Example attributes include:
+
+         (voice)      = only a voice contribution (eg for cartoons)
+         (uncredited) = no on-screen credit given
+         (as ....)    = credited under a different name
+
+       Do not use the attributes section to describe the character played!
+
+    <episode title> The title of the episode. If unknown, leave empty, do not
+       use descriptive text as a substitute for the actual title. 
+
+    <original air date>  The date the episode was aired in the country that
+       produces the show. The format for air-dates is m/d/yyyy, eg. 
+
+           11/21/1997
+           5/1993
+           1991
+
+       Any non-conformant air-dates will be rejected.
+
+Notes: 
+
+  Apart from the name and title all these fields are optional, but please
+  leave the "|" separator for any blank fields, otherwise the some of the data
+  may be lost. 
+
+  The <name> and <title> must already be known to the system or the entry will
+  be rejected. 
+
+  If the actor is not listed in the credits please include an (uncredited)
+  attribute. 
+
+  If the show is a cartoon, please include a (voice) attribute. 
+
+  Please only credit individual names. For example, if all the members of a
+  particular rock group appeared in a show then include them under their
+  individual names and not the name of the whole group. 
+
+  If a person appears as themselves on a show, list their character name as
+  himself or herself, not Guest, Host, etc. 
+
+  This section is for people only. No animals. 
+
+
+Examples:
+---------
+
+GUEST
+Casey, Sue|"Gunsmoke" (1955)|Martha||Hunger, The|11/17/1962|
+De Jesus, Wanda|"Spider-Man" (1995)|Dr. Silvia Lopez|(voice)|Spot, The|1996|
+Duffy, Patrick|"Jeopardy!" (1964)|himself||Celebrity Tournament|4/29/97|
+
+TITLES SECTION
+==============
+
+Keyword
+-------
+
+ TITLE
+
+Format
+------
+
+ <title>|<year>|<attributes>
+
+where:
+
+ <title> is the original title in the original language
+
+         All titles are assumed to be movies unless otherwise indicated 
+         as follows:
+
+           "xxxxx" = a television series, e.g. "Twin Peaks" (1990)
+           "xxxxx" (mini) = a television mini-series, 
+                            e.g. "Lonesome Dove" (1989) (mini)
+           (TV)    = TV movie, or made for cable movie, e.g. Duel (1971) (TV)
+           (V)     = made for video movie, e.g. Steve Martin Live (1986) (V)
+
+         See the earlier section 'TITLE AND NAME FORMATS' for further details.
+
+ <year> is the year of the first public screening. Note that this often 
+        differs from the copyright date shown in the credits
+
+ <attributes> records any award nominations or wins. Example attributes 
+              include:
+
+|    (AA)     =  Academy Award for best movie
+|    (AAN)    = Academy Award Nomination for best movie
+|    (DS:AA)  =  Academy Award for best short documentary
+|    (DS:AAN) = Academy Award Nomination for best short documentary
+|    (D:AA)   =  Academy Award for best documentary
+|    (D:AAN)  =  Academy Award Nomination for best documentary
+|    (S:AA)   =  Academy Award for best short (not animated) movie
+|    (S:AAN)  =  Academy Award Nomination for best short (not animated) movie
+|    (SA:AA)  =  Academy Award for best short animated movie
+|    (SA:AAN) =  Academy Award Nomination for best short animated movie
+|    (AFI)    =  Australian Film Institute Award
+|    (AFIN)   =  Australian Film Institute Award Nomination
+|    (ACE)    =  Ace Award (Cable Award)
+|    (ACEN)   =  Ace Award (Cable Award) Nomination
+|    (BFA)    =  British Academy Award ( = British Film Award )
+|    (FL:BFA) =  British Academy Award for best foreign film
+|                  ( = British Film Award )
+|    (César)  =  French Academy Award for best French film
+|    (CésarN)  =  French Academy Award Nomination for best French film
+|    (S:César)  =  French Academy Award for best French short film
+|    (S:CésarN)  =  French Academy Award Nomination for best French short film
+|    (MPF:César)  =  French Academy Award for best first French film
+|    (MPF:CésarN)  =  French Academy Award Nomination for best first French film
+|    (FL:CésarN)  =  French Academy Award Nomination for best foreign film
+|    (FL:César)  =  French Academy Award for best foreign film
+|    (Emmy)   =  Emmy Award
+|    (EmmyN)  =  Emmy Award Nomination
+|    (C:GGN)  =  Golden Globe Nomination for best comedy/musical
+|    (C:GG)   =  Golden Globe for best comedy/musical
+|    (David)  =  Italian Academy Award for best film
+|    (D:GGN)  =  Golden Globe Nomination for best drama
+|    (D:GG)   =  Golden Globe for best drama
+|    (Felix)  =  European Academy Award (=European Film Award) for best film
+|    (FL:AAN) =  Academy Award Nomination for best foreign movie
+|    (FL:AA)  =  Academy Award for best foreign movie
+|    (FL:GGN) =  Golden Globe Nomination for best foreign language movie
+|    (FL:GG)  =  Golden Globe for best foreign language movie
+|    (Golden Horse)  =  Taiwanese Golden Horse Award
+|    (GBB)    =  Golden Bear Berlin
+|    (SBB)    =  Silver Bear Berlin
+|    (GG)     =  Golden Globe
+|    (GGN)    =  Golden Globe Nomination
+|    (GLV)    =  Golden Lion, Venice
+|    (GPC)    =  Golden Palm Cannes
+|    (S:GPC)  =  Golden Palm Cannes for best short movie
+|    (Guldbagge)  =  Swedish Academy Award
+|    (GuldbaggeN) =  Swedish Academy Award Nomination
+|    (HKFA)   =  Hong Kong Film Award
+|    (HKFAN)  =  Hong Kong Film Award Nomination
+|    (GLL)    =  Golden Lepard Locarno
+|    (SLL)    =  Golden Lepard Locarno
+|    (PLD)    =  Prix Louis Delluc
+|    (Genie)  =  Canadian Genie Award
+|    (GenieN) =  Canadian Genie Award Nomination
+|    (Gemini) =  Canadian Gemini Award (TV)
+|    (GeminiN) =  Canadian Gemini Award Nomination (TV)
+|    (NFR)    =  Film registered by US National Film Registry
+|    (David)  =  Italian Academy Award for best film
+|    (FL:David) =  Italian Academy Award for best foreign language movie
+
+
+Examples
+--------
+
+ TITLE
+ Aliens (1986)|1986|
+ Aliens Are Coming, The (1980) (TV)|1980|
+ Breakfast of Aliens (1993)|1993|
+ Cape Fear (1962)|1962|
+ Cape Fear (1991)|1991|
+
+Notes
+-----
+  - Please see the introductory section for a definition of the different
+    title formats for movies, TV-series, mini-series etc.
+
+                      -------------------
+
+|TITLELOCK
+|=========
+|
+|The spelling and format of titles in the database can be locked against
+|further corrections, ie they are correct, even though other sources may
+|differ, by using the TITLELOCK keyword.
+|
+|For each title to be locked add a line of the following form:
+|
+|current correct title| 
+|
+|For example:
+|
+|Navigator: A Mediaeval Odyssey, The (1988)| 
+|
+|IMDb uses the title as it appears onscreen in the credits as the definitive
+|format. Do not lock a title without viewing a copy of the movie and confirming
+|it yourself as other sources use different standards for the title.
+
+
+ALTERNATIVE TITLES SECTION
+==========================
+
+Keyword
+-------
+
+ AKA
+
+Format
+------
+
+ <primary title>|<aka-title>|<attribute>
+
+|where:
+|
+| <primary title> is the main title used by the database.  Normally this 
+|    would be the title given in the country of production.
+|
+| <aka-title> is the alternative title you want to add. Make sure your new
+|     alternative title is really new and not already in the database with a
+|     slightly different spelling or year.  Just as with original titles please
+|     add the year of first public screening of the movie using this title
+|     (which may be different from the year in the primary title) to the title
+|     and put all articles at the end of titles. If two movies have the same
+|     title in the same year add (I)/(II) etc. as necessary. Also, TV-movies
+|     have a (TV) added, made for video movies a (V), and TV-series are
+|     surrounded by "". The correct spelling of alternative titles is defined
+|     by actual prints, not posters, soundtracks, reference books etc. unless
+|     prints do not show this alternative title.
+|
+|  <attribute> is the field where you can add explanations to the alternative
+|     title.
+|
+|     Some current attributes are:
+|
+|        (16mm release title)   (reissue title)       (unconfirmed)
+|        (video title)          (literal translation) (LD title)
+|        (premiere title)       (alternative title)   (TV title)
+|        (copyright title)      (dubbed version)      (poster title)
+|        (review title)         (retranslation)       (advertising title)
+|        (censored version)     (changed title)       (edited version)
+|        (end title)            (working title)       (new title)
+|        (possible title)       (preview title)       (previous title)
+|        (rerun title)          (short version)       (silent version)
+|        (summer title)         (syndication title)   (video box title)
+|        (weekend title)        (variant transliteration)
+|
+|    As well as (<country> title), eg
+|
+|        (UK title) (USA title) etc
+
+Examples
+--------
+
+ AKA
+ Abbott and Costello Go to Mars (1953)|On to Mars (1953)
+ Abbott and Costello Go to Mars (1953)|Rocket and Roll (1953)
+ Shoot to Kill (1988)|Deadly Pursuit (1988)
+
+Notes
+-----
+ - Please don't send foreign titles of English movies, since basically
+   every country can have another version in their language which gives too
+   much volume and debugging problems for this list and is of little use.
+   Instead, see the sections on local AKA titles below
+
+                      -------------------
+
+GERMAN ALTERNATIVE TITLES SECTION
+=================================
+
+Keyword
+-------
+
+ GERMANAKA
+
+Format
+------
+
+ <primary title>|<german aka-title>
+
+Description
+-----------
+
+ This section is supported in the various locally installable interfaces to
+ the IMDb and enables native German speakers to search for titles by the 
+ names they know them under in their own language. At the present time it is
+ not part of the public WWW or e-mail interfaces.
+
+                      -------------------
+
+ITALIAN ALTERNATIVE TITLES SECTION
+==================================
+
+Keyword
+-------
+
+ ITALIANAKA
+
+Format
+------
+
+ <primary title>|<italian aka-title>
+
+Description
+-----------
+
+ This section is supported in the various locally installable interfaces to
+ the IMDb and enables native Italian speakers to search for titles by the 
+ names they know them under in their own language. At the present time it is
+ not part of the public WWW or e-mail interfaces.
+
+                      -------------------
+
+ALTERNATIVE NAMES SECTION
+=========================
+
+Keyword
+-------
+
+ NAKA
+
+Format
+------
+
+ <primary name>|<aka-name>
+
+Description
+-----------
+
+  People are sometimes billed under several different names during their 
+  careers. The NAKA keyword is used to submit this kind of information. 
+
+| <primary name> is an existing name recognised by IMDb
+|
+| <aka-name> is the alternative name you want to add. This is not the civil
+|    name of people as opposed to the stage name, unless the civil name was
+|    also used as a stage name for some time (civil names go to the biographies
+|    list). And it is not any other name such as a nickname if it was never
+|    used in credits. Usually this is a spelling variation of the stage name
+|    as used in credits or reference material or a maiden name. It's also not
+|    an incorrect spelling variation of a name. These have to be corrected,
+|    not mailed in as alternative names (see below). Please add (I/II/III...)
+|    as necessary to distinguish between different people with the same name.
+|    All names are in surname, first name(s) order (also Japanese,
+|    Chinese etc.). 
+
+Examples
+--------
+
+ NAKA
+ Whalley-Kilmer, Joanne|Whalley, Joanne|
+ Bradbury, Robert N.|Bradbury, Robert North|
+
+                      -------------------
+
+RUNNING TIMES SECTION
+=====================
+
+Keyword
+-------
+
+ TIMES
+
+Format
+------
+
+ <title>|<country>|<running-time>|<attributes>
+
+where:
+
+  <title> is the title for which you wish to add the running time.  This
+     must be a fully qualified IMDb title.
+
+  <country> is the country for which you wish to record the running time
+
+  <running-time> field is used to record the duration of the movie.
+     It includes the film and the credits, but excludes theatrical trailers
+     and, if from a TV broadcast, adverts.
+   
+     Please note:
+
+      1). Silent movies may be shown at slightly different speeds because at 
+          that time there was no exact standard of speed (running times for 
+          silent films were usually given in feet, but we won't go into such 
+          details here), so different people might get different times.
+
+      2). The European (PAL/SECAM) tv/video running times may be shorter by
+          about 4% due to the fact that film runs at 24 frames, but European 
+          video runs at 25 (North American (NTSC) video actually runs at 30, 
+          but the transfer takes the 24/30 difference into account).
+        
+          That said, please do not submit times taken from video versions of
+          films.  We only record running times for theatrical releases
+
+  <attributes> field allows you to specify any special characteristics
+     regarding the movie you are submitting.  Without an <attributes> field,
+     the entry will default to the theatrical release.  Please only include
+     other media versions if they differ from the theatrical release. 
+
+     Valid attributes are:
+
+       (LD)     - Laser Disc Version
+
+       (video premiere)      - Movie never released theatrically
+       (director's cut)      - Director's Cut
+       (special edition)     - Special Edition
+       (re-release)          - Rereleased, probably after a ban or cut
+
+Examples
+--------
+
+   TIMES
+   Speed (1994)|UK|111|
+   Dune (1984)|US|190|(special edition)
+
+                      -------------------
+
+CERTIFICATES SECTION
+====================
+
+Keyword
+-------
+
+ CERT
+
+Format
+------
+
+ <title>|<country>|<cert>|<attributes>
+
+Description
+-----------
+
+ The certificates list records the classification/ratings certificates of
+ movies in the database on a country by country basis. 
+
+ The <country> field is self explanatory.
+
+ The <cert> field is used to record the Certificate awarded the
+ movie. Different countries have different Certificates, please
+ ensure that the entry you give is valid for the country you have
+ specified.  The table below lists the valid entries. 
+
+         Australia:
+              G  - General
+              PG - Parental Guidance for under 15
+              M  - 15+ Recommended
+              MA - 15+ Restricted (Under 15 only with an adult)
+              R  - Passed only for persons 18 and over
+              X  - Sexually Explicit, 18s and over (Possibly only videos) 
+
+         Finland:
+               S - Suitable for all
+             K-8 - Passed only for persons 8 and over
+         K-8/K-5 - Passed only for persons 8 and over
+                   (of 5 and over with an adult)
+        K-10/K-7 - Passed only for persons 10 and over
+                   (or 7 and over with an adult)
+            K-10 - Passed only for persons 10 and over
+            K-12 - Passed only for persons 12 and over
+        K-12/K-9 - Passed only for persons 12 and over
+                   (or 9 and over with an adult)
+            K-13 - Passed only for persons 13 and over
+            K-14 - Passed only for persons 14 and over
+            K-16 - Passed only for persons 16 and over
+            K-18 - Passed only for persons 18 and over
+
+         France:
+             -12 - Passed only for persons 12 and over
+             -16 - Passed only for persons 16 and over
+              X  - For pornographic movies
+
+         Germany:
+              6  - Passed only for persons 6 and over
+              12 - Passed only for persons 12 and over
+              16 - Passed only for persons 16 and over
+              18 - Passed only for persons 18 and over
+              U  - Unrated
+
+         Netherlands:
+              AL - Universal. suitable for all
+              12 - Passed only for persons 12 and over
+              16 - Passed only for persons 16 and over
+
+         Norway:
+              7  - Passed only for persons 7 and over (4 with adult)
+              11 - Passed only for persons 11 and over (7 with adult)
+              15 - Passed only for persons 15 and over (12 with adult)
+              18 - Passed only for persons 18 and over
+
+         New Zealand:
+              G  - Universal. suitable for all
+              GY - More suitable for 13+
+              GA - More suitable for adults
+            RP13 - Entrance below 13 only with parent or guardian
+            RP16 - Entrance below 16 only with parent or guardian
+            RP18 - Entrance below 18 only with parent or guardian
+             R13 - Passed only for persons 13 and over
+             R16 - Passed only for persons 16 and over
+             R18 - Passed only for persons 18 and over
+
+         Portugal: 
+            M/6  - Passed only for persons 6 and over 
+            M/12 - Passed only for persons 12 and over 
+            M/16 - Passed only for persons 16 and over 
+            M/18 - Passed only for persons 18 and over 
+
+         Spain:
+               T - Suitable for all
+              13 - Passed only for persons 13 and over
+              18 - Passed only for persons 18 and over
+               X - Pornographic Movie
+
+         Sweden:
+             Btl - Universal. Suitable for all
+              7  - Entrance below 7 only with an adult.
+              11 - Passed only for persons 11 and over (7 with adult)
+              15 - Passed only for persons 15 and over
+              
+         UK: (BBFC)
+              E  - Exempt from classification
+              U  - Universal, suitable for all
+              PG - Parental Guidance, some scenes may be unsuitable for kids
+              12 - Passed only for persons 12 and over
+              15 - Passed only for persons 15 and over
+              18 - Passed only for persons 18 and over
+
+         US: (MPAA)
+              G  - For all audiences
+              PG - Parental Guidance Suggested (mainly for under 10's)
+           PG-13 - Parental Guidance Suggested for children under 13
+              R  - Under 17 not admitted without parent or guardian
+           NC-17 - Under 17 not admitted
+
+ As well as the country specific certificates, there is also a special
+ global certificate - Banned.  Use this to denote any movie that has
+ been banned from general release.
+
+ The <attributes> field allows you to specify any special
+ characteristics for the movie you are submitting.  Without an
+ <attributes> field, the entry will default to the theatrical
+ release.  Please only include other media versions if they differ
+ from the theatrical release. 
+
+ Valid attributes are:
+
+   (video premiere)     - Video Premiere - Movie had no prior theatrical release
+   (LD)                 - Laser Disc Version
+
+   (director's cut)     - Director's Cut
+   (special edition)    - Special Edition
+   (re-release)         - Rereleased, probably after a ban or cut
+
+   (Banned)             - Film is banned from theatrical performances
+
+Examples
+--------
+
+ CERT 
+ Dangerous Game (1990)|UK|18|
+ Little Buddha (1993)|UK|18|
+
+                      -------------------
+
+RELEASE DATES SECTION
+=====================
+
+Keyword
+-------
+
+ RELEASE
+
+Format
+------
+
+ <title>|<country>|<release-date>|<attributes>
+
+Description
+-----------
+
+ The release dates list records the when movies were released on a country
+ by country basis.
+
+ The <country> field is self explanatory.  Please do not submit abbreviations
+ for countries but rather the English version of the country name.
+
+ If you omit the <country> field it will default to the movie's country of 
+ origin.
+
+ The <release-date> field is used to record the date the movie was released in
+ the specified country.  The date should follow the form
+    
+     <day> <full month> <full year>
+
+     e.g.,
+
+       2 December 1968
+
+ The <attributes> field allows you to specify any special characteristics 
+ regarding the movie you are submitting. Without an <attributes> field, the 
+ entry will default to the theatrical release. Please only include other media
+ versions if they differ from the theatrical release. 
+
+ Valid attributes are:
+
+   (premiere) (<location>) - Location of movie premiere
+   (world premiere) (<location>) - Location of movie world premiere
+
+   (video premiere)        - Movie never released theatrically
+   (director's cut)        - Director's Cut
+   (special edition)       - Special Edition
+   (re-release)            - Rereleased, probably after a ban or cut
+
+Examples
+--------
+
+ RELEASE
+ Speed (1994)|USA|10 June 1994
+ Lion King, The (1994)|USA|18 November 1994|(Re-Release)
+ Lawrence of Arabia (1962)|UK|10 December 1962|(World premiere) (London)
+
+                      -------------------
+
+COUNTRY OF ORIGIN SECTION
+=========================
+
+Keyword
+-------
+
+ COUNTRY
+
+Format
+------
+
+ <title>|<country>|<order>
+
+Description
+-----------
+
+| The countries section records the country of origin of movies in the 
+| database; that is, the country that paid for the movie to be made.
+
+  If the title is a multi-country production, use the <order> field  to
+  specify  the  order  in  which  the  countries  should be listed. The
+  countries will then be displayed in ascending numerical  order.  E.g,
+  if  a  film was predominantly English but also co-produced in the USA
+  you would format it thus: 
+
+    Example (1994)|UK|1
+    Example (1994)|USA|2
+
+  This would then be displayed as:
+
+    Country of Production:
+      UK / USA
+
+  You only need to specify an <order> for multi-country productions.
+
+
+Examples
+--------
+
+ COUNTRY
+ Citizen Kane (1940)|USA
+ Room with a View, A (1986)|UK
+ Diabolique, Les (1954)|France
+
+                      -------------------
+
+LANGUAGE SECTION
+================
+
+Keyword
+-------
+
+ LANGUAGE
+
+Format
+------
+
+ <title>|<language>|<attributes>|<order>
+
+Description
+-----------
+
+ The <language> field specifies the recorded language  used  for  the
+ predominant  dialogue  of the movie. Please do not include languages
+ when only  one  or  two  lines  of  dialogue  were  spoken  in  that
+ language. 
+
+ The <attributes> field  can  be  used  to  record  such  details  as
+ subtitles. 
+
+ If a film contains multiple languages, use the <order> field to specify
+ their order of prominence, with 1 being the most prominent language.
+
+Examples
+--------
+
+ LANGUAGE
+ Citizen Kane (1940)|English|
+ Night on Earth (1991)|English|1
+ Night on Earth (1991)|French|2
+ Night on Earth (1991)|Finnish|3
+ Night on Earth (1991)|Italian|4
+
+ 
+
+                      -------------------
+
+COLOR INFORMATION SECTION
+=========================
+
+Keyword
+-------
+
+ COLOR
+
+Format
+------
+
+ <title>|<color>|<attribute>
+
+Description
+-----------
+
+ This section records whether movies in the database have been shot in color,
+ black and white, or have been colorized. Currently supported values for the
+ <color> field are:
+
+   Black and White
+   Colorized (Films that were originally Black and White)
+   Color
+
+ The <attribute> field covers recording formats such as Technicolor,
+ Eastmancolor etc . . . feel free to submit any information you can
+ about these formats
+
+Examples
+--------
+
+COLOR
+Gone with the Wind (1939)|Color
+Casablanca (1942)|Black and White
+
+                      -------------------
+
+SOUND MIX SECTION
+=================
+
+Keyword
+-------
+
+ MIX
+
+Format
+------
+
+ <title>|<sound>|<attribute>
+
+Description
+-----------
+
+ This section records the type of sound mix used for movies in the database. 
+ Some values currently supported for the <sound> field are:
+
+      * Silent               - Silent Movie.
+
+      * Mono                 - Single Channel sound.
+
+      * Fantasound           - Experimental Multi Channel, Used on Disney's 
+                               Fantasia.
+
+      * Sensurround          - Another experimental system that delivered 
+                               thunderous low-frequency rumbles.  Only used
+                               in three releases.
+
+      * 70mm 6-Track         - Multi channel stereo sound.
+
+      * Dolby Stereo         - Multi Channel surround sound.  Nearly all modern
+                               movie soundtracks use Dolby Stereo or a similar
+                               process.
+
+      * Dolby Stereo SR      - Dolby Stereo Spectral Recording.  Uses more
+                               advanced noise reduction and provides wider
+                               dynamic range than Dolby Stereo.
+
+      * Dolby Stereo Digital - The best quality Dolby can provide.  Combines
+                               Dolby Stereo Digital and Dolby Stereo SR.
+ 
+      * CDS                  - Cinema Digital Sound. One of the earliest 
+                               digital delivery systems.  Now defunct.
+
+      * DTS                  - Digital Theater Sound.  Information stored on 
+                               a CD-Rom and synced to the print.
+
+      * DTS-Stereo           - An analogue version of DTS.
+
+      * SDDS                 - Sony Dynamic Digital Sound.  Another digital
+                               sound system that stores discrete information
+                               for all available channels.
+
+Examples
+--------
+
+ MIX
+ Intolerance (1916)|Silent
+ Psycho (1960)|Mono
+ Jurassic Park (1993)|Dolby Stereo
+
+                      -------------------
+
+GENRES SECTION
+==============
+
+Keyword
+-------
+
+ GENRE
+
+Format
+------
+
+ <title>|<genre>
+
+Description
+-----------
+
+ This section records the genres and keywords appropriate for movies in the 
+ database. There are a fixed number of main genres:
+
+  Action          Adventure       Animation       Children's
+  Comedy          Crime           Documentary     Drama           
+  Film-Noir       Horror          Musical         Mystery
+  Romance         Sci-Fi          Thriller        War
+  Western
+
+ and an unlimited number of keywords which can be used to classify a movie 
+ anyway you think would be interesting to users of the database. 
+
+ Note that all the main genres begin with a Capital letter.  All the
+ keywords on the other hand are completely in lowercase.  Also - no genre
+ or keyword includes whitespace. Please replace spaces with hyphens as in
+ "serial-killer".
+
+ Keywords as of August 1996 include (counts in brackets):
+
+	1001-nights (2)	1200s (1)	1300s (1)	1500s (5)
+	1600s (12)	1700s (8)	1790s (2)	1800s (14)
+	1830s (1)	1840s (1)	1860s (3)	1870s (2)
+	1890s (5)	1900s (3)	1910s (5)	1920s (15)
+	1930s (18)	1940s (20)	1950s (26)	1960s (28)
+	1970s (9)	1980s (1)	3-dimensional (87)
+	3-stooges (190)
+
+	abolition (1)	abortion (9)	absurdism (3)	abuse (5)
+	academia (1)	acapella (1)	accident (6)	acting (6)
+	actors-life (3)	adaptation (2)	adaption (4)	addiction (10)
+	adoption (15)	adult-humor (18)		adult-themes (40)
+	adultery (103)	advertising (14)		aeroplanes (1)
+	affair-extramarital (1)		africa (33)	afro-american (161)
+	afterlife (7)	age-regression (1)		aged-grandfather (3)
+	ageing (1)	aids (47)	ailment (1)	aircraft-carriers (2)
+	airforce (4)	alamo (1)	alaska (8)	alcohol (37)
+	alien-invasion (4)		alienation (1)	aliens (78)
+	allegory (6)	alternative-history (7)		amateur-detective (7)
+	amateur-thief (1)		ambient (4)	ambulance (1)
+	ambush (1)	american (1)	american-civil-war (13)
+	american-dream (3)		american-indian (2)
+	american-revolution (2)		americana (16)	amish (3)
+	amnesia (98)	amputation (3)	amusement-park (1)
+	analysis (1)	anarchy (4)	android (23)	andy-hardy (8)
+	angel (9)	animal-attack (1)		animals (61)
+	anime (201)	anne-frank (6)	anorexia (1)	antebellum (1)
+	antebellum-south (1)		anthology (42)	anti-communist (5)
+	anti-semitism (18)		anti-war (20)	ants (1)
+	apaches (5)	apartheid (3)	apes (13)	apocalypse (6)
+	arabian (19)	archaeology (10)		architect (4)
+	arctic (9)	argentina (2)	aristocracy (11)
+	arm-wrestling (1)		armored-car (1)	army (22)
+	army-life (55)	arson (2)	art (45)	art-movement (1)
+	art-theft (3)	art-violence (1)		artificial (1)
+	artificial-intelligence (12)	artist (6)	asia (6)
+	asian-american (5)		assassination (38)
+	astrology (2)	atom (1)	atomic-testing (2)
+	atomic-weapons (14)		auction (2)	audience-participation (2)
+	australia (4)	authentic (5)	author (4)	autism (2)
+	autobiographical (27)		avalanche (1)	avant-garde (14)
+	aviation (111)
+
+	b-movie (14)	baboon (1)	baby (18)	babysitting (6)
+	bachelors (1)	backstage (14)	backwoods (1)	bacteriologic (2)
+	bad-taste (1)	baghdad (1)	ballet (9)	bandits (10)
+	bandleader (1)	bank (4)	bank-robbery (24)
+	barnstorming (1)		base-jumping (2)
+	baseball (62)	based-on-comic (183)		based-on-novel (12)
+	based-on-play (22)		based-on-song (11)
+	based-on-true-story (331)	based-on-tv-series (46)
+	based-on-tv-show (1)		based-on-video-game (7)
+	basketball (25)	battleship (1)	bawdy (3)	bayou (3)
+	beach (15)	beach-party (9)	bear (2)	beatles (16)
+	beatnik (1)	bedfellows (1)	bereavement (1)	bestiality (3)
+	betrayal (23)	biblical (18)	big-band (10)	big-business (2)
+	bigamy (1)	bigfoot (2)	bigotry (3)	biker (20)
+	bikini (2)	billiards (2)	bimbos (1)	biochemistry (1)
+	biographical (494)		biological-weapon (1)
+	biology (2)	birds (5)	bisexual (11)	bizarre (1)
+	black (43)	black-comedy (87)		black-magic (3)
+	black-power (1)	blacklisting (1)		blackmail (38)
+	blaxploitation (21)		blindness (19)	blonde (1)
+	bluegrass (1)	blues (3)	boarding-house (3)
+	boarding-school (11)		boat (9)	boat-building (1)
+	boat-race (1)	body-building (5)		body-swap (6)
+	bomb (4)	bomba (8)	bombers (5)	bombing (1)
+	bondage (10)	books (4)	bootleggers (3)	border (4)
+	border-jumpers (1)		borgias (1)	bosnia (1)
+	bounty-hunter (6)		bowery-boys (49)
+	bowling (4)	boxing (99)	boy-scouts (7)	boys'-school (1)
+	brain-damage (1)		brainwash (15)	brazil (3)
+	bribe (3)	bridge (6)	brief-encounter (1)
+	british (7)	british-colonial (5)		broadway (12)
+	brothers (12)	budapest (1)	buddhism (6)	buddy (5)
+	bugs-bunny (168)		building-labourers (3)
+	bull-fighting (10)		bulldog-drummond (4)
+	bureaucracy (3)	burglary (9)	burlesque (5)	bus (1)
+	bushranger (1)	business (9)	business-tycoon (1)
+	butler (1)
+
+	cabaret (4)	cajun (3)	california (3)	camelot (2)
+	camp (13)	camping (2)	campus (10)	canada (10)
+	canadian-mounties (1)		cancer (10)	cannibalism (22)
+	cantonese (10)	caper (14)	capital-punishment (2)
+	capitalism (1)	car (65)	card-playing (1)
+	cards (1)	career (4)	caribic (1)	carnival (9)
+	carry-on (31)	cartoon (160)	casanova (1)	casino (6)
+	castration (2)	cat (2)		catholic (5)	cats (1)
+	cattle (8)	cavalry (7)	caveman (16)	caves (2)
+	celibacy (1)	central-america (2)		chainsaw (9)
+	chambara (1)	charity (1)	charlie-chan (46)
+	chase (99)	cheerleading (4)		chemistry (2)
+	chess (13)	chickens (1)	child-abuse (23)
+	child-care (3)	childhood (5)	children (127)	children-as-adults (7)
+	chimpanzee (1)	china (23)	chinatown (3)	chinese (680)
+	chinese-gang (2)		chinese-opera (1)
+	cholera (1)	christian (4)	christmas (75)	chronicle (2)
+	churchill (1)	cia (1)		cigarettes (4)	cinderella (3)
+	cinema-verite (2)		cinematography (1)
+	cinerama (8)	circle-vision (3)		circus (52)
+	cisco-kid (7)	civil-war (43)	class-differences (1)
+	classic (19)	classical-music (2)		classism (2)
+	classroom (1)	cleptomania (1)	clergy (1)	climbing (8)
+	clinic (1)	cliques (4)	clothing-industry (1)
+	clowns (2)	co-ed (1)	coal (2)	cocaine (1)
+	cockroaches (8)	cold-war (13)	collectivization (1)
+	college (47)	collegiate (2)	colonialism (7)	colonization (3)
+	columbia (1)	coma (1)	comedy-teams (2)
+	comic (7)	comic-strip (2)	comics (1)	coming-of-age (11)
+	commentary (5)	commercials (2)	communism (29)	communist-infiltrators (3)
+	compilation (13)		computer-animation (12)
+	computer-virus (2)		computers (39)	con-artists (16)
+	con-trick (14)	concert (16)	conquest (1)	conspiracy (11)
+	construction (5)		contest (6)	continental (1)
+	convent (12)	conversation (3)		cookery (2)
+	coprophilia (1)	coronet (1)	corpse (3)	corruption (44)
+	corsica (1)	costume (8)	counter-revolution (2)
+	counterfeit (8)	country (7)	couples (7)	courtroom (185)
+	coven (1)	cover-up (6)	cowardice (4)	cowboy (8)
+	crime-club-series (1)		cripple (1)	cross-country (4)
+	cross-dresser (1)		crusades (1)	cryogenics (3)
+	cryptography (4)		cuba (8)	cult (82)
+	cults (1)	cultural (1)	cultural-revolution (7)
+	culture-clash (16)		culture-revolution (2)
+	custody (6)	cyberpunk (3)	cyberspace (5)	cyborgs (10)
+	cycling (6)
+
+	d&d (2)		dada (2)	dairy (1)	dam-builder (2)
+	dance (101)	dance-hall (1)	dance-marathon (1)
+	dating (1)	deafness (12)	death (18)	death-penalty (7)
+	debate (1)	debutante (1)	decadence (3)	deceit (3)
+	deception (4)	defection (2)	delinquent (24)	dell'arte (1)
+	demon (4)	demonstration-movie (2)		department-store (2)
+	depression (6)	desert (44)	desert-island (4)
+	desertion (2)	design (2)	desperado (1)	destiny (2)
+	detective (248)	devil (5)	devil-worship (1)
+	diabolic (2)	diamonds (2)	diary (5)	dickens (1)
+	dictator (3)	dinosaur (17)	diplomacy (2)	director (1)
+	dirt-bikes (1)	disability (2)	disaster (75)	disco (7)
+	discrimination (1)		discussion (4)	disease (5)
+	disney-animated-feature (37)	disney-park (11)
+	divorce (47)	dna (2)		doctor (27)	docu-drama (16)
+	dog (44)	dolphin (3)	domestic (19)	domestic-triangle (2)
+	doo-wop (1)	doping (1)	doppelganger (2)
+	down's-syndrome (1)		dr.-christian (6)
+	drag (12)	drag-racing (3)	dragon (1)	dragons (7)
+	drawing-room (4)		dream (1)	dreams (25)
+	drought (1)	drugs (137)	drugs-rehabilitation (3)
+	drunk (1)	drunk-driving (2)		dude-ranch (1)
+	dynamite-the-dog (4)		dysfunction (2)
+
+	e.s.p. (1)	ealing (2)	earthquake (14)	east-germany (1)
+	east-side-kids (17)		eccentrics (2)	ecological (1)
+	editor (1)	educational (21)		egypt (7)
+	egyptology (5)	elders (1)	election (2)	elephant (6)
+	ellery-queen (2)		elvis (11)	embezzler (1)
+	emigration (9)	endgame (1)	engineer (3)	england (2)
+	english (2)	english-country-village (1)	entomology (1)
+	environmental (42)		epic (52)	epidemic (9)
+	episodic (9)	eros (2)	erotica (273)	escape (59)
+	escaped-convict (4)		eskimo (6)	essay (3)
+	ethical (1)	ethnic (1)	ethnic-conflict (2)
+	european-union (1)		evangelist (1)	evil (1)
+	evolution (1)	ex-con (4)	ex-cop (1)	execution (11)
+	exercise (1)	exile (2)	existential (2)	exorcism (1)
+	expedition (7)	experimental (36)		exploitation (31)
+	exploration (1)	explorer (5)	expose (1)	expressionist (3)
+	exterminators (2)		extortion (1)	eye-shaking (1)
+
+	fable (1)	factory (11)	failing-business (2)
+	fairy-tale (31)	faith-healing (1)		falcon (16)
+	falconry (1)	falsely-accused (4)		family (251)
+	family-life (2)	family-saga (5)	fanaticism (1)	fantasy (485)
+	farce (111)	farm (28)	farm-workers (1)
+	fascism (14)	fashion (12)	fast-food (2)	father (1)
+	father-daughter (4)		father-daughter-relationship (4)
+	father-son (4)	father-son-relationship (11)	faustian (1)
+	fbi (19)	female (11)	female-prison (37)
+	feminism (7)	fencing (3)	fertility (3)	fetish (2)
+	feud (5)	fictional-biography (22)	fictional-documentary (7)
+	fight (7)	film-history (8)		film-in-film (51)
+	film-making (93)		film-restoration (2)
+	finance (2)	fire (1)	firefighting (13)
+	first-lady (1)	first-love (3)	first-person (2)
+	fish (1)	fishing (24)	fishing-industry (1)
+	fitness (2)	flamenco (6)	flashback (41)	flood (4)
+	food (14)	foot-racing (1)	football (34)	foreign-correspondent (1)
+	foreign-legion (10)		forest (4)	forgery (3)
+	fortune-hunters (1)		found-footage (3)
+	foundling (1)	frame-up (2)	framed-man (1)	france (19)
+	frankenstein (2)		fraud (7)	freaks (1)
+	freddy-krueger (9)		freedom (1)	freighter (1)
+	french-revolution (5)		friends (3)	friendship (12)
+	frontier (12)	fued (1)	fugitive (4)	funeral (1)
+	funny-accent (1)		fur-trapper (3)	future (9)
+	futuristic (120)
+
+	g-men (2)	gambling (29)	game (4)	game-show (13)
+	gangs (48)	gangster (152)	garden (5)	gastropods (1)
+	gay (284)	gay-90s (1)	gay-rights (4)	gender-clash (2)
+	gender-confusion (1)		gender-disguise (4)
+	gene-manipulation (1)		genealogy (1)	generation-x (7)
+	generational (3)		genetics (4)	genocide (6)
+	geography (1)	germ-warfare (1)		german (3)
+	german-reunification (13)	germany (21)	ghetto (14)
+	ghost (35)	giant (29)	giant-animal (6)
+	giant-insect (8)		giant-monster (4)
+	giant-squid (4)	gigolo (2)	gladiator (1)	global-warming (2)
+	goblin (1)	god (1)		gold (29)	gold-digger (3)
+	golem (1)	golf (6)	gore (9)	gorilla (1)
+	gospel (1)	gotcha (3)	gothic (9)	great-depression (2)
+	greed (5)	greek (2)	greek-tragedy (1)
+	grief (3)	griffith (1)	grotesque (3)	groupie (1)
+	grunge (1)	guam (1)	guerillas (9)	guide-dog (1)
+	gulf-war (2)	gumshoe (1)	gun (2)		gunfight (11)
+	gypsies (5)	gypsy (3)
+
+	hacienda (1)	hacker (23)	hair (1)	haiti (1)
+	hal-roach (1)	halloween (7)	handicap (8)	handicapper (1)
+	hard-boiled (1)	hardcore (9)	harem (3)	hatred (1)
+	haunted (1)	haunted-house (13)		haute-couture (1)
+	hawaii (4)	health (1)	hearing-impaired (1)
+	hearings (2)	heaven (2)	heimatfilm (9)	heir (1)
+	heiress (11)	heist (38)	helicopter (6)	hell (1)
+	henry-aldrich (11)		heritage (4)	hero (5)
+	heroin (4)	hidden-camera (3)		hidden-civilization (5)
+	hidden-treasure (4)		hide-out (2)	high-finance (1)
+	high-school (37)		high-society (3)
+	high-tech (1)	hijack (15)	hinduism (1)	hip-hop (13)
+	hippies (7)	hispanic (8)	historic-fiction (2)
+	historical (646)		hit-and-run (1)	hitchcockian (3)
+	hitman (20)	hoax (2)	hockey (8)	hold-up (2)
+	holiday (7)	hollywood (46)	holocaust (31)	homage (2)
+	homefront (7)	homelessness (8)		homespun (1)
+	homophobia (2)	homosexuality (21)		hong-kong (21)
+	honor (4)	hopalong-cassidy (63)		hopelessness (1)
+	horses (69)	hospital (47)	hostage (30)	hotel (21)
+	houseboat (1)	huguenots (1)	human-duplication (5)
+	human-rights (1)		humor (26)	hunchback (3)
+	hungary (1)	hunting (9)	hypnosis (1)	hypnotism (5)
+
+	i-am-joe's (6)	ice-hockey (3)	ice-skating (9)	idiot-savant (3)
+	illegal-immigrants (2)		illiteracy (1)	illness (1)
+	illusion (1)	imax (122)	immigration (23)
+	immortality (10)		impostor (10)	improvisation (1)
+	incest (30)	independent (2)	india (8)	indian-uprising (3)
+	indiana-jones (7)		indians (59)	infantry (2)
+	infertility (1)	infidelity (9)	inner-city (1)	innocence (1)
+	inquiry (2)	insanity (18)	insect (7)	inspirational (1)
+	instruction (2)	insurance (5)	insurance-extortion (1)
+	intellectual (1)		interactive (2)	internet (2)
+	interogation (2)		interview (12)	intolerance (2)
+	intrigue (27)	invasion (6)	invention (3)	inventor (6)
+	invisible (11)	ireland (8)	irish (5)	irish-rebellion (3)
+	ironic (15)	island (36)	island-romance (1)
+	isolation (3)	israeli (2)	issues (2)	it-was-all-a-dream (10)
+	italian (1)	italy (14)
+
+	jail (9)	james-bond (20)	japan (20)	japanese (8)
+	jazz (19)	jealousy (19)	jet (2)		jets (1)
+	jewel-theft (17)		jewel-thief (8)	jewels (3)
+	jewish-culture (15)		jingles (1)	job (5)
+	jockey (1)	journalism (49)	joyriding (1)	judge (3)
+	juggling (1)	jungle (53)	jungle-jim (17)	jury (1)
+	justice (3)	juvenile-delinquent (4)		juveniles (5)
+
+	kabuki (1)	kafka-esque (2)	kaidan (1)	karate (7)
+	kgb (2)		kick-boxing (4)	kidnapping (94)	king (1)
+	kingdom (2)	kitchen-sink-realism (3)	knights (4)
+	korea (1)	korean-war (11)	kung-fu (31)
+
+	labor (7)	labor-unions (12)		laboratory (5)
+	lake (2)	lambada (2)	land (1)	land-rush (3)
+	landlord (3)	large-family (2)		las-vegas (8)
+	lassie (1)	last-will (1)	latin-america (6)
+	lauchau-4 (1)	law (26)	leader (1)	legend (18)
+	lesbian (78)	lesbian-scene (41)		letter (1)
+	liberty (1)	libya (1)	life-after-death (1)
+	linesmen (1)	lion-taming (1)	literary (15)	literature (10)
+	live-recording (2)		loan-sharks (1)	logging (3)
+	lost-identity (2)		lost-race (3)	lottery (1)
+	louisiana (2)	love (130)	love-hate (5)	love-letter (1)
+	love-triangle (75)		lovecraft (1)	loyalists (1)
+	luck (2)	lumage-animation (1)		lumberjack (2)
+
+	macabre (1)	mad-scientist (14)		madame (1)
+	madness (4)	mafia (80)	magic (28)	maid (1)
+	making-of (5)	malaya (1)	male (1)	manhunt (3)
+	manic (2)	manicurist (1)	manners (2)	marathon (2)
+	marauders (2)	marine (1)	marine-corps-us (9)
+	marital-abuse (7)		marital-crisis (1)
+	marriage (80)	marriage-as-hell (2)		marriage-without-love (1)
+	mars (1)	martial-arts (150)		marvel (9)
+	marx-brothers (13)		marxism (4)	masked-villain (1)
+	mass-destruction (1)		maternity-ward (1)
+	matisse (1)	mau-mau (1)	maya (1)	maze (2)
+	mccarthyism (6)	media (4)	media-hype (4)	medical (128)
+	medicine-show (1)		medieval (26)	mediterranean (1)
+	melancholy (2)	melodrama (470)	menage-a-trois (1)
+	mental-illness (16)		mentally-handicapped (1)
+	mercenary (4)	messiah-complex (1)		mexican (32)
+	mexican-revolution (15)		mexico (6)	middle-age (4)
+	middle-east (1)	midlife-crisis (3)		military (40)
+	militiarism (2)	millionaire (8)	mime (1)	miniaturization (6)
+	mining (35)	minstrel (2)	miracle (2)	mirror (2)
+	miscegenation (14)		miser (1)	misogyny (1)
+	missing-person (12)		missionary (1)	mistaken-identity (37)
+	misunderstanding (1)		mobbing (1)	modeling (2)
+	modern-day (1)	modern-life (2)	monarchy (1)	money (3)
+	monk (1)	monkey (7)	monks (3)	monologue (6)
+	monster (76)	moon (3)	moon-landing (1)
+	moorland (1)	morality (25)	mormon (3)	morocco (2)
+	mother-daughter (12)		mother-love (6)	mother-son (7)
+	motherhood (2)	motorcycle (20)	mountain (16)	mounties (2)
+	mourning (1)	mouse (5)	movies (53)	mr-wong (5)
+	multimedia (1)	mummy (1)	muppets (15)	murder (512)
+	music (265)	musician (6)	mutant (2)	mutants (3)
+	mutation (1)	mutiny (8)	mystical-realism (1)
+	mysticism (8)	mythical-kingdom (2)		mythological (16)
+
+	nancy-drew (4)	napoleonic (8)	nasa (2)	nationalist (2)
+	native-american (8)		natives (6)	nature (38)
+	navy (38)	nazi (97)	neighbors (7)	neo-nazism (4)
+	neorealism (7)	nerd (2)	neurotic (1)	new-wave (8)
+	new-years-eve (3)		new-york (16)	newlyweds (1)
+	news (8)	news-photographer (3)		newspaper (55)
+	newsreel-cameraman (1)		night-life (1)	nightclub (12)
+	nightmares (3)	ninja (1)	nomad (1)	norfolk (1)
+	north-africa (4)		north-of-england (1)
+	nostalgia (8)	nouvelle-vogue (2)		nuclear (17)
+	nuclear-accident (2)		nuclear-power (1)
+	nuclear-war (21)		nuclear-weapons (1)
+	nun (7)		nurse (8)	nursery-school (1)
+
+	obsession (17)	occult (55)	occupation (1)	ocean (15)
+	odyssey (1)	off-beat (1)	office (3)	oil (12)
+	oklahoma (2)	old-age (14)	old-dark-house (6)
+	olympics (9)	one-reeler (139)		opera (48)
+	opera-singer (3)		operamicha (1)	operetta (11)
+	opinion (2)	opium (7)	organized-religion (1)
+	orgasm (1)	orient (10)	orientalist (1)	orphan (27)
+	oscars (2)	other-woman (1)	ouija (3)	our-gang (23)
+	out-takes (1)	outback (2)	outlaw (1)	outlaws (5)
+	outsider (11)
+
+	pacific (7)	pacifism (1)	page (1)	painting (13)
+	paleontology (2)		panic (1)	parable (1)
+	paradox (2)	paranoia (12)	paranoid-fantasy (1)
+	paranormal (4)	parenthood (9)	paris (7)	parody (71)
+	part-animated (44)		part-live-action (28)
+	part-stop-motion (1)		party (5)	patriarchy (1)
+	patriotism (22)	peanuts (4)	pearl-harbour (3)
+	peasant (4)	peking-opera (1)		pen-pals (1)
+	penguins (1)	pennsylvania (1)		peplos (2)
+	performance (1)	period (64)	perry-mason (32)
+	persecution (3)	philippines (5)	philo-vance (13)
+	philosophical (1)		philosophy (1)	phone (1)
+	phone-operator (1)		phone-sex (2)	photography (14)
+	physics (3)	pigs (2)	pilot (3)	pimp (5)
+	pink-film (2)	pioneers (8)	pirate (28)	plague (10)
+	plane-crash (14)		plant (1)	plantation (1)
+	plastic-surgery (4)		platonic-love (1)
+	play-writing (2)		playboy (2)	playwright (2)
+	poetry (9)	poirot (1)	poison (2)	poker (1)
+	police (509)	police-brutality (12)		policier (3)
+	polio (2)	political (269)	political-oppression (2)
+	political-repression (10)	poll (2)	poltergeist (1)
+	pope (2)	porn-makers (2)	pornography (1)	port-o-call (12)
+	portmanteau (3)	portrait (4)	possession (6)	post-apocalyptic (18)
+	post-cold-war (6)		post-communism (1)
+	post-traumatic-stress (2)	post-war (37)	post-wwi (3)
+	post-wwii (16)	poultry (1)	poverty (12)	power-abuse (1)
+	prairie (1)	pranks (2)	pre-cyberpunk (2)
+	pre-historic (2)		pre-raphaelite-brotherhood (1)
+	pregnancy (15)	prehistoric (6)	president (16)	press-agent (2)
+	priest (17)	prison (157)	prisoner-of-war (12)
+	private-detective (57)		prohibition (8)	projectors (1)
+	proles (1)	promotion (2)	propaganda (54)	prophecy (2)
+	prostitution (94)		protest (2)	provence (1)
+	provincial (1)	prussia (1)	pseudo-sociology (1)
+	psychedelia (1)	psychiatry (12)	psychic (13)	psycho-sexual (4)
+	psychoanalysis (30)		psychological (134)
+	psychology (7)	psychopath (43)	psychosomatic (1)
+	public-access (1)		publisher (1)	punk (6)
+	puppet (10)	purple-heart (1)		pyromania (1)
+	python (6)
+
+	quakers (2)	quiz (17)	quiz-show (5)
+
+	rabbit (2)	race-relations (1)		racetrack (4)
+	racial (30)	racing (48)	racism (42)	radiation (1)
+	radiation-poisoning (1)		radio (45)	rags-to-riches (3)
+	railway (117)	ramraiding (1)	ranch (5)	range-busters (12)
+	ransom (1)	rape (89)	rats (4)	rattlesnake-birth (1)
+	reading (6)	real-time (3)	reality (4)	realtors (4)
+	reanimation (3)	rebellion (11)	recovery (7)	redneck (1)
+	reenactment (2)	reform-school (2)		refugee (1)
+	regeneration (2)		rehabilitation (5)
+	reincarnation (21)		rejuvenation (1)
+	relationship (198)		religion (132)	religious-intolerance (1)
+	remake (2)	reporter (15)	rescue (11)	reservation (1)
+	resistance (15)	restaurant (4)	resurrection (1)
+	retarded (5)	reunion (1)	revenge (145)	revolt (13)
+	revolution (21)	revue (9)	ribald (1)	ride-film (3)
+	rin-tin-tin (13)		riot (7)	rites-of-passage (2)
+	rivalry (3)	riverboat (15)	road (154)	robbery (36)
+	robin-hood (1)	robot (15)	rock (55)	rock'n'roll (5)
+	rock-musical (1)		rocket (2)	rodeo (12)
+	role-playing (1)		role-reversal (36)
+	roller-derby (1)		roller-skating (2)
+	rollerblading (1)		roman (8)	rome (3)
+	roommates (24)	rough-riders (6)		rowing (1)
+	royalty (12)	rubber-plantation (1)		rugby (1)
+	rum-runners (1)	runaway (5)	runaway-heiress (2)
+	rural (90)	ruritania (1)	russia (9)	russian (1)
+	russian-revolution (4)		rustlers (1)	rustling (5)
+
+	s&m (3)		sabotage (10)	sadism (8)	saga (3)
+	sailing (18)	sailors (4)	saint (9)	salesman (1)
+	salesmen (3)	salvage (2)	samurai (13)	sand (1)
+	sanitarium (3)	santa (1)	satanism (9)	satellite (2)
+	satire (208)	scams (2)	scandal (4)	schizophrenia (6)
+	school (79)	schoolgirl-romance (5)		schooner (1)
+	science (14)	scientists (3)	scissors (4)	scotland (2)
+	screwball (116)	scuba-diving (10)		sculpture (2)
+	sea (94)	secret-service (7)		secretaries (1)
+	secretary (4)	secrets (4)	sect (5)	seduction (4)
+	self-justice (3)		self-reflection (3)
+	semi-auto-biography (6)		semi-documentary (10)
+	seminoles (1)	senility (1)	sentimental (5)	serial (237)
+	serial-killer (88)		settlers (4)	sex (207)
+	sex-change (16)	sex-killing (3)	sexism (1)	sexual (32)
+	sexual-harassment (4)		sexuality (7)	shakespeare (219)
+	sharecroppers (1)		shark (5)	sheep (5)
+	sheik (4)	sheriff (2)	sherlock-holmes (50)
+	shinto (1)	ship (14)	shipwreck (21)	short (2455)
+	show (1)	show-biz (17)	showdown (5)	showgirl (1)
+	shrimp (1)	sibling-rivalry (1)		sideshow (1)
+	siege (2)	sign-language (1)		silent (121)
+	silhouette (1)	silly-symphony (75)		sin (1)
+	singer (12)	singing-cowboy (9)		single-parent (7)
+	sisters (5)	sitcom (237)	skateboard (3)	skating (2)
+	sketch (7)	skiing (12)	skijumping (1)	skinheads (4)
+	skydiving (9)	slapstick (226)	slasher (2)	slave-ship (1)
+	slavery (9)	sleaze (7)	sled (2)	slovenia (1)
+	slum (13)	small-company (1)		small-town (18)
+	smuggling (26)	sniper (1)	snow (6)	soap (54)
+	soccer (11)	social (15)	social-climber (3)
+	social-critics (5)		social-issues (12)
+	social-work (3)	socialism (5)	socialite (1)	society (10)
+	society-murder (1)		sociology (4)	soft-ball (1)
+	song-writing (3)		songs (1)	soul-selling (1)
+	south (5)	south-africa (3)		south-america (5)
+	south-seas (14)	southern (41)	space (109)	space-opera (5)
+	space-shuttle (1)		spaghetti (1)	spaghetti-western (1)
+	spain (22)	spanish (3)	spanish-american (1)
+	spanish-civil-war (5)		special-agent (2)
+	special-venue (11)		spectacle (4)	spider (6)
+	splatter (33)	spoof (100)	sport (147)	spy (320)
+	stage (9)	stagecoach (2)	stalker (4)	stampede (1)
+	stand-up-comedy (10)		star-wars (9)	starvation (1)
+	stills (1)	stock-market-crash (2)		stone-age (1)
+	stop-motion (45)		story-in-story (4)
+	stranded (5)	street-life (6)	strike (2)	strikes (1)
+	stripper (11)	striptease (2)	student-film (8)
+	students (7)	studio (3)	study (1)	stunt (3)
+	stuttering (1)	subculture (6)	submarine (27)	substitution (1)
+	subterranean (3)		suburban (1)	subway (1)
+	suicide (71)	summer (1)	summer-camp (2)	sunken-continent (1)
+	superhero (9)	supernatural (109)		surfing (15)
+	surgery (5)	surreal (159)	surveillance (1)
+	surveying (1)	survival (14)	swashbuckler (19)
+	swimming (5)	swimwear (2)	swing (4)	switzerland (1)
+	sword-and-sorcery (9)		swordfight (18)	symbolic (1)
+
+	take-over (1)	talent (3)	talk (6)	talk-show (30)
+	talking-animal (6)		tango (55)	tank (1)
+	tap-dance (2)	tarzan (55)	taxi (4)	taxi-dancer (1)
+	tea-house (1)	teaching (22)	tear-gas (1)	tearjerker (27)
+	technology (3)	teen (173)	telegraph (1)	telekinesis (1)
+	telepathy (5)	telephone-sex (1)		tennis (2)
+	terminal-illness (23)		terrorism (50)	testimonial (1)
+	texas (4)	texas-rangers (1)		the-falcon (3)
+	theater (91)	therapy (1)	thief (12)	three-reeler (4)
+	tic-tac-toe (2)	tidal-wave (3)	time-lapse (3)	time-loop (3)
+	time-travel (88)		tokyo (1)	tom-and-jerry (1)
+	topless (1)	torchy-blane (9)		tornado (4)
+	torture (5)	tourists (4)	toxic-waste (2)	tradition (3)
+	tragedy (84)	tragicomedy (25)		trail-blazers (6)
+	train (21)	train-crash (5)	train-robbery (5)
+	transplantation (2)		transsexual (3)	transvestitism (41)
+	trapper (6)	travel (50)	travesty (3)	treason (4)
+	treasure (9)	trial (11)	tribute (1)	trick (2)
+	trojan-war (1)	truck (11)	true-crime (2)	true-life-adventure (14)
+	true-love (13)	tuberculosis (1)		turtle (7)
+	tv (47)		tv-magazine (1)	tv-reporting (9)
+	twins (26)	two-reeler (53)	typhoon (1)
+
+	ufo (21)	undercover (14)	underground (4)	underwater (18)
+	underworld (10)	unemployment (3)		union (9)
+	university (3)	unrequited-love (3)		unwed-mother (6)
+	upper-class (1)	uprising (1)	urban (7)	us-civil-war (18)
+	us-navy (27)	uso (1)		utopia (1)
+
+	vacation (6)	vagabond (1)	vampire (113)	vampire-bats (2)
+	variety (69)	vaudeville (8)	venereal-disease (5)
+	venezuela (1)	vengeance (1)	venice (1)	ventriloquism (1)
+	ventriloquist (1)		verite (1)	veteran (7)
+	victorian (3)	video-game (7)	vienna (2)	vietnam (56)
+	vigilante (5)	villagers (2)	vine-growing (1)
+	violence (98)	violet's-dreams (3)		virtual-reality (20)
+	virus (7)	volcano (10)	volleyball (1)	voodoo (12)
+	voyage (1)	voyeur (5)
+
+	wagon-train (2)	wall-street-crash (1)		war-crimes (9)
+	washington (3)	wasteland (2)	water (1)	water-skiing (1)
+	watergate (2)	weather (3)	weatherman (2)	wedding (14)
+	weepy (1)	werewolf (18)	west-indies (2)	west-virginia (1)
+	whale (4)	whistler (1)	white-collar-crime (2)
+	white-house (1)	white-water-rafting (4)		whorehouse (6)
+	widow (9)	widower (4)	widowhood (1)	wild-animals (1)
+	wild-girl (1)	wild-west (2)	wilderness (4)	wildlife (3)
+	winter (13)	witchcraft (26)	witness (4)	witness-protection (2)
+	witty-flirting (1)		women (70)	women's-rights (3)
+	working-conditions (3)		working-woman (3)
+	world-peace (1)	wrestling (11)	writing (35)	wrongly-convicted (4)
+	ww3 (2)		wwi (64)	wwii (379)
+
+	yakuza (13)	yankee (1)	yeti (1)	youth (35)
+	yugoslavia (1)	yukon (2)
+
+	zealot (1)	zeppelin (1)	zombie (62)	zorro (1)
+
+ A movie can obviously conform to several genres so please try to list them
+ in order of significance with the primary genre first.
+
+ Some examples of genres you shouldn't add:
+
+  Incorrect genres                   Correct genres
+  ----------------                   --------------
+  Science Fiction                    Sci-Fi
+  Serial Killer                      serial-killer
+  Short Documentary                  Documentary
+                                     + short
+  Historical Drama                   Drama
+                                     + historical
+  Action, Thriller                   Action
+                                     + Thriller
+  COMEDY                             Comedy
+
+  Also bear in mind that a movie is not necessarily a "Comedy" just
+  because there are a few quick remarks or funny jokes in it.  It happens
+  too often that movies are registered with incorrect genres.  It's not
+  a disaster, but it is annoying for the person renting "Schindler's List"
+  to watch a good "Horror" movie.
+
+Examples
+--------
+
+ GENRE
+ Point Break (1991)|Action
+ Point Break (1991)|heist
+ Point Break (1991)|surfing
+ Point Break (1991)|police
+ Point Break (1991)|skydiving
+ Speed (1994)|Action
+ Speed (1994)|Thriller
+ Speed (1994)|chase
+ Speed (1994)|police
+
+                      -------------------
+
+PRODUCTION COMPANIES SECTION
+============================
+
+Keyword
+-------
+
+ PRODCO
+
+Format
+------
+
+ <title>|<production company>|<attribute>|<order>
+
+Description
+-----------
+
+  This section records the production companies of movies in the database. 
+
+| <order> is used to identify the order in which the distribution companies
+|   are listed in the film's creits.
+
+Examples
+--------
+
+ PRODCO
+ Extreme Justice (1993)|Trimark Pictures||1
+ Extremities (1986)|Atlantic||1
+ Eye of the Needle (1981)|United Artists||1
+
+Notes
+-----
+
+|- Distributors should not be submitted using PRODCO, but rather using their
+|  own keyword, DISTRIB (see Distributors Section)
+
+                      -------------------
+
+DISTRIBUTION COMPANIES SECTION
+==============================
+
+Keyword
+-------
+
+ DISTRIB
+
+Format
+------
+
+ <title>|<production company>|<attribute>|<order>
+
+Description
+-----------
+|
+| This section records the distribution companies of movies in the database. 
+|
+| Use the <attribute> field to record information that varies from the norm,
+| to denote a specialist distributor for non-domestic distribution (A UK
+| distributor for a UK film doesn't need an attribute. A US distributor for a
+| UK film does need an attribute), e.g.
+|
+|    Grace of My Heart (1996)|Universal Pictures|(non-USA)
+|    Mystery of the Marie Celeste, The (1935)|Guaranteed|(USA)
+|
+| The attribute can also record other non-standard distribution information
+| such as (video), if the distributor is responsible only for video
+| distribution and not theater distribution.
+|
+Examples
+--------
+
+Cette sacrée gamine (1956)|Films Around the World|(USA, 1957)|2
+Cette sacrée gamine (1956)|Films de France|(UK, 1957)|3
+Cette sacrée gamine (1956)|Sofradis||1
+Cette sacrée gamine (1956)|Anthony-Borgese Communications|(video)|4
+101 Dalmatians (1996)|Buena Vista Pictures
+Bachelor's Wife, A (1919)|Pathé Exchange
+
+                      -------------------
+
+SPECIAL EFFECTS COMPANIES SECTION
+=================================
+
+Keyword
+-------
+
+ SFXCO
+
+Format
+------
+
+ <title>|<special effects company>|<attribute>|<order>
+
+Description
+-----------
+
+  This section records the companies providing the special effects for movies
+  in the database.
+
+| <order> is used to identify the order in which the SFX companies
+|   are listed in the film's creits.
+
+Examples
+--------
+
+  SFXCO
+  Jurassic Park (1993)|Industrial Light & Magic (ILM)
+  Chain Reaction (1996)|Digital Domain
+
+                      -------------------
+
+MISCELLANEOUS COMPANIES SECTION
+================================
+
+Keyword
+-------
+
+ COMPANY
+
+Format
+------
+
+ <title>|<miscellaneous company>|(<service>)
+
+Description
+-----------
+ 
+  This section records the various companies that provide the services 
+  required to make the particular <title>.
+
+Examples
+--------
+
+COMPANY
+That Thing You Do! (1996)|Pacific Title|(opticals)
+That Thing You Do! (1996)|Sound One|(adr recorded at)
+That Thing You Do! (1996)|Technicolor|(dailies)
+That Thing You Do! (1996)|Title House|(titles)
+That Thing You Do! (1996)|Todd A-O Studios West|(adr recorded at)
+
+                      -------------------
+
+LOCATIONS SECTION
+=================
+
+Keyword
+-------
+
+ LOCATION
+
+Format
+------
+
+ <title>|<location>|<attribute>|<order>
+
+Description
+-----------
+
+  This section records the actual locations where movies were actually filmed. 
+  Note this is not necessarily the location portrayed in the movie. Please give
+  as much info as you can regarding the state and or country. Please don't 
+  abbreviate US states. Abbreviate countries e.g. UK, USA, if that is widely 
+  accepted. Don't abbreviate e.g. France to FRA.
+
+  <order> field is used to note locations in order of prominence.  An
+    order of 1 denotes the highest prominence.
+
+Examples
+--------
+
+ LOCATION
+ Escape from Alcatraz (1979)|San Francisco, California, USA||1
+ Hercules in the Maze of the Minotaur (1994) (TV)|New Zealand||1
+ Restoration (1994)|Caerphilly Castle, Wales, UK||1
+ Jurassic Park (1993)|Hawaiian Islands, USA||1
+
+Notes
+-----
+
+ - Please use the names as given in the credits. Avoid translating names 
+   to modernised equivalents, e.g. if the film credits say 
+   Czechoslovakia, please don't change it to Czech Republic.
+
+ - This list is for filming locations i.e. where the filming took 
+   place and not necessarily the location portrayed in the movie - so 
+   DON'T add things like.. Total Recall (1990)|Mars 
+
+ - Studio names/locations don't belong in this list. See the business 
+   list for those.
+
+                      -------------------
+
+MOVIE LINKS SECTION
+===================
+
+Keyword
+-------
+
+ MOVIELINK
+
+Format
+------
+
+ <title>|<link type>|<title>
+
+Description
+-----------
+
+ The movie links list records (often trivial) connections between movies in 
+ the Internet Movie Database, the best example being sequel information. The 
+ currently supported links are:
+
+  Link           | Notes
+  ---------------|---------------------------------------------------------
+  followed by    | the movie has a sequel or in some way is followed by a
+                 | future movie
+  ---------------|---------------------------------------------------------
+  follows        | the movie is a sequel or in some way follows on from a
+                 | previous movie
+  ---------------|---------------------------------------------------------
+  remade as      | the movie was subsequently remade
+  ---------------|---------------------------------------------------------
+  remake of      | the movie is a remake of a previous movie
+  ---------------|---------------------------------------------------------
+  version of     | the movie is another version of a play/novel/etc, i.e. 
+                 | not originally written for the screen.
+  ---------------|---------------------------------------------------------
+  referenced in  | the movie is referenced or a homage paid to it in a 
+                 | subsequent movie
+  ---------------|---------------------------------------------------------
+  references     | the movie references or pays homage to a previous movie
+  ---------------|---------------------------------------------------------
+  spoofed in     | a joke reference to the movie is made in a subsequent
+                 | movie
+  ---------------|---------------------------------------------------------
+  spoofs         | the movie makes a joke reference to a previous movie
+  ---------------|---------------------------------------------------------
+  featured in    | extracts from the movie are featured in a subsequent
+                 | movie, for example, on TV or characters attend a cinema
+                 | screening during the movie
+  ---------------|---------------------------------------------------------
+  features       | extracts from a previous movie are featured
+  ---------------|---------------------------------------------------------
+| edited into    | actual footage from the movie have been edited into a
+|                | subsequent movie to form part of the newer movie
+| ---------------|---------------------------------------------------------
+| edited from    | part of the movie has been constructed by editing 
+|                | footage from a previous movie
+| ---------------|---------------------------------------------------------
+| spin off       | some characters/situations from one movie were used to
+|                | create a subsequent movie
+| ---------------|---------------------------------------------------------
+| spin off from  | some characters/situations from a previous movie were 
+|                | used during the movie
+| ---------------|---------------------------------------------------------
+
+
+ For example:
+
+ Alien (1979)
+   (followed by Aliens)
+ 
+ Alien 3
+   (follows Aliens)
+ 
+ Aliens
+   (followed by Alien 3)
+   (follows Alien (1979))
+
+ As you can see, each forward link (lefthand column) has an equivalent 
+ backward link (righthand column), the only exception is 'version of'. 
+ To simplify the additions process you only need to specify one of the 
+ directions and the processing software will generate the opposite 
+ link automatically. For example:
+
+  MOVIELINK
+  Alien (1979)|followed by|Aliens
+      
+ the processing software will generate the additional line:
+
+  Aliens|follows|Alien (1979)
+
+ automatically when the data is incorporated into the database.
+
+Examples
+--------
+
+ MOVIELINK
+ Alien (1979)|followed by|Aliens (1986)
+ Hot Shots! (1991)|spoofs|Top Gun (1986)
+ When Harry Met Sally... (1989)|features|Casablanca (1942)
+ Vertigo (1958)|referenced in|Kiss Before Dying, A (1991)
+ Sense and Sensibility (1995)|version of|Sense and Sensibility (1985) (TV)
+
+                      -------------------
+
+TECHNICAL SECTION
+=================
+
+Keywords
+--------
+
+     METRES     Length of a film in METER, add <blank> and a lower case
+                "m". If necessary add (Format, Country)
+
+     NEGATIVE   Film negative format in mm, one format entry per line,
+                then type <blank> and "mm". If the original master was made
+                on video use "Video" and add an attribute for the TV standard
+                (NTSC, PAL, ...)
+
+     PRINTS     Printed film format(s) in mm, one format entry per line,
+                then type <blank> and "mm" in small letters. For TV
+                productions which were edited and mastered on video, use
+                "Video" and add an attribute for the TV standard.
+
+     RATIO      Aspect Ratio with width information (_.__ : 1).
+                Please type correct: <blank> and ":" and <blank> and "1".
+
+     PROCESS    Cinematographic process or video system.
+                Note: Do not add color or cound processes here. Use the
+                color.list or the sound-mix.list instead.
+
+     CAMERA     Camera model and lenses. Syntax: Camera, Lens. If different
+                camera models are used, please use a seperate entry for
+                each model.
+
+     LAB        Laboratory. Syntax: Laboratory Name, Location, Country
+
+
+Format
+------
+
+ <keyword>
+ <title>|<data>|<attributes>
+
+Description
+-----------
+
+ This section records technical information about movies in the database. 
+
+Examples
+--------
+
+  CAMERA
+  Benny & Joon (1993)|Panavision Cameras and Lenses|
+  Living in Oblivion (1995)|Arriflex 16SR|(16 mm)
+  Living in Oblivion (1995)|Arriflex BL4S|(35 mm)
+
+  LAB
+  2001: A Space Odyssey (1968)|Technicolor, UK|
+  2001: A Space Odyssey (1968)|Technicolor, USA|
+
+  METRES
+  2001: A Space Odyssey (1968)|4064 m|(35 mm, Germany)
+
+  NEGATIVE
+  2001: A Space Odyssey (1968)|65 mm|(spherical)
+  True Lies (1994)|35 mm|
+
+  PROCESS
+  2001: A Space Odyssey (1968)|Super Panavision 70|
+  2001: A Space Odyssey (1968)|Todd-AO|
+  True Lies (1994)|Super 35|
+
+  PRINTS
+  2001: A Space Odyssey (1968)|16 mm|(anamorphic)
+  2001: A Space Odyssey (1968)|35 mm|(anamorphic, 4 Track Magnetic Stereo)
+  2001: A Space Odyssey (1968)|35 mm|(anamorphic, Mono Optical Sound)
+  2001: A Space Odyssey (1968)|70 mm|(spherical)
+  2001: A Space Odyssey (1968)|70 mm|(Super-Cinerama)
+  True Lies (1994)|35 mm|(anamorphic)
+  True Lies (1994)|70 mm|(blow-up)
+
+  RATIO
+  2001: A Space Odyssey (1968)|RAT:2.2 : 1|
+  2001: A Space Odyssey (1968)|RAT:2.35 : 1|(35 mm prints)
+  True Lies (1994)|2.35 : 1|
+
+                      -------------------
+
+PLOT SUMMARIES SECTION
+======================
+
+Keyword
+-------
+
+ PLOTS
+
+Rules
+-----
+
+ 1. Try to avoid any spoilers.   Some very small spoilers will be allowed, and
+    are often necessary, but any biggies will annoy other readers when they
+    find out the Butler didn't do it !
+ 
+ 2. Any analysis of the film should be left out of the plot summary.   e.g.
+    "This film is one of Hitchcocks finest".   It is up to the viewer
+    to decide if he/she likes it.   This includes performances by
+    actors and actresses.
+ 
+ 3. Where possible, try not to use any actor or actress names in the plot 
+    outline.   This is already taken care of in the movie database.   
+    If possible, use the character names from the movie.   
+ 
+ 4. All copyrighted material is excluded from the plot outlines database.
+    This includes Movie Guides, Newspapers, and even the blurb on the back
+    of the video case.  
+ 
+ 5. You must stick to the pre-arranged format given below.   The plot summaries
+    will be read in by a program, and will automatically be added to the 
+    list.   Any non-conformant outlines may be discarded.
+ 
+ 6. Try and keep it reasonably short.   Less than 10 lines for the description
+    if possible.
+ 
+ 7. Any queries about plots or the submitting of plots must have "PLOT QUERY"
+    in the subject line.
+ 
+ 8. Please try and spell check any summaries you submit.
+ 
+ 9.Try and keep you BY: line consistent if you write more than one summary.
+    You will never make it into the top 10 if you have 5 variations of your
+    name/mail address.
+ 
+Format
+------
+
+First an example:
+
+ MV: Vertigo
+ PL: San Francisco police detective (Scottie Fergusson) develops a fear of
+ PL: heights and is forced to retire when a colleague falls to his death during
+ PL: a chase. An old college friend (Gavin Elster) hires Scottie to watch his
+ PL: wife (Madeleine) who has become obsessed with the past. Scottie follows her
+ PL: around San Francisco and is drawn into a complex plot.
+ BY: Colin Needham <col@imdb.com>
+
+The format is:
+
+ MV: <title>
+ PL: <text>
+ BY: <Real Name> followed by mail name, or enter anonymous if you wish
+
+where:
+
+ "MV:" indicates the title of the movie, please follow the form as used on the
+       lists. If you are in doubt check the movie database for a definitive 
+       answer.
+
+ "PL:" upto 76 characters per line of description. The description may span
+       several PL lines.
+
+ "BY:" author of description.   Enter your name (or pseudonym) here.   
+       You may enter anonymous if you wish.
+
+ The PL and BY lines are treated as belonging to the last MV line
+ encountered by the software. 
+
+Examples
+--------
+
+ MV: Alien (1979)
+ PL: The crew of the deep space mining ship Nostromo are awoken from hypersleep
+ PL: to investigate a strange signal from a nearby planet.   While investigating
+ PL: the signal, they discover it was intended as a warning, and not an SOS.
+ PL: What follows are some grisly and inventive special effects based on the
+ PL: work of H.R.Giger
+ BY: Colin Tinto <cst@imdb.com>
+
+ MV: Indiana Jones and the Last Crusade
+ PL: Renowned archeologist and expert in the occult, Dr. Indiana Jones, returns
+ PL: for the 3rd and final Indy film.   Teaming up with his father, Indiana
+ PL: sets out to try and find the Holy Grail.   Once again, the Nazis are after
+ PL: the same prize, and try to foil Indianas plans.
+ BY: Colin Tinto <cst@imdb.com>
+
+                      -------------------
+
+BIOGRAPHIES SECTION
+===================
+
+Keywords
+--------
+
+  BIOGR
+
+Description
+-----------
+
+ This is a guide to submitting biographies to the movie database. The 
+ biographies database is used to record personal trivia such as real name,
+ date of birth, date of death, mini-biography about the person's life, agent's
+ address etc. It does *not* include the list of movies the person was involved
+ with - these are held separately in the filmography databases. 
+
+Rules
+-----
+
+  (1) All  copyrighted material is *excluded* from the BIOGRAPHY  database.
+      This includes Movie Guides, Newspapers, Biographies etc.
+
+  (2) You   must  stick  to  the  pre-arranged  format  given  below.   The 
+      biographies  will be read in by a program, and will automatically  be 
+      added to the list. Any non-conformant entries will be discarded.
+
+  (3) Try and keep biographies reasonably concise.
+
+  (4) The  list compiler has the right to choose which information to  use.  
+      Information  from  a number of sources may be combined to  provide  a 
+      single biography.
+
+  (5) Run your mini-bio through a spell checker.
+
+  (6) Any  libelious or slanderous entries will, unfortunately, have to  be 
+      discarded :)
+
+  (7) When  submitting  Trivia, if appropriate, try and include a  date  so
+      that some form of chronology can be formed.
+
+Format
+------
+
+ The format for submitting entries is described below, but first, here is one
+ we prepared earlier . . .
+
+  NM: Hamilton, Linda
+  
+  DB: 26 September 1956, Salisbury, Maryland, USA
+  
+  BG: Born in Salisbury, Maryland, USA, following high school Linda
+  BG: studied for two years at Washington College in Chestertown,
+  BG: Maryland, before moving on to acting studies in New York. 
+  BG: In New York she attended acting workshops given by Lee Strasberg.
+  BG: Her first parts where small parts in TV series, with her biggest
+  BG: break coming with her role in _Terminator, The_ (qv).
+  BG: Most known to public at large from her part in the TV series
+  BG: _"Beauty and the Beast"_ (qv) (before _Terminator 2_ (qv), at
+  BG: least). 
+  
+  BY: Steinar Bang <steinarb@falch.no>
+  
+  SP: 'Bruce Abbott' (qv) (19th December 1982 - 1989)
+  
+  TR: * Won the "Best Female Performance" and "Most Attractive Female"
+  TR:   awards for her appearance in _Terminator 2_ (qv) at the 1992 MTV
+  TR:   movie awards
+  TR: 
+  TR: * Mother of Dalton Abbott, born 4th October 1989.
+  TR: 
+  TR: * Recently, she's been living with director 'James Cameron' (qv), who is
+  TR:   the father of her second child.
+  TR: 
+  TR: * Linda is an LA Dodgers fan.
+  TR: 
+  TR: * Has an identical twin sister Leslie.
+  
+  AG: Linda Hamilton
+  AG: c/o ICM
+  AG: 8899 Beverly Blvd.
+  AG: Los Angeles, CA 90048, USA
+  AG: (agent: Mr. R. Shapiro)
+
+  
+ The fields available for submitting information are:
+ 
+     * NM: <Person's Industry Name>
+     * RN: <Person's Real Name>
+     * NK: <Person's Nick-Name>
+     * DB: <Date of Birth>, <Place of Birth>
+     * DD: <Date of Death>, <Cause of death>
+     * HT: <Height of Person>
+     * BG: <Mini-Biography>
+     * BY: <Real Name> followed by mail name, or enter anonymous if you wish
+     * BO: <Available Biographies>
+     * BT: <Title of Biographical Films about the person>
+     * PI: <Portrayed in>
+     * OW: <Other Works>
+     * TR: <General Trivia>
+     * QU: <Personal Quotes>
+     * WN: <Where Are They Now?>
+     * AG: <Agent's Address>
+     * SP: <Spouse Entry>
+     * TM: <Trade Mark>
+     * IT: <Interview>
+     * AT: <Article>
+     * CV: <Magazine Cover>
+     * SA: <Salary>
+       
+   Where:
+   
+   NM:    This is the personality's industry name, i.e. the name we all
+          know the person by. The name should be in Lastname, Firstname
+          format.
+          
+   RN:    This is the name given to the person at birth. Use Lastname,
+          Firstname format for this entry.
+          
+   NK:    The nick name commonly given to this person.
+          
+   DB:    Date of birth. Please use full date e.g. 10 September 1945.
+          This can be followed by the place of birth if known.
+          
+   DD:    Date of death, if known. Again, please state full date. The
+          cause of death, if known should follow the date.
+          
+   HT:    Height of person (preferably in feet and inches).
+          
+   BG:    A mini biography. Each line may contain up to 76 characters.
+          There can be any number of BG: lines.
+          
+   BY:    Author(s) of description. Enter your name (or pseudonym) here.
+          You may enter anonymous if you wish.
+          
+   BO:    Biographies of / books about this person. This line contains
+          the book title, author and possibly ISBN numbers.
+          The start of each new entry should be bulleted with a *.
+          
+   BT:    Biographical films about this person. This line contains the
+          title of any movies of a biographical nature regarding this
+          person.
+          The start of each new entry should be bulleted with a *.
+          
+|  PI:    Films in which the person was portrayed by an actor.
+|         The start of each new entry should be bulleted with a *.
+|         
+   OW:    Other works. This section describes works, other than movies
+          attributed to the person, e.g. Books, plays, albums etc. One
+          entry per line, please.
+          The start of each new entry should be bulleted with a *.
+          
+   TR:    Trivia. Split each trivia point over as many lines as required.
+          Each line must start with the TR: tag and each new piece of
+          trivia should be bulletted using *.
+          
+   WN:    Where Are They Now?. This section describes what occupation the
+          person has (after their movie career has ended). Split the
+          entry over as many lines as required. Each line must start with
+          the WN: tag and the first line should be bulletted using *
+          
+   QU:    Quotes made by that person. Each quote should be enclosed by
+          quotation marks and contain no more than 76 characters per
+          line. There may be more than one QU: line.
+          The start of each new entry should be bulleted with a *.
+          
+   AG:    Agent's address. A contact address for information on the
+          person.
+          The start of each new entry should be bulleted with a *.
+          
+   SP:    Spouses name, followed by start and end of marriage. The name
+          should be inside single quotes and in Firstname Lastname
+          format, followed by (qv) and then the dates of the marriage. If
+          either date is unknown, replace with a ? (see above example).
+          The start of each new entry should be bulleted with a *.
+          
+   TM:    Trade Marks. Descriptions of a person's recognisable trait.
+          Usually something oft repeated over a number of films. Each
+          line must start with the TM: tag.
+          The first line of each new entry should be bulletted using *
+          
+   IT:    Interviews. Details of a Journal/Magazine holding an interview
+          with the person. One line per entry, the format is,
+
+         IT: * "<pub>" (<cntry>), <yr>, Vol. <vol>, Iss. <iss>, pg. <pg>, <auth>
+
+         IT: * "Empire" (UK), 1995, Vol. 5, Iss. 10, pg. 25-33, Arnold Aufer
+   
+          Each entry should be bulletted using *
+          
+   AT:    Articles. Details of a Journal/Magazine holding an article
+          about the person. One line per entry, the format is,
+          
+         AT: * "<pub>" (<cntry>), <yr>, Vol. <vol>, Iss. <iss>, pg. <pg>, <auth>
+
+         AT: * "Sight & Sound" (UK), 1996, Vol. 5, Iss. 10, pg. 54, John Alist
+
+          Each new entry should be bulletted using *
+
+|  CV:    Magazines on whose cover the person has appeared.  Format:
+|
+|        CV: * "<pub>" (<cntry>), <yr>, Vol. <vol>, Iss. <iss>
+|
+|      eg
+|
+|        CV: * "Sight & Sound" (UK), 1996, Vol. 5, Iss. 10
+|
+|
+|  SA:    Salary payed to person for their part in the making of a film.
+|         Format is: <title> -> <salary>, eg
+|
+|            _Abyss, The (1989)_ (qv) -> $1,250,000
+|
+|
+    *NB*  The  NM: field  is required, all other fields are  optional.  The 
+          *smallest* detail will get added to the database.
+
+                      -------------------
+
+LITERATURE SECTION
+==================
+
+Keyword
+-------
+
+  LITERATURE
+
+Format
+------
+
+ MOVI: indicates the title of the movie, please follow the form as used on the
+       other lists. 
+ 
+ SCRP: Bibliographical information of the original scrrenplay/teleplay
+       (only if published) also original film text
+ 
+ NOVL: Bibliographical information of the orignal novel
+       -> original novel, theatre play, short story
+ 
+ ADPT: Bibliographical information of the adaption of the literaric source 
+       (only if published)
+       -> adaption of novel, play, short story
+ 
+ BOOK: Monographic book related to this film production
+ 
+ PROT: Protocol of production process of this film -> "on location"-literature
+ 
+ IVIW: Interviews of cast and crew of this film production
+       and related to this specific film production
+ 
+ CRIT: Critics of this specific film production in printed media
+       (in newspapers, magazines, non-monographic books)
+ 
+ ESSY: Essays related specially to this particular film production
+       (in newspapers, magazines, non-monographic books)
+ 
+ OTHR: Bibliographical information of other literature of this film production
+
+ You may have up to 76 characters per line of description. Every entry 
+ description may span several lines. Each line has to start with the 
+ format-string.
+
+Notes
+-----
+
+ It is absolutely necessary to use the 
+ international scientific bibliographic standards:
+
+ "AUTHOR_LAST_NAME, AUTHOR_FIRST_NAME. TITLE/SOURCE. LOCATION: PUBLISHER,
+ YEAR/DATE. PAGES."
+
+ You may add the International Standard Book Number (ISBN).
+
+ If necessary, add the categorical information
+ (NP)  -> Newspaper
+ (WNP) -> Weekly Newspaper
+ (MG)  -> Magazine
+ (BK)  -> Book
+ at the end of an data entry.
+
+ Be careful with the date-format.
+ Use either the mid-european TT.MM.JJJJ-format
+ or use the anglo-american   MM/DD/YYYY-format.
+
+Example
+-------
+
+ LITERATURE
+ MOVI: 2001: A Space Odyssey (1968)
+ 
+ NOVL: Clarke, Arthur C.. The Sentinel (1950). 
+ NOVL:  New York City, 1951.
+ 
+ ADPT: Clarke, Arthur C.. 2001: A Space Odyssey. 
+ ADPT:  New York: New American Library; London: Hutchinson, 1968.
+ 
+ BOOK: Agel, Jerome (Ed.). The Making of Kubrick`s 2001. 
+ BOOK:  New York City: New American Library, 1970.
+ 
+ OTHR: Trumbull, Douglas. Creating Special Effects for 2001. 
+ OTHR:  In: American Cinematographer. Vol. 49. No. 6. June 1968. (MG) 
+ 
+ IVIW: Bernstein, Jeremy. Beyond the Stars. In: The New Yorker. 04/24/1965. (MG)
+ 
+ CRIT: Sahl, Hans. In: Die Welt. (Hamburg) 27.04.1968. (NP)
+ 
+ CRIT: Spiegel, Der. (Hamburg) No. 21/1968. 20.05.1968. (MG)
+ 
+ ESSY: Hoch, David G.. Mythic Patterns in 2001: A Space Odyssey. 
+ ESSY:  In: Journal of Popular Culture. Vol. 4. No. 4. Spring 1971.
+ 
+                      -------------------
+
+TRIVIA SECTION
+==============
+
+Keyword
+-------
+
+  TRIVIA
+
+Acceptable Trivia
+-----------------
+
+ Please ensure that what you submit is trivia, and not a ``goof''.  Also, we
+ will only include trivia that has a direct bearing on the film it is
+ classified under.
+
+What kind of things go into the list?
+
+   - In-jokes 
+   - (Backwards) references to other movies 
+   - Behind the scenes information 
+   - Interesting connections 
+   - Cameos, Director's Cameos, Director's Trademarks, Actor's Trademarks,
+
+What kind of things DON'T go into the list?
+
+   - Your (or anybody else's) opinion on what's in Marsellus Wallace's
+     briefcase.
+   - Your (or anybody else's) version of Vincent Vega's family tree.
+   - Movie goofs, mistakes, boom-mikes, and/or anachronisms. 
+   - Gossip and most rumours 
+   - Gutter press scandal
+   - Shooting dates/locations (there is a list specifically for this)
+   - Authors whose work the film was based on (there is a list specifically
+     for this)
+   - Sequel/remake information (there is a list specifically for this)
+   - Opinions, reviews, flames, or plot summaries
+   - Forward references. Links between films should be stored under the later
+     film. See _Trading Places_ (qv) and _Coming to America_ (qv). 
+
+ You can also use the following tags:
+
+ CAMEOS:
+  A ``cameo'' is a small, unbilled role.  If their name appears in the credits,
+  it's NOT a cameo.  A cameo is NOT defined a famous person with a small role,
+  despite the fact that this may be interesting.  If they are billed, then
+  please don't send it in as a ``cameo'', but decide if it's signifcant enough
+  to be included in the trivia section.
+
+ SMITHEE
+  The DGA contracts that directors operate under require that a name be given
+  for the director of a film.  If the actual director of the film wishes to
+  disown the film, he or she typically uses the name ``Alan Smithee'' (An
+  anagram for ``The alias men'').
+
+ BOOTH
+  Writers who refuse to have their name appear in the credits typically use
+  the the standard pseudonym ``Judas Booth'' (derived from ``Judas'' and
+  ``John Wilkes Booth'').
+
+Format
+------
+
+  TRIVIA
+  # Movie Name, The
+  - 'Firstname Lastname' (qv) also appeared in _The Other Movie_ (qv), which is
+    why in this film he cracks the joke ``They're the wrong trousers!  And
+    they've gone wrong!''.
+  - CAMEO(Name Name): blah blah blah blah blah blah blah blah blah blah blah
+  - DIRTRADE(Name Name): blah blah blah blah blah blah blah blah blah blah
+  - DIRTRADE(Name Name): [cream]: The lead character eats whipped cream
+  - DIRCAMEO(Name Name): Getting onto a bus.
+  - SMITHEE(Name Name): Disowned the director's cut.
+  - BOOTH(Name Name): Disowned the studio cut.
+  - URL(<URL>|Description)
+  
+  # Second Movie, A (1900) (TV)
+  - blah blah blah
+  - blah blah blah blah blah
+
+ There is a separate list for technical and plot errors in movies.  Please use
+ the keyword "GOOF" when submitting goofs.
+ 
+                      -------------------
+
+GOOFS SECTION
+=============
+
+Keyword
+-------
+
+  GOOF
+ 
+Format
+------
+
+ # Movie Title
+ - TAG: blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+   blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+ - TAG: blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+   blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+ 
+where TAG is:
+
+CONT: Continuity errors.  Errors in technical detail, where the film
+      objectively contradicts itself.
+
+PLOT: Plot holes.  Errors in narrative structure as opposed to technical
+      detail.
+
+FACT: Concept in the film contradicts science or known facts.
+
+DATE: Anachronisms; objects/concepts which hadn't existed at the time the
+      film was set.
+
+FAKE: Mistakes which reveal how the film makers composed a scene of the film.
+
+BOOM: Boom mike visible in an interesting or unusual way.  A special case of
+      CREW below.
+
+CREW: Crew or equipment visible in shot.
+
+SYNC: Audio/visual tracks don't match exactly.
+
+GEOG: Errors in geography of *specific* places.
+
+FAIR: Justification of scenes which are commonly (and incorrectly) believed
+      to contain goofs.
+
+MISC: Anything else
+
+
+DO NOT INCLUDE: Goofs due to non-perfect special effects.  The list would
+become too big, full of "that looks cheap/fake" entries.
+
+DO NOT INCLUDE: Goofs regarding multiple time lines and/or time travel.
+
+DO NOT INCLUDE: Information from copyrighted sources.
+
+DO NOT INCLUDE: Goofs due to non-perfect special effects.  What looks bad
+                today was state-of-the art yesterday.
+
+DO NOT INCLUDE: Suicide rumours from The Wizard of Oz (1939)
+
+DO NOT INCLUDE: Ghost rumours from 3 Men and a Baby (1987)
+
+DO NOT INCLUDE: Luke Skywalker calling out "Carrie".
+
+
+Notes
+-----
+
+ * visible boom mikes aren't really goofs unless they are appear in some
+   unexpected way (eg reflection, hit actor on the head).
+
+ * please make the goof report as short and specific as possible.
+
+ * please use the appropriate tag!
+
+ * some movies are filmed in the same aspect ratio as a television screen
+   with 'safe areas' masked off which are not intended to be seen in the
+   cinema. When shown on video, the safe area is opened up which accounts
+   for boom mikes, wires and scaffolding seen in some movies. These 'safe
+   area' goofs will be listed, but noted as such.
+
+ * please remeber that this is the movie goofs list and not the movie
+   gripes list so don't submit opinions on what should have happend
+   in terms of plot development etc.
+
+Example
+-------
+
+ GOOF
+ # Aliens
+ - CREW: When Bishop is skewered by the mother alien, you can see the string
+   pulling the stinger through his body.
+ - CONT: The yellow caution light on the loaded when the mother alien pulls
+   it into the pit.
+ - CREW: Bishop's ('Lance Henriksen' (qv)'s) body as he stops Newt being
+   sucked out of the airlock.
+
+                      -------------------
+
+QUOTES SECTION
+==============
+
+Keyword
+-------
+
+ QUOTE
+
+Format
+------
+
+ # <title>
+ <quotes>
+
+Description
+-----------
+
+ * Include which movie the quotes are taken from.  The movie title must be
+   consistent with the movie database, including the year of release.  Avoid
+   AKA-titles.
+
+ * Write in a script-like way (see the list below) and include both the actors'
+   real names and the character names.  Both are needed to create hypertext
+   links in the WWW interface.  Preferred format is:
+ 
+           {Surname, First Name@Character Name}:  The quote.
+ 
+ * Keep narration brief, but do narrate if necessary.
+
+ * Don't submit any quote.  Please try to avoid spoilers, and only submit
+   quotes which have a certain point to them.  It doesn't need to be a funny
+   quote (but they most often will be), but it should be memorable (like Roy's
+   last words in `Blade Runner').
+
+ * Keep the QUALITY UP and the QUANTITY DOWN.
+
+ * The quotes should be correct.  Correct spelling and written _exactly_ as
+   it's said in the movie.  When this is not the case, I'm not necessarily the
+   one to blame, but I am the one you should notify.
+
+Example
+-------
+
+ QUOTE
+ # Blues Brothers, The (1980)
+ {Aykroyd, Dan@Elwood Blues}:  It's 106 miles to Chicago, we've got a full tank
+ of gas, half a pack of cigarettes, it's dark and we're wearing sunglasses.
+ {Belushi, John@Jake Blues}:  Hit it!
+
+ 
+                      -------------------
+
+CRAZY CREDITS SECTION
+=====================
+
+Keyword
+-------
+
+ CRAZY
+
+Format
+------
+
+ # <Movie Title>
+ - <Text>   Each entry should start with a hyphen, followed by  a
+   space  and  then  the  text  (no  more  than 65 characters per
+   line). If subsequent lines refer to the  same  entry  then  no
+   hyphen  is  required.  See  the  list below for more examples.
+   Please try and keep movie titles consistent with  those  found
+   in the database itself.
+
+Description
+-----------
+
+ The crazy credits section contains a list of unusual things shown during a
+ movie's credits. Sometimes these are extra scenes, more usually they are 
+ funny messages hidden in the credits themselves. 
+
+Example
+-------
+
+ # Buffy the Vampire Slayer (1992)
+ - TV interviews with people who were at the dance attacked by vampires.
+ - Amilyn (Paul Reubens) revives to go through some more death throes.
+ 
+                      -------------------
+
+SOUNDTRACKS SECTION
+===================
+
+Keyword
+-------
+
+ SOUND
+
+Format
+------
+
+ # <movie title as listed in the movie database>
+ - Music: <Composer, usually listed in the beginning of the movie>
+ - "<title of song>"
+   Written by <person(s)/group>
+   Performed by <person(s)/group>
+ - "<title of next song>"
+
+Notes
+-----
+
+ * Include which movie the soundtrack information is taken from.  I would
+   appreciate it if the movie title is consistent with the movie database,
+   including the optional year of release.  Please avoid AKA-titles.
+
+ * Please follow the format shown below.
+
+ * The information should be correct.  Correct spelling, etc., exactly as
+   it's shown in the movie.
+
+ * Only include the information on soundtracks from the movie itself, not
+   soundtrack LP's/CD's/etc...
+   + The reason to include only the soundtrack information listed in the
+     movie and not soundtrack information as it appears on soundtrack
+     LP/CD releases is as follows:
+     1) Many times a movie soundtrack is not released on LP/CD. 
+     2) The music released on an LP/CD many times does not match the music
+        in the movie. 
+     3) Sometimes, many different soundtrack LP's/CD's are released, each
+        one with different music on them. 
+   + These are several of the reasons for only listing the music as it is
+     listed in the movie credits.
+
+Example
+-------
+
+ SOUND
+ # Back to the Future Part III (1990)
+ - "DOUBLEBACK"
+   Written and Performed by ZZ Top
+   Courtesy of Warner Bros. Records
+   Available on Warner Bros. Records
+ - "POWER OF LOVE"
+   Written by Huey Lewis, Johnny Colla, Chris Hayes
+   Performed by Huey Lewis And The News
+   Courtesy of Chrysalis Records, Inc.
+ 
+                      -------------------
+
+TAG LINES SECTION
+=================
+
+Keyword
+-------
+
+ TAG
+
+Format
+------
+
+ # movie title
+ [tab] blah blah blah blah
+ blah blah blah blah
+
+Description
+-----------
+
+ This section records the advertising taglines for movies in the database.
+
+Example
+-------
+
+ TAG
+ # True Lies (1994)
+	When he said I do, he didn't say what he did
+
+                      -------------------
+
+EXTERNAL URLs SECTION
+=====================
+
+This section allows links to external movie resources to be added to the 
+WWW interface to the database.
+
+Keywords
+--------
+
+ URLTITLE  =  URL to title resource
+ URLNAME   =  URL to name resource
+
+Format
+------
+
+ <name>|<type>|<URL>|<description(size)>
+ <title>|<type>|<URL>|<description(size)>
+
+where <type> is one of:
+
+ IMG = image
+ SND = sound
+ MOV = movie
+ REV = review(TEXT) #=rec.arts.movies.reviews number
+       n.b. reviews are added to the list automatically using the published 
+       index 
+ OFF = official movie information i.e. from the studio.
+ COM = printed COMments e.g. reviews in online newspapers.
+ FAQ = Frequently Asked Questions list.
+ MSC = miscellaneous e.g. a URL for a dedicated server for "Star Wars"
+ POS = movie poster
+
+Notes
+-----
+
+ - Please try out the links before you send them to me.
+
+ - The description should contain the format and size of the file if it is an
+   image, sound or movie. e.g. (15k jpeg)
+
+ - No URLs to nude photos please !
+
+ - Keep the descriptions brief. 4 or 5 words are usually enough. 
+
+ - Only submit URLs if they will last more than 6 months.. no short 
+   term URLs please. 
+
+
+Examples
+--------
+
+ URLTITLE
+ Blues Brothers, The (1980)|SND|ftp://athena.sdsu.edu/.1/movies/blues_brothers/106_miles.au|106miles(133k)
+ Eastwood, Clint|IMG|ftp://ee.lbl.gov/poskbitmaps/c/clint.gif|face(83k)
+ Ferris Bueller's Day Off (1986)|SND|ftp://athena.sdsu.edu/.1/movies/ferris_bueler/bueller.au|bueller(74k)
+ 
+ URLNAME
+ Jackson, Michael|MOV|ftp://daneel.rdt.monash.edu.au/pub/images/mpeg/mjackson.mpg|Black or White video(724k mpeg)
+
+                      -------------------
+
+LASERDISC SECTION
+=================
+
+Keywords
+--------
+
+  LASERDISC
+
+Format
+------
+
+ The format for submitting entries is described below, but first, here is
+ one we prepared earlier:
+
+-----------------------------------------------------------------------------
+LN: 1124
+LB: CBS FOX
+CN: 0693-84
+
+LT: Star Wars Trilogy - The Definitive Collection
+OT: Star Wars (1977)
+OT: Empire Strikes Back, The (1980)
+OT: Return of the Jedi (1983)
+
+PC: USA
+YR: VAR
+CF: PG
+CA: Movie
+GR: Sci-Fi
+LA: English
+SU: -
+LE: 376
+
+RD: 15 September 1993
+ST: Available
+PR: $ 249.98
+
+VS: NTSC
+CO: Color
+SE: Digital/Analog
+DS: Dolby Surround
+AL: Commentary
+AR: Commentary
+MF: Film
+PP: Mitsubishi
+SZ: 12
+SI: 18
+DF: CAV
+PF: Letterbox
+AS: 2.35:1
+CC: CC
+CS: 287
+TX: THX
+IN: Collector's Edition.  This disc has the rolling bar problem.  See text
+IN: _StarWarsFlaws_.
+IN: 
+IN: Supplements: Book "George Lucas: The Creative Impulse"; audio
+IN: commentary; interviews; trailers; production photos.
+-----------------------------------------------------------------------------
+
+   The fields available for submitting information are:
+
+     LN: <LaserDisc Number>
+     LB: <Label>
+     CN: <Catalogue Number>
+     LT: <LaserDisc Title>
+     OT: <Original Title>
+     PC: <Production Country>
+     YR: <Year>
+     CF: <Certification>
+     CA: <Category>
+     GR: <Group (Genre)>
+     LA: <Language>
+     SU: <Subtitles>
+     LE: <Length>
+     RD: <Release Date>
+     ST: <Status of Availablility>
+     PR: <Official Retail Price>
+     VS: <Video Standard>
+     CO: <Color Information>
+     SE: <Sound Encoding>
+     DS: <Digital Sound>
+     AL: <Analog Left>
+     AR: <Analog Right>
+     MF: <Master Format>
+     PP: <Pressing Plant>
+     SZ: <Disc Size>
+     SI: <Number of Sides>
+     DF: <Disc Format>
+     PF: <Picture Format>
+     AS: <Aspect Ratio>
+     CC: <Close Captions/Teletext/LD+G>
+     CS: <Number of Chapter Stops>
+     TX: <THX>
+     IN: <Additional Information>
+
+     Please try to submit as many technical details as possible. If you
+     do not find the information, you can simply leave out the corresponding
+     field. Please do not leave out field for information which is not
+     applicable, just use "-" as value. For example a disc without digital
+     sound would get this entry:
+     DS: -
+     or a LaserDisc which is not under the THX program will get:
+     TX: -
+
+     This is important, because we want to know if it is a fact, that some
+     information is not applicable or if some information is simply
+     unknown.
+
+   Description of the fields:
+
+    "LN:" This is a unique LaserDisc number which identifies a LaserDisc.
+          A LaserDisc number will be allocated by me, when you submit a
+          new entry. Please use this field for updates only and do not fill
+          in anything, if you are not exactly sure which number to use.
+          Since this field marks the start of a new LaserDisc, you must
+          not omit it. Just use use "LN: " without number for new titles.
+
+    "LB:" This is the Label which released the LaserDisc. Please use the
+          labels as they appear in the list below. If you find a new label
+          which is not in the list, please let me know.
+
+          LaserDisc Labels
+          ----------------
+          LVF is the abbreviation used in the Laser Video File catalogue.
+          Database Name is the name which is used in the database. You have
+          to supply this name.
+
+          LVF   Database Name         Real Name
+          -----------------------------------------------------------------
+          A&M   A&M Records           A&M Records
+          A*V   A*Vision              A*Vision Entertainment
+          ACD   Academy               Academy Home Entertainment
+          ATA   Atlanta               Atlanta Artists Records
+          ATL   Atlantic              Atlantic Records
+          BMG   BMG Video             BMG Classics (Bertelsmann Music Group)
+          BVH   Buena Vista           Buena Vista Home Video
+          CAN   Cannon Home Video     Cannon Home Video
+          CAR   Carolco               Carolco Home Video
+          CFX   CBS FOX               CBS/FOX Video
+          CMV   Columbia Music        Columbia Music Video
+          CRI   Criterion             Criterion
+          CTC   Criterion Television  Criterion Television Classics
+          CTV   Columbia/Tristar      Columbia Tri-Star Video
+          DAV   Def American Music    Def American Music
+          DGG   Deutsche Grammophon   Deutsche Grammophon
+          DIS   Disney                Walt Disney Home Video
+          EIC   Elektra Classics      Elektra International Classics
+          ELE   Elite                 Elite Entertainment
+          ELK   Elektra               Elektra Records
+          EMI   EMI Classics          EMI Classics
+          EMV   Epic Music            Epic Music Video
+          FOX   FOX Video             FOX Video
+          FME   Full Moon             Full Moon Entertainment
+          HBO   HBO Video             HBO Video
+          HDL   Hemdale               Hemdale Home Video
+          HMV   Home Vision           Home Vision
+          HWP   Hollywood Pictures    Hollywood Pictures
+          IMG   Image                 Image Entertainment
+          IVN   International Video   International Video Network
+          J2C   J2 Communications     J2 Communications
+          JHV   Jim Henson Video      Jim Henson Video
+          KSC   Killiam Silent        Killiam Silent Classics
+          LAH   L.A. Hero             L.A. Hero
+          LDE   LaserDisc             LaserDisc Entertainment
+          LFC   LVA Film Classics     LVA Film Classics
+          LIG   Lightning Video       Lightning Video
+          LON   London Records        London Records
+          LST   Laserstar             Laserstar
+          LUM   Lumivision            Lumivision
+          LVE   Live Home Video       Live Home Video
+          MAS   Mastervision          Mastervision
+          MCA   MCA Home Video        MCA/Universial Home Video
+          MER   Mercury Records       Mercuray Records
+          MIR   Miramax               Miramax Home Entertainment
+          MGM   MGM Home Video        MGM/UA Home Video
+          MHV   Motown Home Video     Motown Home Video
+          MPI   MPI Home Video        MPI Home Video
+          NAP   NA Philips            North American Philips
+          NKD   Nikkodo USA           Nikkodo USA, Inc.
+          NLV   New Line              New Line Home Video
+          ODC   Optical Data          Optical Data Corporation
+          PAR   Paramount             Paramount Home Video
+          PCL   Pioneer Classics      Pioneer Classics
+          PHI   Philips               Philips
+          PIM   Pioneer Imports       Pioneer Imports
+          PIO   Pioneer Artists       Pioneer Artists
+          PLE   Pioneer Laser         Pioneer Laser Entertainment
+          PLK   Pioneer Karaoke       Pioneer LDCA Karaoke
+          PMI   Public Media          Public Media Video
+          PMV   Polygram              Polygram Video
+          POL   Polydor               Polydor Records
+          PPI   PPI Entertainment     PPI Entertainment Group/Parade Video
+          PSE   Pioneer               Pioneer Special Editions
+          PSG   Pioneer Signature     Pioneer Signature
+          PSI   Pioneer Interest      Pioneer Special Interest
+          RCA   RCA/Columbia          RCA/Columbia Pictures Home Video
+          REF   Reference Recordings  Reference Recordings
+          REP   Republic              Republic Pictures Home Video
+          SHA   Shadow                Shadow Entertainment
+          SGO   Samuel Goldwyn        Samuel Goldwyn
+          SON   Sony Video            Sony Video Software/Classical
+          SVS   SVS Triumph           SVS Triumph
+          SZA   Saul Zaentz Company   Saul Zaentz Company
+          TCH   Touchstone            Touchstone Home Video
+          TOR   Torchlight            Torchlight Entertainment
+          UNE   United                United Entertainment
+          VER   Vertigo               Vertigo Records
+          VES   Vestron               Vestron Video
+          VDK   Vidmark               Vidmark Entertainment
+          VGO   Video A Go Go         Video A Go Go
+          VOY   Voyager               Voyager
+          VPI   Videodisc             Videodisc Publishing
+          WAR   Warner Home Video     Warner Home Video
+          WBR   Warner Brothers       Warner Brothers Records
+          WNG   Wing Records          Wing Records
+          WRV   Warner Reprise        Warner Reprise Video
+          WVS   World Video           World Video & Supply
+          
+          Labels not in the Laser Video File catalogue:
+          
+                3M                    3M (NTSC USA)
+                20th Century Fox      20th Century Fox (PAL UK)
+                20th Century Home     20th Century Fox Home Entertainment
+                Astronomical Society  Astronomical Society (NTSC USA)
+                Bandai                Bandai (NTSC J, Old Disney Titles)
+                Canal+ Video          Canal+ Video (PAL France)
+                Carson                Carson Production Group (NTSC USA)
+                CIC                   CIC Video (PAL)
+                Constantin            Constantin Video (PAL Germany)
+                DiscoVision           DiscoVision (NTSC USA)
+                Embassy               Embassy (PAL UK)
+                EMI Music             EMI Music (PAL UK)
+                Encore                Encore Entertainment (PAL UK)
+                Guild                 Guild Home Video (PAL UK)
+                Gaumont/Columbia      Gaumont Columbia Tri-Star (PAL France)
+                Home Video            Home Video (PAL UK)
+                KLV-TV                KLV-TV (NTSC USA)
+                LD Entertainment      LaserDisc Entertainment (NTSC USA)
+                Lorimar Home Video    Lorimar Home Video (NTSC USA)
+                Made in Hong Kong     Made in Hong Kong (PAL UK)
+                Magnetic Video        Magnetic Video (NTSC USA)
+                MGM/UA                MGM/UA Video (PAL UK)
+                Milan                 Milan (PAL France)
+                MPO-France            MPO-France (PAL France)
+                Nelson                Nelson Entertainment (NTSC USA)
+                PBS Home Video        PBS Home Video (NTSC USA)
+                Sonodisc              Sonodisc (PAL France)
+                Spectrum              Spectrum Home Video (PAL UK)
+                Starlight             Starlight Home Video (PAL Germany)
+                Tartan                Tartan Video (PAL UK)
+                Taurus Film           Taurus Film (PAL Germany)
+                TF 1 Video            TF 1 Video (PAL France)
+                Thorn EMI             Thorn EMI Video (PAL UK)
+                Toshiba EMI           Toshiba EMI (NTSC Japan)
+                Trema                 Trema (PAL France)
+                VCI Distribution      VCI Distribution Ltd (PAL UK)
+                VCL/Carolco           VCL/Carolco Home Video (PAL Germany)
+                Videoarts Japan       Videoarts Japan (NTSC Japan)
+                Video Collection      Video Collection (PAL UK)
+                Virgin Video          Virgin Video (PAL France)
+                VPS Video             VPS Video (PAL Germany)
+                Warner Music Vision   Warner Music Vision (PAL Europe)
+                Welcome               Welcome (PAL France)
+                WEA                   Warner Music (PAL Europe)
+                WEA Music Video       Warner Music (NTSC Japan)
+
+    "CN:" This is the catalogue number of the LaserDisc.
+
+    "LT:" This is the title of the LaserDisc. If the LaserDisc is a movie
+          and the disc is released in the original language, this title is
+          the same as the title in the movie database, except that the
+          information [(Year) (TV) (V) (mini) etc.] following the title
+          is missing. For TV Series you also do not have to include the
+          quotes (""). Please check if the original title on the film itself
+          is consistent with the movie database. If not, you should also
+          submit update entries to the movie database. See the FAQ for more
+          information about how to submit movie entries and updates.
+          If the LaserDisc is not in the original language or is not a
+          movie, you should supply the title as it appears printed on the
+          cover. For movie collections you submit the Title of the
+          collection as printed on the cover.
+
+    "OT:" This is the original title of a program as it appears in the
+          movie database. If the LaserDisc is not a movie, a TV movie or a
+          TV series, submit the same entry as under "LT:" <LaserDisc Title>.
+          For movie collections submit an OT entry for each movie included
+          in the collection.
+          If possible, check if the movie is already in the movie database.
+          Sometimes movies are known under different names, so you may have
+          to query via actors or directors to find the right title. If the
+          movie is not in the database, please submit as much data on the
+          movie as you can find in the credits on the LaserDisc.
+          See also "movies.list" for more information about the title
+          formats to use.
+
+          To demonstrate the diffence between the LaserDisc title and the
+          original title here are some EXAMPLES:
+
+          a) Movie title is the same as the LaserDisc title:
+             LT: Piano, The
+             OT: Piano, The (1993)
+
+          b) LaserDisc title in a different langauge than movie title
+             LT: Woman Next Door, The
+             OT: Femme d'à côté, La (1981)
+
+          c) Collection of movies in a box set:
+             LT: Connery Collection, The
+             OT: Dr. No (1962)
+             OT: From Russia With Love (1963)
+             OT: Goldfinger (1964)
+
+          d) TV Series on LaserDisc:
+             LT: Twilight Zone, The - Vol. 2
+             OT: "Twilight Zone, The" (1959)
+
+          e) Music video title:
+             LT: Scorpions: First Sting
+             OT: Scorpions: First Sting
+
+    IMPORTANT NOTE on titles:
+    Starting with the laserdisc.list we are introducing the ISO Latin 1
+    character set for international characters. Please submit all titles
+    for the LaserDisc database with international characters, if possible.
+    Do not use ISO characters for the other lists yet!
+    Your systems must have MIME installed to be capable of mailing 8 bit
+    characters. Please use quoted printable encoding. If you do not have
+    MIME, you can use constructs such as
+    <"a>, <'e>, <^u> to submit a title.
+
+    EXAMPLE:
+    with MIME (ISO)       -  OT: Femme d'à côté, La (1981)
+    without MIME (ASCII)  -  OT: Femme d'<`a> c<^o>t<'e>, La (1981)
+
+
+    "PC:" This is the country which produced the program on the LaserDisc.
+          Do not confuse this with country which has released a disc.
+          For co-productions submit a PC entry for each country. See also
+          "countries.list" for more information about the country formats.
+
+    "YR:" This is the year of the first public screening of a program. For
+          movies, use the same year as used in the movie title. See "OT:".
+
+    "CF:" This is the certification of the LaserDisc in the country in which
+          the LaserDisc was first released.
+
+    "CA:" This is the category of the LaserDisc contents: Currently the
+          following categories are used:
+
+          LaserDisc Categories
+          --------------------
+          Movie
+          Music
+          Special Interest
+          TV Series
+
+          The keywords "Movie" and "TV Series" are mostly used for titles
+          which are in the movie database. Please use "Movie" also for made
+          for TV movies. Only TV series and mini series get "TV Series" as
+          category.
+          For animation collections such a "Golden Age of Looney Tunes,
+          The - Vol. 1" you can choose between "Special Interest" and
+          "Movie". If you choose to use "Movie", you have to make sure that
+          each single cartoon is in the movie database, and if not, you
+          should submit all relevant information about the cartoon. In this
+          case, you also have to submit an "OT:" entry for each cartoon.
+          If you only want to submit the collection as a whole, then use
+          "Special Interest" and submit the same title under "OT:" as under
+          "LT:". If possible, submit a listing of cartoon in the "IN:" field
+          in this case.
+
+    "GR:" This is the Group or Genre of the LaserDisc to further classify
+          the program contents. For each category there are a number of
+          groups. The following groups are currently in use:
+
+          LaserDisc Groups
+          ----------------
+          Movies/TV Series:  Action
+                             Adventure
+                             Anime
+                             Animation
+                             Comedy
+                             Drama
+                             Horror
+                             Musical
+                             Thriller
+                             Sci-Fi
+                             Western
+
+          Music:             Ballet
+                             Classical
+                             Jazz
+                             Karaoke
+                             Opera
+                             Pop/Rock
+
+          Special Interest:  Adult
+                             Anime
+                             Animation
+                             Computer Animation
+                             Demo Disc
+                             Documentary
+                             Educational
+                             Exercise
+                             Game
+                             Industrial
+                             Sports
+                             Video Image Music
+                             Visual Arts
+
+          I try to keep this field consistent with the primary genre field
+          of the movie database. I only support one primary genre, so please
+          do not submit more than one "GR:" entry. In additon to the primary
+          genres, there are the two additional genres "Adult" and "Anime".
+          See the "genres.list" for information about updating the genres in
+          the movie database.
+
+    "LA:" This is the language of the audio on the LaserDisc. For bilingual
+          programs submit two language entries. Do not use any abbreviations
+          for languages, just write: English or Japanese etc.
+
+    "SU:" This field contains the language of the subtitles or just -.
+
+    "LE:" This is the length of the program in minutes.
+
+    "RD:" This is the release date of the LaserDisc. Use one of these
+          formats to submit dates: <day> <full month> <full year> or
+          <full month> <full year> or <full year>. If you do not know
+          the exact release date it is better to submit just the year
+          than nothing. You can probably use the year which is stated
+          under package design or the copyright of the distributor. It
+          is usually the newest year printed on the cover.
+          EXAMPLES: 21 January 1995, April 1994, 1985.
+
+    "ST:" This is the availability status of a LaserDisc. Only the four
+          keywords: Available, Out of Print, Announced and Cancelled are
+          allowed here.
+
+    "PR:" This is the retail price of the LaserDisc in the country in
+          which the disc was first released. You also have to include the
+          currency. For example: $ 34.98 (USA), DM 59.00 (Germany), FF 409
+          (France), £ 19.99 (UK), Y 5100 (Japan), HK$ 200.00 (Hong Kong),
+          NT$ 2200 (Taiwan).
+          Since this field can also be used to find out in which country
+          a disc was released, please submit the currency also when you
+          do not know the retail price. For Example: $, DM, £, Y or HK$.
+
+    "VS:" This is the video standard of the LaserDisc. Allowed values are:
+          NTSC, PAL and HI-Vision.
+
+    "CO:" This is the color information about the LaserDisc. Submit one of
+          these values: Color, Black and White or Colorized. If a LaserDisc
+          contains Color and Black and White material, submit Color only.
+
+    "SE:" This is the format of the audio on the LaserDisc. These values
+          are possible:
+
+          Sound Encoding formats
+          ----------------------
+          Analog
+          Analog-CX
+          Digital/Analog
+          Digital/Analog-CX
+          Digital
+          Digital/AC-3/Analog
+
+    "DS:" This field describes what is on the digital tracks. Use one of
+          the following values:
+
+          Digital Sound
+          -------------
+          -
+          Mono
+          Stereo
+          Dolby Surround
+          QSound
+          Bilingual
+          Commentary
+          
+    "AL:" This field describes what is on the left analog track. If there
+          is only one program on the analog tracks (Mono/Stereo or Dolby
+          Surround track) only the left analog track contains an entry.
+          The "AR:" entry just contains - in such a case.
+
+          Analog Stereo or Left
+          ---------------------
+          -
+          Mono
+          Stereo
+          Dolby Surround
+          QSound
+          Bilingual
+          Commentary
+          Soundtrack
+          Effects
+
+    "AR:" This field describes what is on the right analog track. If there
+          is only one program on the analog tracks (Mono/Stereo or Dolby
+          Surround soundtrack) only the left analog track contains an entry.
+          The "AR:" entry just contains - in such a case.
+
+          Analog Right
+          ------------
+          -
+          Mono
+          Commentary
+          Soundtrack
+          Effects
+          AC-3
+
+    "MF:" This is the format in which the original program was mastered.
+          Use these keyword to submit data: FILM, NTSC, PAL, SECAM or
+          HI-Vision. If a movie was transfered to an NTSC tape and then
+          transcoded to PAL, use FILM anyway for this field, but add a note
+          in the information field "IN:".
+
+    "PP:" This is the pressing plant which has manufactured a LaserDisc. See
+          the article LD09 by Bob Niland for information about how to find
+          out the manufacturer of a LaserDisc. This article is available via
+          FTP from: ftp.csn.org (128.138.213.23), directory: Laserdisc.
+          Please use one of the listed manufacturers. If you encounter any
+          new manufacturer, please let me know.
+
+          LaserDisc manufacturers
+          -----------------------
+          3M
+          DADC Austria
+          DADC USA
+          Denon USA
+          DiscoVision
+          DMI USA
+          Kuraray
+          MPO France
+          Nippon Columbia
+          PDO UK
+          Pioneer Japan
+          Pioneer USA
+          Mitsubishi
+          Sonopress
+          Sony Japan
+          Technidisc
+          WEA Germany
+          WEA USA
+
+    "SZ:" This is the LaserDisc size in Inches: 5, 8 or 12.
+
+    "SI:" This is the number of sides of a LaserDisc title.
+
+    "DF:" This is the disc format: CLV, CAV or CLV/CAV. Use CLV/CAV for
+          titles which are not CLV or CAV only. If only the last side is
+          CAV, you do not have to submit additional information. If not,
+          please add more information about which sides are CAV in the
+          "IN:" field.
+
+    "PF:" This is the picture format of a LaserDisc. The following values
+          are used:
+
+          Picture Format
+          --------------
+          Pan & Scan
+          Unmatted
+          Letterbox
+          Matted
+          Windowbox
+          Video
+          Academy Ratio
+          Widescreen 16:9
+          Pan & Scan 16:9
+
+          "Unmatted" is used for open matte transfers. Please only use this
+          value, if you are certain that every single frame is unmatted. If
+          there is only a single special effects shot, which was cropped,
+          the LaserDisc will get "Pan & Scan" entry.
+          "Widescreen 16:9" is used for anamorphically or PAL Plus coded
+          LaserDiscs. Do not use this keyword for Letterbox releases. If
+          an anamorphic LaserDisc is Pan & Scanned (2.35:1 -> 1.78:1) it
+          will get a "Pan & Scan 16:9" entry.
+
+    "AS:" This is the aspect ratio of the LaserDisc. The format used here
+          is _.__ : 1.
+
+    "CC:" This field contains information whether the LaserDisc includes
+          Close Captions, Teletext or LD+G. Use CC, Teletext or LD+G as
+          values.
+    
+    "CS:" This is the number of chapter stops the LaserDisc contains. Use
+          0, if the disc does not contain any chapter stops.
+
+    "TX:" This field is used if a LaserDisc was mastered under the THX
+          quality control program. Just submit THX or -.
+
+    "IN:" This field contains additional information about the LaserDisc.
+          Each line may contain up to 76 characters. There can be any
+          number of "IN:" lines.
+          Do not submit informations about the movie itself. You may however
+          send a short description of the program contents, if the program
+          does not belong into the movie database.
+          You can add anything you want here. It is recommended that you
+          supply information about the transfer quality and about
+          supplements. Please make comments about the tranfer quality and
+          bugs etc. before the Supplements section. Use a new paragraph
+          to list the supplements and use the word "Supplements: " to
+          indicate the start of the supplements list. List all supplements
+          seperated by a semi-colon ';'. After this list you can add
+          whatever comments you like about the supplements.
+
+          EXAMPLE:
+          
+          IN: Sides 1 and 4 are CAV.  This disc has the rolling bar problem.
+          IN: See also text _StarWarsFlaws_.
+          IN: 
+          IN: Supplements: Audio commentary by Demme, Foster, Hopkins,
+          IN: screenwriter Ted Tally and FBI agent John Douglas; deleted
+          IN: scenes; a film-to-storyboard comparison; storyboards; and
+          IN: production stills.  These are followed by filmographies on
+          IN: Demme, Hopkins, and Foster.  Pauline Kael apparently hosts the
+          IN: Demme filmography.  Finally there are 8 chapters of FBI
+          IN: material onserial killers.  Featuring several profiles such as
+          IN: Organized sexualhomicide and so on.
+
+          For TV series, cartoon collections and such add an episode listing.
+          Place each episode name in quotes '"' and seperate them with a
+          comma. Use the same spelling conventions as on movie titles.
+
+          EXAMPLE:
+          IN: Episodes: "Nightmare at 20000 Feet", "The Odyssey of Flight 33",
+          IN: "Steel", "A Game of Pool".
+
+          For music LaserDiscs please send a comma separated list of tracks
+          beginning with "Videos: " if the disc contains video clips or
+          "Live: " if the disc contains concert footage. If you want to
+          add on which side the songs are you can use "Videos 1" or "Live 2"
+          instead.
+
+          EXAMPLES:
+          IN: Videos: Change His Ways, Simply Irresistible, Tell Me...
+
+          IN: Live 2: One Vision, Tie Your Mother Down, In The Lack Of The
+          IN: Gods...
+
+                      -------------------
+
+ALTERNATE VERSIONS SECTION
+==========================
+
+Keyword
+-------
+
+  VERSIONS
+
+Format
+------
+
+  VERSIONS
+  # First Movie
+  - blah blah blah
+  - blah blah blah blah blah
+
+  # Second Movie
+  - blah blah blah
+  - blah blah blah blah blah
+
+Description
+-----------
+
+There are many kinds of alternate versions, the most common of which are:
+
+DIRECTOR'S CUTS/SPECIAL EDITIONS: Contracts under the terms of the
+Hollywood Director's Guild allow about six weeks for a director to assemble
+a cut without studio interference.  This is fully edited and has a
+synchronized sound track; however, it is usually not color-corrected nor
+density-corrected and may not have the final music and effects track.  In
+more recent times, due to an expanding video aftermarket, the term
+director's cut has acquired a popular meaning that implies a finished final
+print, officially prepared by the director or with his consent, and usually
+including scenes not included in the original theatrical release. Many
+director's cuts are re-released in theathers or on video. Examples: "Blade
+Runner", "Aliens", "Close encounters of the third kind".
+
+RESTORED VERSIONS: Classic movies are sometimes re-released (usually many
+years after their original premiere) with never before seen or long-lost
+restored scenes. Examples: "Spartacus", "Lawrence of Arabia", "The Wild
+Bunch".
+
+CENSORSHIP CHANGES: Censorship laws often impose changes or deletions
+before a film can be given a certificate and released. In the U.S.A movies
+are often cut after being submitted to the MPAA in order to avoid a X or NC-17
+rating; sometimes the deleted scenes are restored for the video or laserdisc
+release, or are left intact in the European release. Other countries have
+different censorship standards: U.K. releases routinely cut any scene that
+suggests violence or mishandling of animals (ex. the mouse sequence in "The
+Abyss").
+
+UNAUTHORIZED/UNOFFICIAL VERSIONS: Sometimes a movie is cut or otherwise
+modified from the original version without the consent or the knowledge of
+the filmmakers. A frequent occurrence is when a foreign distributor decides
+to remove scenes to reduce the film's running time in order to get more
+showings per day or to make it more appealing to the local audience, often by
+including a different music score.
+
+TELEVISION VERSIONS: Films, especially R-rated ones, are routinely cut or
+altered before they can be shown on network television or airline planes to
+delete objectionable language and frames or to fit a two-hour time slot.
+These changes are routine, don't necessarily represent alternate versions and
+will _not_ be considered here, unless very extensive. However, TV versions
+which add new footage (ex. "1941"), significantly re-edit or change existing
+material or substitute new scenes (ex. "Basic Instinct") in place of deleted
+sequences will be listed.
+
+                      -------------------
+
+BUSINESS INFORMATION SECTION
+============================
+
+Keyword
+-------
+
+  BUSINESS
+
+Format
+------
+
+The fields available for submitting information are:
+
+     MV: Movie Title (Year)
+         The original title of the movie, followed by the year of release.
+
+     BT: Movie Budget [Country] 
+         Cost of production of the movie, optionally followed by the name of
+         the country (for currency identification purposes). If Country is
+	 omitted, the amount is in US dollars.
+
+     GR: Box Office Gross (Territory) [Date]
+         How much did the movie make at the box office. The figures must be
+         followed by the country. "Non-Usa" means that the amount is the sum
+         of all box office receipts from outside the USA. "Worldwide" means
+         that the b.o. figures are the total of all revenues from all over
+         the world, including the USA.
+         All box office figures without a date are final (i.e. that's the
+         total b.o. gross at the time the film was pulled out of release). 
+         An optional date indicates when the box office figures were last
+         updated and is generally used for films still in general release.
+         All figures are _not_ adjusted for inflation or variations in
+         movie ticket prices and are rough estimates, not definitive data.
+
+     OW: Opening Weekend Box Office Take (Territory) [Date] [Screens]
+         How much the movie took at the box office in its first weekend of
+         release, followed by the country of release and optionally by the
+         weekend date and number of theatres the movie opened in.
+         Opening weekend takes are often a reliable indicator of a film's 
+         future commercial performance.
+
+     RT: Rentals
+         Rentals are the money that goes back to the film distributor after
+         its worldwide theatrical release and are therefore the best
+         indicator of a movie's real commercial performance and strength.
+
+     AD: Admissions (Territory)
+         The number of tickets were actually sold at the box office in a
+         specific country. 
+
+     PD: Production Dates (Start-End)
+         When filming took place. Use full date format and separate the
+         production start and end dates with a hyphen.
+
+     ST: Studio where movie was filmed (Country) 
+         Studio facility where parts or all of the movie was shot, followed
+         by the country. If filming took place in more than one studio, use
+         separate lines for each of them.
+         Warning: this field must be used for film studio facilities only
+         (example: Universtal Studios in Hollywood, Warner Studios in
+         Burbank, Pinewood Studios in UK, Cinecitta' in Rome, etc.) and
+         _not_ for actual on-site shooting film locations (i.e. real places
+         or cities). There is a separate LOCATIONS list, managed by Rob
+         Hartill, in the Internet Movie Database that specifically includes
+         that kind of information.
+
+     CP: Copyright Holder and contact information.  
+	 The name of the individual or company that owns the copyright over
+         the movie, followed by the address/contact information (if
+         available). Not to be confused with the studio or distribution
+         company, this information is usually found at the very end of the
+         films title credits.
+
+Example
+-------
+
+Here's an example (all data is bogus and for sample purposes only):
+
+  MV: Fictional Title, A (1996)
+
+  BT: $43,000,000 (USA)
+  
+  OW: $5,400,000 (USA) (3 March 1996) (450 screens)
+  
+  GR: $15,340,000 (USA) (10 March 1996)
+  GR: $35,405,000 (Non-USA) (10 March 1996)
+  GR: $50,745,000 (Worldwide) (10 March 1996)
+  
+  RT: $25,130,000 
+  
+  AD: 330,150 (USA)
+  AD: 21,000 (UK)
+  
+  PD: 21 December 1995 - 7 February 1996
+  
+  ST: Shepperton Studios, Shepperton (UK)
+  ST: Cinecitta', Rome (Italy)
+  
+  CP: Foobar Productions, Inc.
+  CP: 1234 Wilshire Blvd.
+  CP: 90210 Beverly Hills, CA, U.S.A.
+  CP: Phone: 301-555-1234
+
+                      -------------------
+
+MARKING THE END OF YOUR DATA
+=============================
+
+Finally, to finish off a message put the word END on a new line.
+
+                      -------------------
+
+SUBMITTING CORRECTIONS, DELETIONS AND COMMENTS
+==============================================
+
+The keyword interface can also be used to submit corrections to
+existing entries, to remove erroneous entries and to make general comments
+about the movie database or the information it contains. Again, you should
+set the subject of your mail to the single word:
+
+ ADD
+
+and send the message to <add@imdb.com>.
+
+Corrections and comments may be included in the same mail message as the
+addition mail outlined in the previous sections.
+
+
+Deleting and Correcting Specific Entries
+----------------------------------------
+
+To delete an existing erroneous entry in the database use the appropriate 
+keyword as described in the previous sections, but mark the start of the line
+with a '!' character. For example, imagine the database had an incorrect
+entry for Geena Davis appearing in "The Grifters", to remove this you could use:
+
+ACTRESS
+!Davis, Geena|Grifters, The (1990)|
+
+This facility can be used to correct specific errors in the database too. For
+example, imagine the actors list had an incorrect entry for Alan Hale appearing
+in "Hang 'em High", when in fact it was Alan Hale Jr., to make this correction 
+you could have use:
+
+ACTOR
+!Hale, Alan|Hang 'em High (1967)|
+Hale Jr., Alan|Hang 'em High (1967)|
+
+The first line deletes the erroneous entry and the second adds the correct one.
+
+
+Correcting Names Across the Whole Database
+------------------------------------------
+
+If you spot a spelling error in a name in the database, use the keyword
+
+  NAMECORRECT
+
+and the format:
+
+  <current name>|<correct name>
+
+For example:
+
+   NAMECORRECT
+   Bogart, Humphry|Bogart, Humphrey
+
+
+Correcting Titles Across the Whole Database
+-------------------------------------------
+
+If you spot a spelling error in a title in the database, use the keyword
+
+  TITLECORRECT
+
+and the format:
+
+  <current title>|<correct title>
+
+For example:
+
+  TITLECORRECT
+  Flight of the Phoenix, The (1965)|Flight of the Phoenix (1965)
+  Jurassic Park (1995)|Jurassic Park (1993)
+
+
+General Comments and Corrections
+--------------------------------
+
+Keywords
+
+ COMMENT = general comments/explanations on the data you've submitted
+ CORRECT = corrections for the database
+
+Description
+
+ There is no format for either of these so just write in plain English. Please
+ note that the processing software splits your mail into separate files by
+ keyword, so make sure any comments/corrections make sense on their own and 
+ do not depend on something you added under another keyword in order to be
+ understood. 
+
+ As an aid to the database managers, if your comments relate to a specific
+ section, you may mark them as such by adding a hyphen ("-") after the
+ COMMENT/CORRECT keyword followed by the corresponding section keyword.
+ For example:
+
+ COMMENT-ACTOR
+ This is a comment specific to the actors database
+
+ CORRECT-TRIVIA
+ This is a correction specific to the trivia database
+
+
+Moving People Between the Actors and Actresses List
+---------------------------------------------------
+
+We often have to guess the gender of people submitted via the CAST keyword
+and sometimes entries end up in the wrong list.
+
+To move an actor from the actresses list to the actors list, use:
+
+MALE
+<name>
+
+To move an actress from the actors list to the actresses list, use:
+
+FEMALE
+<name>
+
+Example:
+
+FEMALE
+Novak, Kim
+
+                      -------------------
+
+FOREIGN LANGUAGE MOVIE CREDITS
+==============================
+
+This section provides translations between names of occupations as they appear
+in movie credits of non-English language movies and their equivalents for the
+purposes of adding data to the IMDb. Updates to this section of the guide 
+should be mailed directly to me at <col@imdb.com>
+
+German
+------
+actor ................. Darsteller
+cinematographer ....... Kamera (less often: Bild)
+editor ................ Schnitt
+sound ................. Ton
+writer ................ Drehbuch (or: Buch)
+producer .............. Produzent
+composer .............. Musik
+costumes .............. Kostueme (ue=Umlaut u)
+film editor ........... Bildschnitt
+sound editor .......... Tonschnitt
+director .............. Regie
+assistant editor ...... Schnittassistenz
+mixer ................. Mischung
+electician ............ Beleuchter
+lightning technician .. Beleuchter
+gaffer ................ Chefbeleuchter
+set decorator ......... Ausstatter
+sound effects ......... Geraeusche
+property .............. Requisite
+property master ....... Requisiteur
+make-up ............... Maske
+still photographer .... Standfotos
+production manager .... Aufnahmeleitung
+executive producer .... Produktionsleiter
+best boy/best girl .... Hilfskraft
+grip .................. Atelierarbeiter
+key grip .............. Atelier-Vorarbeiter
+trainee ............... Praktikant
+
+
+Dutch 
+------
+actor ................. akteur
+cinematographer ....... camera
+editor ................ montage 
+sound ................. geluid
+writer ................ schrijver
+producer .............. producent
+composer .............. componist
+costumes .............. kleding (sometimes: kostuums)
+film editor ........... beeld technicus
+sound editor .......... geluid technicus
+director .............. regisseur
+
+
+Hungarian
+---------
+Cast ................... Szereplok
+Actor ..................       Szinesz
+Actress ................ Szineszno
+Director (directed by) . Rendezo (rendezte)
+Producer ............... Producer (or gyartasvezeto)
+Co-producer ............ Tarsproducer
+Sound .................. Hang (or hangmernok)
+Composer ......... ..... Zene (or zeneszerzo)
+Production-designer .... Diszlet (or diszlettervezo)
+Make-Up ................ Smink
+Cinematographer ........ Operator
+Costume-designer ....... Jelmeztervezo (or kosztum or jelmez)
+Certificate ............ Korhatar
+Editor (edited by) ..... Vago (vagta)
+Visual effects ......... Latvanytervezo
+Sound effects .......... Hangeffektek
+Art director ........... Muveszeti vezeto
+Title .................. Cim
+Production Company ..... Gyarto
+Writer (written by) .... Forgatokonyv or Irta (forgatokonyvet irta)
+Taglines ............... Szalagcim, or cimsor
+Plot summary ........... Rovid tartalom
+Release Date ........... Bemutato (osbemutato)
+Character .............. Karakter
+Color .................. Szines
+Black and white ........ Fekete-feher
+Running time ........... Hossza (or Vetitesi ido)
+
+
+                      -------------------
+
+COMPLETE KEYWORD EXAMPLE
+========================
+
+This section includes a complete keyword entry for "Vertigo" to illustrate
+the formats. Note: in reality you can of course submit data for more than 
+one title in the same message.
+
+
+To: add@imdb.com
+
+TITLE
+Vertigo (1958)|1958|
+PRODCO
+Vertigo (1958)|Paramount Pictures
+COUNTRY
+Vertigo (1958)|USA|1
+CERT
+Vertigo (1958)|Germany|16|
+TIME
+Vertigo (1958)|USA|128|
+COLOR
+Vertigo (1958)|Color|(Technicolor)
+MIX
+Vertigo (1958)|Westrex
+NEGATIVE
+Vertigo (1958)|35 mm|(horizontal)
+PROCESS
+Vertigo (1958)|VistaVision|
+PRINTS
+Vertigo (1958)|35 mm|
+RATIO
+Vertigo (1958)|1.85 : 1|
+RELEASE
+Vertigo (1958)|Germany|3 February 1959|
+Vertigo (1958)|Sweden|16 March 1959|
+LOCATION
+Vertigo (1958)|San Francisco, California, USA
+Vertigo (1958)|South of San Juan Bautista, California, USA
+LANGUAGE
+Vertigo (1958)|English|1
+PLOTS
+MV: Vertigo (1958)
+PL: San Francisco police detective Scottie Fergusson develops a fear  of
+PL: heights  and is forced to retire when a colleague falls to his death
+PL: during a chase. An old college friend (Gavin Elster)  hires  Scottie
+PL: to  watch  his wife Madeleine who has become obsessed with the past.
+PL: Scottie follows her  around  San  Francisco  and  is  drawn  into  a
+PL: complex plot. 
+BY: Col Needham <col@imdb.com>
+GENRE
+Vertigo (1958)|Thriller
+Vertigo (1958)|Mystery
+Vertigo (1958)|impostor
+Vertigo (1958)|reincarnation
+Vertigo (1958)|tragedy
+Vertigo (1958)|quiz
+PRODUCER
+Coleman, Herbert|Vertigo (1958)|(associate)
+Hitchcock, Alfred|Vertigo (1958)|
+DIRCTOR
+Hitchcock, Alfred|Vertigo (1958)|
+WRITER
+Boileau, Pierre|Vertigo (1958)|(novel ...d'Entre les Morts)
+Coppel, Alec|Vertigo (1958)|
+Narcejac, Thomas|Vertigo (1958)|(novel ...d'Entre les Morts)
+Taylor, Samuel A.|Vertigo (1958)|
+COMPO
+Herrmann, Bernard|Vertigo (1958)|
+CINE
+Burks, Robert|Vertigo (1958)|
+EDITO
+Tomasini, George|Vertigo (1958)|
+COSTU
+Head, Edith|Vertigo (1958)|
+MISC
+Bass, Saul|Vertigo (1958)|(title design)
+Bumstead, Henry|Vertigo (1958)|(art director)
+Comer, Sam|Vertigo (1958)|(set decorator)
+Edouart, Farciot|Vertigo (1958)|(process photography)
+Ferren, John|Vertigo (1958)|(special sequence)
+Fulton, John P.|Vertigo (1958)|(special effects)
+Kelley, W. Wallace|Vertigo (1958)|(process photography)
+Leverett, Winston H.|Vertigo (1958)|(sound)
+Lewis, Harold|Vertigo (1958)|(sound)
+Manley, Nellie|Vertigo (1958)|(hair styles)
+Mathieson, Muir|Vertigo (1958)|(musical conductor)
+McCauley, Daniel|Vertigo (1958)|(assistant director)
+McKelvy, Frank R.|Vertigo (1958)|(set decorator)
+Mueller, Richard|Vertigo (1958)|(color consultant)
+Pereira, Hal|Vertigo (1958)|(art director)
+Westmore, Wally|Vertigo (1958)|(make-up)
+CAST
+Stewart, James|Vertigo (1958)||John 'Scottie' Ferguson|1
+Novak, Kim|Vertigo (1958)||Madeleine Elster/Judy Barton|2
+Bel Geddes, Barbara|Vertigo (1958)||Marjorie 'Midge' Wood|3
+Helmore, Tom|Vertigo (1958)||Gavin Elster|4
+Jones, Henry|Vertigo (1958)||Coroner|5
+Corby, Ellen|Vertigo (1958)||Manageress of McKittrick Hotel|6
+Bailey, Raymond|Vertigo (1958)||Scottie's Doctor|7
+Patrick, Lee|Vertigo (1958)||Older Mistaken Identification|8
+Shayne, Konstantin|Vertigo (1958)||Pop Leibel|9
+Analla, Isabel|Vertigo (1958)|(uncredited)||
+Ano, Jack|Vertigo (1958)|(uncredited)|Extra|
+Benson, John|Vertigo (1958)|(uncredited)|Salesman|
+Brayton, Margaret|Vertigo (1958)|(uncredited)|Ransohoff's Saleslady|
+Bryar, Paul|Vertigo (1958)|(uncredited)|Captain Hansen|
+Delman, Roxann|Vertigo (1958)|(uncredited)|Ransohoff's Model|
+Dodd, Mollie|Vertigo (1958)|(uncredited)|Beautician|
+Dotto, Carlo|Vertigo (1958)|(uncredited)|Ernie's Bartender|
+Genthon, Joanne|Vertigo (1958)|(uncredited)|Carlotta Valdez|
+Giovanni, Don|Vertigo (1958)|(uncredited)|Salesman|
+Got, Roland|Vertigo (1958)|(uncredited)|Maitre d' at Ernies|
+Graham, Fred|Vertigo (1958)|(uncredited)|Death Fall Officer|
+Harrington, Buck|Vertigo (1958)|(uncredited)|Elster's Gateman|
+Jocelyn, June|Vertigo (1958)|(uncredited)|Miss Woods|
+Milo, Miliza|Vertigo (1958)|(uncredited)|Saleswoman|
+Petruzzi, Julian|Vertigo (1958)|(uncredited)|San Francisco Flower Seller|
+Remick, William|Vertigo (1958)|(uncredited)|Jury Foreman|
+Richardson, Jack|Vertigo (1958)|(uncredited)|Escort|
+Santina, Bruno|Vertigo (1958)|(uncredited)|Waiter at Ernies|
+Shipman, Nina|Vertigo (1958)|(uncredited)|Younger Mistaken Identification|
+Simmons, Dori|Vertigo (1958)|(uncredited)|Middle-Aged Mistaken Identity|
+Stevlingson, Ed|Vertigo (1958)|(uncredited)|Inquest Attorney|
+Taft, Sara|Vertigo (1958)|(uncredited)|Nun|
+CASTCOM
+Vertigo (1958)|Col Needham <col@imdb.com>
+CREWCOM
+Vertigo (1958)|Col Needham <col@imdb.com>
+MOVIELINK
+Vertigo (1958)|referenced in|Jules et Jim (1961)
+Vertigo (1958)|referenced in|Sirene du Mississippi, La (1969)
+Vertigo (1958)|referenced in|Obsession (1976)
+Vertigo (1958)|referenced in|Last Embrace (1979)
+Vertigo (1958)|referenced in|Body Double (1984)
+Vertigo (1958)|referenced in|Batman (1989)
+Vertigo (1958)|referenced in|Kiss Before Dying, A (1991)
+Vertigo (1958)|referenced in|Final Analysis (1992)
+Vertigo (1958)|referenced in|Basic Instinct (1992)
+Vertigo (1958)|referenced in|Manhattan Murder Mystery (1993)
+Vertigo (1958)|referenced in|Twelve Monkeys (1995)
+Vertigo (1958)|referenced in|Girl 6 (1996)
+Vertigo (1958)|spoofed in|High Anxiety (1977)
+Vertigo (1958)|spoofed in|Foul Play (1978)
+Vertigo (1958)|featured in|Kiss Before Dying, A (1991)
+Vertigo (1958)|featured in|Libera (1993)
+Vertigo (1958)|featured in|Twelve Monkeys (1995)
+TRIVI
+# Vertigo (1958)
+- DIRCAMEO(Alfred Hitchcock): about 11 minutes in wearing a gray suit
+  walking past Gavin Elster's shipyard.
+- The film is based upon the novel ``D'Entre les Morts'' which was written
+  specifically for Hitchcock after the authors heard that he tried to
+  buy the rights to their previous novel ``Diabolique''.
+- San Juan Batista, the Spanish mission which features in key scenes in the
+  movie doesn't actually have a bell tower - it was added with trick
+  photography. The mission originally had a steeple but it was demolished
+  following a fire.
+- The screenplay is credited to 'Alec Coppel' (qv) and 'Samuel Taylor' (qv),
+  but Coppel didn't write a word of the final draft.  He is credited for
+  contractual reasons only. Taylor read neither Coppel's script nor the
+  original novel, he worked solely from Hitchcock's outline of the story.
+- Hitchcock reportedly spent a week filming a brief scene where Madeleine
+  stares at a portrait in the Palace of the Legion of Honor just to get the
+  lighting right.
+- Hitchcock invented the famous combination of forward zoom and reverse
+  tracking shot to convey the sense of vertigo to the audience. The view
+  down the mission stair well cost $19,000 for just a couple of seconds of
+  screen time.
+- Hitchcock originally wanted 'Vera Miles' (qv) to play Madeleine, but she
+  became pregnant and was therefore unavailable.
+- The film was unavailable for decades because its rights (together with four
+  other pictures of the same periods') were bought back by Hitchcock and left
+  as part of his legacy to his daughter. They've been known for long as the
+  infamous ``5 lost Hitchcocks'' amongst film buffs, and were re-released in
+  theathers around 1984 after a 30-years absence. They are
+  _Rear Window (1954)_ (qv), _The Trouble with Harry (1955)_ (qv),
+  _Rope (1948)_ (qv), _Vertigo (1958)_ (qv) and
+  _The Man Who Knew Too Much (1956)_ (qv).
+- DIRTRADE(Alfred Hitchcock): [bathroom] Madeline emerges from the bathroom,
+  ready for lovemaking.
+- DIRTRADE(Alfred Hitchcock): [hair] Carlotta and Madeline have spiral
+  hairstyles, and Judy's hair color is significant.
+QUOTE
+# Vertigo (1958)
+[First Line]
+Cop: Give me your hand.  Give me your hand.
+
+John 'Scottie' Ferguson: You shouldn't keep souvenirs of a killing.
+  You shouldn't have been that sentimental.
+
+John 'Scottie' Ferguson: Midge, who do you know that's an authority on
+  San Francisco history?
+Marjorie 'Midge' Wood: That's the kind of greeting a girl likes!  Not
+  this 'Hello-you-look-wonderful'-stuff, just a good straight 'Who do
+  you know that's an authority on San Francisco his...' [interrupted]
+END
+
+                      -------------------
+
+KEYWORD SUMMARY
+===============
+
+ACTOR/ACTRESS/CAST
+<name>|<title>|<attributes>|<character name>|<order>
+
+COMPO/DIRECTOR/CINE/COSTU/DESIG/EDITOR/PRODUCER/MISC
+<name>|<title>|<attr>
+
+WRITER
+<name>|<title>|<attr>|<sequence>
+
+CHARA
+<name>|<title>|<char>
+
+ORDER
+<name>|<title>|<order>
+
+GUEST
+<name>|<title>|<role>|<attribute>|<air date>|<episode title>
+
+CASTCOM/CASTVER/CREWCOM/CREWVER
+<title>|<your name and e-mail address>
+
+TITLE
+<title>|<year>|<attributes>
+
+TITLELOCK
+<title>|
+
+AKA
+<primary title>|<aka title>|<attributes>
+
+NAKA
+<primary name>|<aka name>
+
+TIME
+<title>|<country>|<running-time>|<attributes>
+
+CERT
+<title>|<country>|<cert>|<attributes>
+
+COUNTRY
+<title>|<country>|<order>
+
+RELEASE
+<title>|<country>|<release-date>|<attributes>
+
+LANGUAGE
+<title>|<language>|<attributes>|<order>
+
+COLOR
+<title>|<color>|<attributes>
+
+MIX
+<title>|<sound>|<attribute>
+
+GENRE
+<title>|<genre>
+
+PRODCO/DISTRIB/SFXCO/COMPANY
+<title>|<company>|<attribute>
+
+LOCATION
+<title>|<location>
+
+METRES/NEGATIVE/PRINTS/RATIO/PROCESS/LAB/CAMERA
+<title>|<data>|<attributes>
+
+PLOTS
+<formatted data for plot summaries database>
+
+BIOGR
+<formatted data for biographies database>
+
+LITERATURE
+<formatted data for literature database>
+
+LASERDISC
+<formatted data for laserdisc database>
+
+BUSINESS
+<formatted data for business database>
+
+CRAZY/TRIVI/GOOF/QUOTE/SOUND/TAG/VERSIONS
+# <title>
+<free text containing info can be more than one line>
+
+COMMENT/CORRECT
+<free form comment can be more than one line>
+
+NAMECORRECT
+<current name>|<correct name>
+
+TITLECORRECT
+<current title>|<correct title>
+
+MALE
+<name>
+
+FEMALE
+<name>
+
+URLTITLE
+<title>|<type>|<URL>|<description(size)>
+
+URLNAME
+<name>|<type>|<URL>|<description(size)>
+
+-------------------------------------------------------------------------------

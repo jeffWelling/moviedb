@@ -1,0 +1,14 @@
+#!/bin/sh
+
+trap "exit 1" 1 2 15
+
+base=$1
+compress=$2
+ext=$3
+
+if [ -f $base$ext -a -f $base ]; then
+        echo Compressing $base
+        rm -f $base$ext
+        $compress $base
+fi
+exit 0

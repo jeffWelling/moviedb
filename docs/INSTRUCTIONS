@@ -1,0 +1,1469 @@
+MOVIE DATABASE v3.4
+===================
+
+Welcome to the latest version of the movie database package. 
+
+Comments, suggestions for new features, bug reports etc. via IMDb contact
+form at http://www.imdb.com/contact please.
+
+Col Needham
+
+------------------------------------------------------------------------------
+CONTENTS
+========
+
+ 1. Introduction
+     1.1  Requirements
+     1.2  Installation
+     1.3  Quick Introduction
+     1.4  Database Structure
+           1.4.1 Cast Lists
+	   1.4.2 Crew Lists
+	   1.4.3 Titles Lists
+	   1.4.4 Biographies List
+	   1.4.5 Alternative Names List
+
+ 2. List Program
+     2.1  Database Options
+     2.2  Output Options
+     2.3  Control Options
+     2.4  Substring and Approximate Matching
+     2.5  Multiple Name Queries
+
+ 3. Title Program
+     3.1  Output Options
+     3.2  Miscellaneous Options
+     3.3  Multiple Title Searches
+
+ 4. Listall Program
+
+ 5. Lguide Program
+
+ 6. Ltrace Program
+
+ 7. Lindex Program
+     7.1  Database Options
+     7.2  Title Mode Options
+     7.3  Miscellaneous Options
+     7.4  Examples
+
+ 8. Alist Program
+     8.1  Database Options
+     8.2  Search Options
+     8.3  Miscellaneous Options
+     8.4  Examples
+
+ 9. Mkballot Program
+
+10. Lformat Program
+     10.1  Database options
+     10.2  Format options
+     10.3  Output options
+     10.4  Examples
+
+11. Lseen Program
+     11.1  Checking the votelog file
+     11.2  Database Options
+     11.3  Output Options
+     11.4  Control Options
+     11.5  Examples
+
+12. Maintaining the Database
+     12.1  Ready Made Database Files
+     12.2  Updating via FTP
+     12.3  Customized Installation
+            12.3.1 Reducing Space Requirements
+            12.3.2 FTP set-up
+     12.4  Troubleshooting
+     12.5  Logfiles
+
+13. Changes for Users of Version 3.2
+     13.1  Upgrading to Version 3.3
+
+14. Adding to the Database
+
+------------------------------------------------------------------------------
+1. INTRODUCTION
+===============
+
+The Internet Movie Database is an international volunteer effort whose 
+objective is to provide useful and up to date movie information *freely* 
+available on-line, across as many systems and platforms as possible. It 
+currently covers over 130,000 movies with over 2,100,000 filmography entries
+and is expanding continuously. 
+
+The database includes filmographies for actors, directors, writers, composers,
+cinematographers, editors, production designers, costume designers, producers
+and a miscellaneous catch all section; plot summaries; character names; movie
+ratings; year of release; running times; movie trivia; quotes; goofs;
+soundtracks; personal trivia; alternative names; certificates; color
+information; country of production; genres; production companies; sound mix;
+reference literature; filming locations; sequel/remake information; release
+dates; advertising tag lines; detailed technical data; alternative versions;
+laserdisc availability; and Academy Award information. 
+
+The database aims to capture any and all information associated with movies 
+from across the world, starting with the earliest cinema, going through to the
+very latest releases and even movies still in production. Many thousands of 
+movies are covered completely from the major actors to the minor bit players
+and crew members. All the information comes from the users of the database so
+please continue to support it and help it to grow. The database is updated 
+weekly and is available over the world wide web, an e-mail interface or for
+local installation on Unix, Amiga and MS-DOS machines.
+
+In its six year history the IMDb has grown from a small informal project to a
+major Internet resource. The WWW interface to the database is one of the most 
+popular and well-known sites of any class on the web. It is frequently cited 
+as a model for how to create and organise a major web site and has received 
+numerious awards and honours over the years.
+
+The movie database frequently asked questions list contains more information
+on the whole movie database project and the different ways to access it. A 
+copy is included in the package, alternatively send an e-mail message with the
+subject:
+
+  HELP FAQ
+
+to <mail-server@imdb.com> and the movie mail-server will send a copy back. The
+database is available via an e-mail interface and on the World Wide Web and
+full details are given in this FAQ.
+
+
+1.1 Requirements
+================
+
+This version requires a Un*x like operating system, an ANSI C compiler and 
+approximately 100Mb of disk-space for the full standard version. The package 
+includes support for compressed database files using 'compress' or 'gzip', 
+bringing the requirements down to 30Mb of disk-space. There are options to
+reduce the space further by discarding some of the databases that you might
+not be interested in, so disk-space requirements can be as low as 20Mb.
+
+You will need an ANSI compatible C compiler to compile the programs. If one 
+wasn't supplied with your machine, I recommend the GNU C compiler 'gcc'. 
+You can pick up a source code distribution of 'gcc' from ftp.gnu.ai.mit.edu
+in pub/gnu which can be installed on a wide range of machines. NOTE FOR
+USERS OF SUN MACHINES: the standard Sun C compiler is *not* ANSI compliant
+so you will need a copy of 'gcc' to install this package.
+
+An Amiga version is also available both on AMINET (under biz/dbase) and from
+the main anonymous FTP sites (see later)
+
+An MS-DOS interface to the same data, but based on different software is also 
+available from the FTP sites.
+
+
+1.2 Installation
+================
+
+ (1) The database software is available from the FTP sites:
+
+ uiarchive.cso.uiuc.edu  in  /pub/info/imdb/tools/moviedb-3.4.tar.gz
+
+ ftp.funet.fi in  /pub/culture/tv+film/lists/tools/moviedb-3.4.tar.gz
+
+ ftp.fu-berlin.de  in  /pub/misc/movies/database/tools/moviedb-3.4.tar.gz
+
+ sunsite.mff.cuni.cz  in  /MultiMedia/Movies/Database/tools/moviedb-3.4.tar.gz
+
+ (2) get the file using anonymous FTP and unpack by typing:
+
+       gzip -cd moviedb-3.4.tar | tar -xvf -
+
+     this will install the software in the directory moviedb-3.4, 'cd' into
+     the directory to continue.
+
+ (3) since the package includes a program to automatically get the data files
+     from the FTP site (and to keep them up to date), you need to give the
+     package your e-mail address to use as the password for FTP. Edit the
+     file Makefile and change the following line:
+
+	LFETCHOPT = -auto
+     
+     to 
+
+	LFETCHOPT = -auto -user <address>
+
+     where <address> is your e-mail address.
+
+ (4) follow the comments in the Makefile for further changes that might be
+     required for installation on your system. In particular, don't forget to
+     set CC and/or CFLAGS to enable ANSI compatible compilation.
+
+     Also, pay close attention to the variables which describe how to handle
+     the compressed list files (ZLISTCATCOM etc.) and how to enable support
+     for compressed database files (ZDBSCATCOM etc.)
+
+     The variables AUTOUNCOMPRESS and KEEPLISTS affect the amount of disk 
+     space used by the package if your resources are limited. Please refer
+     to section 12.2 for more information.
+
+ (5) to compile all the programs, fetch the list files and create the 
+     databases run:
+
+	make install
+
+     See section 12 if anything goes wrong with this process.
+
+     NOTE: the database generation process does require quite a bit memory 
+     and processing power to run. I've arranged to have ready made data
+     files available on the FTP sites for people who have problems generating
+     them locally. See section 12.1 for more details.
+
+ (6) the search programs will be installed in the moviedb-3.4/bin directory,
+     therefore you need to either add this directory to your path or run
+     all the programs from this directory.
+
+The package is now installed and you're ready to try it out, see the next
+section for a quick introduction.
+
+Section 12.2 has details on the one line command that you can use to ensure
+the database is always up to date with respect to the FTP site.
+
+If you do not have direct access to anonymous FTP or you have some special
+configuration requirements, see section 12 for more details on a customized
+set-up procedure and on fixing general problems.
+
+ 
+1.3 Quick Introduction
+======================
+
+If any of these commands fails to work, see section 12 for details of
+potential problems and how to resolve them.
+
+The database supports many different kinds of queries and I refer you to the
+rest of this manual for more information. This section is provided as a 
+very simple introduction to searching:
+
+To generate a filmography for a particular person including any personal
+trivia, use:
+
+  list -name <name> -full
+
+where <name> is in "<surname>, <first name>" format. 
+
+Examples:
+
+  list -name "Hitchcock, Alfred" -full
+
+  list -name "Hamilton, Linda" -full
+
+  list -name "Grant, Cary" -full
+
+
+To search for all the data on a particular movie (plot summary, year of
+release, rating, cast, crew and trivia), use:
+
+  title -t <title> -full
+
+bearing the following in mind:
+
+ - leading articles are placed at the end (e.g. "Terminator, The")
+
+Examples:
+
+  title -t "Vertigo" -full
+
+  title -t "Aliens" -full
+
+  title -t "Jurassic Park" -full
+
+The remainder of this document describes the search programs and maintenance
+process in more detail. All the programs in the package output a brief usage 
+description if run with no arguments.
+
+1.4 Database Structure
+======================
+
+The database is made up of many files which are maintained by different people 
+on the internet. This section describes the files in more detail and gives
+a contact address for the maintainer. The data can never hope to be complete
+owing to the volume of movies being produced, therefore if you spot any
+omissions, please let us know.
+
+The most convenient way to send in new additions or corrections is via the
+movie mail-sever's central collection service. For a complete submissions 
+guide which covers everything send e-mail with the subject:
+
+  HELP ADD FULL
+
+to <mail-server@imdb.com>.
+
+See the file CONTENTS for a description of all the files in the package.
+
+The titles in the database fall into one of five categories:
+
+ (1) movies, unless otherwise indicated the title is a movie
+ (2) TV-movies, indicated by a (TV) tag
+ (3) made for video movies, indicated by a (V) tag
+ (4) TV-series, indicated by enclosing the title in "'s
+ (5) mini-series, indicated by enclosing the title in "'s and a (mini) tag
+
+1.4.1 Cast Lists
+----------------
+
+The character names information is published with the main list files,
+but is still maintained separately by Steve Hammond.
+
+  List             | Maintained by
+  -----------------|--------------------------------------
+  Actors           | Col Needham <actors@imdb.com>
+  Actresses        | Col Needham <actresses@imdb.com>
+  Cast Completion  | Col Needham <col@imdb.com>
+  -----------------|--------------------------------------
+
+Highlights from the actors and actresses lists are posted to rec.arts.movies
+on a regular basis and contain filmographies for most popular performers in
+those categories. The versions on the FTP sites contain the full lists with
+all the actors and actresses known to the database.
+
+Each filmography entry consists of up to five pieces of information: the 
+name, the title, an attributes field (to store, for example, academy award 
+nominations), the character name and a number to specify their position in
+the credits. 
+
+Please note that guest appearances on TV-shows are not eligible for the cast
+databases owing to the volume and accuracy of this type of information.
+
+Note that the actors and actress lists only contain filmography information -
+biographical data such as date and place of birth, real name etc. is stored
+in the biographies list.
+
+The cast completion list simply records which movies we have full cast lists
+for in the database (i.e. everyone listed in the credits of the movie is in
+the actors/actresses lists).
+
+
+1.4.2 Crew Lists
+----------------
+
+The following lists are of a similar format to the cast lists in that they
+contain filmographies for people in the respective fields:
+
+  List                 | Maintained by
+  ---------------------|-------------------------------------------
+  Cinematographers     | Michel Hafner <cinematographers@imdb.com>
+  Composers            | Michel Hafner <composers@imdb.com>
+  Costume Designers    | Harald Mayr <costumes@imdb.com>
+  Directors            | Col Needham <directors@imdb.com>
+  Editors              | Harald Mayr <editors@imdb.com>
+  Misc. Filmography    | Col Needham <miscellaneous@imdb.com>
+  Producers            | Andre Bernhardt <producers@imdb.com>
+  Production Designers | Harald Mayr <prod-designers@imdb.com>
+  Writers              | Jon Reeves <writers@imdb.com>
+  ------------------------------------------------------------------
+      
+
+The miscellaneous filmography list is a "catch all" for people in careers not
+covered by the other filmography lists. Anyone who worked on a movie can be 
+listed here. The idea is to spin-off new filmography lists from it if new
+list managers can be found and the volume of data relating to a particular
+type of contribution justifies a new separate list.
+
+
+1.4.3 Titles Lists
+------------------
+
+The following lists contain information that relates to individual titles:
+
+  List                 | Maintained by
+  ---------------------|------------------------------------------
+  Alternative Titles   | Michel Hafner <aka-titles@imdb.com>
+  Alternative Versions | Giancarlo Cairella <versions@imdb.com>
+  Certificates         | Mark Harding <certificates@imdb.com>
+  Color Information    | Mark Harding <color@imdb.com>
+  Countries            | Mark Harding <countries@imdb.com>
+  Crazy Credits        | Mark Harding <crazy-credits@imdb.com>
+  Genres               | Colin Tinto <genres@imdb.com>
+  Goofs                | Murray Chapman <goofs@imdb.com>
+  Literature           | Joachim Polzer <literature@imdb.com>
+  Locations            | Rob Hartill <locations@imdb.com>
+  Movies               | Michel Hafner <original-titles@imdb.com>
+  Plot Summaries       | Colin Tinto <plots@imdb.com>
+  Production Companies | Rob Hartill <prod-companies@imdb.com>
+  Quotes               | Bob Glickstein <quotes@imdb.com>
+  Ratings              | Col Needham <col@imdb.com>
+  Release Dates        | Mark Harding <release-dates@imdb.com>
+  Running Times        | Mark Harding <running-times@imdb.com>
+  Sound Mix            | Mark Harding <sound-mix@imdb.com>
+  Soundtracks          | Ron Higgins <soundtracks@imdb.com>
+  Tag Lines            | Rob Hartill <tag-lines@imdb.com>
+  Technical Info       | Joachim Polzer <technical@imdb.com>
+  Trivia               | Murray Chapman <trivia@imdb.com>
+  ---------------------|------------------------------------------
+      
+The alternative titles list contains original foreign language, video titles, 
+TV titles etc. for the primary titles in the database.
+
+The certificates list contains the certificates / ratings classifications
+(MPAA, BBFC etc.)
+
+The color information list records whether the movie was shot in color or
+black & white.
+
+The countries list records the country of origin.
+
+The crazy credits list contains trivia and jokes that appear in movie credits.
+
+The genres list records records the genres which describe the movie (formally
+part of the plot summaries list)
+
+The goofs list contains a list of mistakes (or goofs) in movies.
+
+The literature list records references to essays, critical analyses and books
+relating to specific movies.
+
+The locations list holds information on where movies were filmed.
+
+The movie links list notes links between movies in the database such as 
+sequels, remakes and also trivial connections such as homages and spoofs.
+
+The movies list contains the year of release of most movies in the database,
+along with any awards given to the movie as a whole.
+
+The plot summaries list has brief outlines of some of the movies in the
+database.
+
+The production companies list records the production company / studio which 
+produced the movie.
+
+The quotes list contains memorable quotes from movies.
+
+The ratings list is the rec.arts.movies Movie Ratings Report which is a
+massive on-going electronic poll wherein readers of the group rate movies
+on a scale from 1 (bad) to 10 (good).
+
+The release dates list records the release dates of movies on a country by 
+country basis.
+
+The running times list contains the length in minutes of movies in the
+database.
+
+The sound mix list records whether movies are recorded in mono, stereo etc.
+or are silent.
+
+The soundtracks list contains details of songs used on the soundtracks of
+movies.
+
+The tag lines list contains advertising tag lines used to publicise movies 
+(e.g. for Alien "In space no-one can hear you scream")
+
+The technical list records technical information such as aspect ratio, 
+negative formats, print formats, cinematographic process etc.
+
+The trivia list contains all kinds of trivia for movies from cameo appearances
+to behind-the-scenes information.
+
+
+1.4.4 Biographies List
+----------------------
+
+The biographies list contains personal trivia on people in the database 
+including dates of birth, dates of death, mini-biographies, agent's addresses
+and books about them. 
+
+1.4.5 Alternative Names List
+----------------------------
+
+The alternative names list contains details of different names people have 
+been billed under during their careers, for example Joanne Whalley / Joanne
+Whalley-Kilmer.
+
+-------------------------------------------------------------------------------
+2. LIST PROGRAM
+===============
+
+The list program searches for filmographies for people in the database.
+
+2.1 Database Options
+====================
+
+The -name option searches all of the filmography lists for information.
+This is rather inefficient if you know which list the person will be on. The
+following options can be used in place of -name to limit the search:
+
+ -cast     search both cast databases
+ -acr      search actors databases
+ -acs      search actresses databases
+ -dir      search directors database
+ -write    search writers database
+ -comp     search composers database
+ -cine     search cinematographers database
+ -edit     search editors database
+ -prodes   search production designers database
+ -costdes  search costume designers database
+ -prdcr    search producers database
+ -misc     search miscellaneous filmographies database
+
+Examples:
+
+  list -acr "Bogart, Humphrey"
+
+  list -acr "Biehn, Michael"
+
+  list -acs "Hepburn, Katharine"
+
+  list -dir "Cameron, James"
+
+
+2.2 Output Options
+==================
+
+A basic 'list' query just generates a filmography for the person concerned. A
+number of output options are provided to link other information to the results:
+
+ -yr    add the year of release to each title, and sort chronologically
+ -yru   add the year of release, but leave unsorted
+
+ -mrr   adds movie ratings report information to each title
+ -smrr  adds movie ratings report information, and sort by average rating 
+ -vmrr  adds movie ratings report information, and sort by number of votes
+
+ -chr   for cast lists, adds character names in []'s where available
+ -aka   add any alternative titles / names and search aka names database
+ -bio   include information from biographies list and formats output neatly
+
+ -full  combines -yr -chr -aka and -bio
+
+Examples:
+
+  list -acr "Grant, Cary" -yr -chr
+
+  list -dir "Hitchcock, Alfred" -smrr
+
+
+2.3 Control Options
+===================
+
+A couple of options are provided to control the search:
+
+ -m          movies only: ignores TV-series and mini-series
+ -i          case sensitive search: normally searches are not case sensitive
+ -genre <s>  only include titles with a genre equal to <s>
+ -time <s>   only include titles with a time equal to <s>
+ -prodco <s> only include titles with a production company equal to <s>
+ -sfxco <s>  only include titles with a special effects company equal to <s>
+ -cert <s>   only include titles with a certificate equal to <s>
+ -mix <s>    only include titles with a sound mix equal to <s>
+ -cntry <s>  only include titles with a country equal to <s>
+ -rel <s>    only include titles with a release date equal to <s>
+ -loc <s>    only include titles with a location equal to <s>
+ -tech <s>   only include titles with technical info equal to <s>
+ -lang <s>   only include titles with a language equal to <s>
+
+The options may be combined to constrain the search further.
+
+Example:
+
+ list -dir "Hitchcock, Alfred" -prodco Selznick
+  -- list Hitchcock's movies made for Selznick studios
+
+ list -dir "Hitchcock, Alfred" -mix Silent
+  -- list Hitchcock's silent movies
+
+ list -dir "Lang, Fritz" -genre Film-Noir -full -color "Black and White"
+  -- list Fritz Lang's films noirs, shot in black and white
+
+2.4 Substring and Approximate Matching
+======================================
+
+Ordinarily, the program requires an exact match in order to locate the 
+information on a person. In some cases the exact spelling may not be known.
+There are two classes of options which can help locate the specific person:
+the first is substring matching, which treats the name you provided with the 
+database option as a substring. The option to trigger this is '-s'. 
+
+The second class is approximate matching, which enables names with a limited 
+number of character differences to still match. The options to trigger this 
+are -1 -2 -3 -4 -5 -6 -7 -8 and -9 where the larger the number, the larger the 
+number of differences allowed for a match. 
+
+Examples:
+
+  list -cast "Barrymore" -s -full
+
+  list -acr "rGant, Cary" -2 -full
+
+
+2.5 Multiple Name Queries
+=========================
+
+Any number of database and name options may be combined in the same query
+to generate a list of movies that all the people worked on together. 
+
+Examples:
+
+  list -dir "Hitchcock, Alfred" -acr "Grant, Cary" 
+
+  list -acs "Hepburn, Katharine" -acr "Tracy, Spencer" -yr
+
+-------------------------------------------------------------------------------
+3. TITLE PROGRAM
+================
+
+The title program searches the database for all the information relating
+to a specific title. The basic option is '-t <title>' which specifies the
+movie to search for. If there is more than one movie in the database with
+the same title, details on all matches are returned.
+
+3.1 Output Options
+==================
+
+A basic title query just returns the names of the people who worked on the 
+movie. A number of options are provided to add further information to the
+results:
+
+ -aka     add any alternative titles
+ -mrr     add movie ratings report data
+ -yr      add year of release and any title attributes
+ -pl      add plot summary
+ -trivia  add movie trivia, crazy credits, goofs, quotes, soundtrack info,
+          certificates, color information, countries, genres, production
+          companies, running times and sound mix.
+ -full    combines all of the above options
+
+Examples:
+
+ title -t "2001: A Space Odyssey" -full
+
+ title -t "Cape Fear"
+  -- returns details of both the 1962 and 1991 versions of this movie
+
+ title -t "Cape Fear (1991)"
+  -- returns details of just the 1991 version
+
+3.2 Miscellaneous Options
+=========================
+
+The following options are also available:
+
+ -i        case sensitive search: normally searches are not case sensitive
+ -s        substring: match on substring rather than whole title
+
+The -s option is particularly useful for finding details of all the movies
+with the same name. For example:
+
+ title -t "Thin Man" -full -s
+
+3.3 Multiple Title Searches
+===========================
+
+Any number of '-t' options may be combined in the same query to generate a 
+list of people that worked on each and every one of the movies.
+
+Example:
+
+  title -t "Ghostbusters" -t "Ghostbusters II"
+
+-------------------------------------------------------------------------------
+4. LISTALL PROGRAM
+==================
+
+This program can be used to generate filmographies for each person involved
+with a particular movie.
+
+Example:
+
+  listall -t "Abyss, The" -full
+
+The following options are also available:
+
+  -yr     add year of release to titles and sort chronologically
+  -yru    add year of release, but leave in alphabetical order
+
+  -mrr    add movie ratings report information
+  -smrr   add movie ratings report and sort by average ratings
+  -vmrr   add movie ratings report and sort by votes
+
+  -chr    add character names where available
+  -bio    add biography data
+  -lit    add literature data
+  -bus    add business data
+  -ld     add business data
+  -aka    add alternative title data (and check if title is an aka title)
+
+  -full   combines -aka -bio -chr -yr -bus -ld -lit
+
+  -i      case sensitive search
+  -m      restrict search to movies only (ignore TV-series)
+
+-------------------------------------------------------------------------------
+5. LGUIDE PROGRAM
+=================
+
+This program works like 'title' except that it takes a list of titles from a 
+file and searches for information on each one. I find lguide really useful for
+generating a little movie guide to accompany the TV schedules for the local 
+movie channels. To use the program simply type the titles into a file, one on 
+each line and enter:
+
+ lguide -f <filename>
+
+Other options:
+
+  -yr      adds year of release information
+  -mrr     adds movie ratings report information
+  -pl      adds plot summary and formats results
+  -trivia  add movie trivia, crazy credits, goofs, quotes, soundtrack info,
+           certificates, color information, countries, genres, production
+           companies and sound mix.
+  -chr     add character names
+  -aka     lists any alternative titles
+  -full    combines all above options
+
+  -i       case sensitive search
+
+A report of any titles which are not found in the database is written to the
+standard error stream. 
+
+-------------------------------------------------------------------------------
+6. LTRACE PROGRAM
+=================
+
+This program displays all the information about each of the movies that someone
+has worked on. The options are similar to those for 'list':
+
+ -acr <name>      search for actor
+ -acs <name>      search for actress
+ -cast <name>     search both cast databases
+ -dir <name>      search for director
+ -write <name>    search for writer
+ -comp <name>     search for composer
+ -cine <name>     search for cinematographer
+ -edit <name>     search for editor
+ -prodes <name>   search for production designer
+ -costdes <name>  search for costume designer
+ -prdcr <name>    search for producer
+ -misc <name>     search miscellaneous database
+ -name <name>     search all filmography databases
+
+ -yr          adds year of release information
+ -mrr         adds movie ratings report information
+ -pl          adds plot summary and formats results
+ -triv        add movie trivia and formats results
+ -chr         add character names
+ -aka         lists any alternative titles
+ -full        combines this group of options
+
+ -m           movies only, ignore TV-series
+ -i           case sensitive search
+
+For a good example try:
+
+ ltrace -dir "Hitchcock, Alfred" -full
+
+finds the list of Hitchcock's movies then reports full details on each one.
+
+-------------------------------------------------------------------------------
+7. LINDEX PROGRAM
+=================
+
+This program can be used either to generate lists of names that appear 
+on filmography lists or to generate lists of titles from the movies list.
+It's uses include finding exact spellings of names or titles on the lists; 
+finding names/titles containing a particular substring; and finding titles
+released between a range of years or in a particular year.
+
+
+7.1 Database Options
+====================
+
+For title mode, simply use:
+
+ -title
+
+For name mode, any combination of these options can be used:
+
+ -acr       actors database
+ -acs       actresses database
+ -dir       directors database
+ -write     writers database
+ -comp      composers database
+ -cine      cinematographers database
+ -edit      editors database
+ -prodes    production designers database
+ -costdes   costume designers database
+ -misc      miscellaneous database
+ -prdcr     producers database
+
+Note, if you do not specify any database options then the default is to search 
+all the lists in name mode.
+
+
+7.2 Title Mode Options
+======================
+
+The following options are available only in title mode to limit the search
+and to link the results with other information:
+
+          -yr  adds the year of release and sorts in chronological order.
+         -yru  adds the year of release, but leaves in alphabetical order.
+
+ -yrfrom <yr>  limit search to titles released during or after <yr>
+   -yrto <yr>  limit search to titles released before <yr>
+   -yreq <yr>  limit search to titles released in <yr>
+
+         -mrr  add ratings report data
+        -smrr  add ratings report data and sort by average ratings
+        -vmrr  add ratings report data and sort by number of votes 
+       -match  limit search to movies with entry in ratings database
+
+ -veq <votes>  limit search to movies with <votes> votes
+-vmin <votes>  limit search to movies with a minimum of <votes> votes
+-vmax <votes>  limit search to movies with a maximum of <votes> votes
+
+           -m  limit search to movies only, i.e. no TV-series
+
+   -genre <s>  limit search to titles with a genre equal to <s>
+    -time <s>  limit search to titles with a time equal to <s>
+  -prodco <s>  limit search to titles with a production company equal to <s>
+   -sfxco <s>  limit search to titles with a sfx company equal to <s>
+    -cert <s>  limit search to titles with a certificate equal to <s>
+     -mix <s>  limit search to titles with a sound mix equal to <s>
+   -cntry <s>  limit search to titles with a country equal to <s>
+     -rel <s>  limit search to titles with a release date equal to <s>
+     -loc <s>  limit search to titles with a location equal to <s>
+    -tech <s>  limit search to titles with technical info equal to <s>
+    -lang <s>  limit search to titles with a language equal to <s>
+
+These options maybe combined to limit the search to titles matching *all*
+the constraints.
+
+
+7.3 Miscellaneous Options
+==========================
+
+  -s <substring>  restrict search to names/titles containing <substring>
+              -i  become case sensitive with -s
+
+
+7.4 Examples
+============
+
+ lindex -acs -acr -name
+   -- generate list of all the names on the cast lists
+
+ lindex -acr -s "Michael" -name
+  -- generate list of actors containing the substring "Michael"
+
+ lindex -title -s "Alien"
+  -- generate list of all movie/tv titles containing "Alien" 
+
+ lindex -title -yr -yreq 1945
+  -- list all titles in database released in 1945
+
+ lindex -title -yr -yrfrom 1990 -yrto 1995 -smrr
+  -- sort all movies released in the 1990s by average rating
+
+ lindex -title -genre Film-Noir -prodco RKO
+  -- list films noirs made for RKO
+
+ lindex -title -prodco MGM -color Color -yrto 1940
+  -- list all color MGM movies released up to 1940
+
+-------------------------------------------------------------------------------
+8. ALIST PROGRAM
+================
+
+This program searches the attribute fields of all the databases. Examples
+of the kind of queries you can construct include:
+
+ * search for details of all best actor academy award winners
+
+ * search for movies nominated for best picture
+
+ * search for all movies narrated by a particular person
+
+ * search for all plays by a particular writer that have been filmed
+
+
+8.1 Database Options
+====================
+
+For title mode, simply use:
+
+ -title
+
+For name mode: 
+
+ -acr       actors database
+ -acs       actresses database
+ -dir       directors database
+ -write     writers database
+ -comp      composers database
+ -cine      cinematographers database
+ -edit      editors database
+ -prodes    production designers database
+ -costdes   costume designers database
+ -prdcr     producers database
+ -misc      miscellaneous database
+
+Only one database option is allowed in each run.
+
+
+8.2 Search Options
+==================
+
+These options specify the information to be searched for:
+
+ -aa              academy award winners
+ -aan             academy award nominees
+ -gg              golden globe winners
+ -ggn             golden globe nominees
+ -attr <pattern>  values matching <pattern>
+
+The academy award options can be combined together to give a list of all 
+winners and nominees. The same is true for the golden globe options.
+
+These options can be used to limit the search in various ways:
+
+ -m               restrict search to movies only
+
+ -yrfrom <yr>     restrict search to titles released during or after <yr>
+   -yrto <yr>     restrict search to titles released before <yr>
+   -yreq <yr>     restrict search to titles released in <yr>
+
+
+8.3 Miscellaneous Options
+=========================
+
+ -s    substring: allow partial matches with -attr
+ -i    become case sensitive in -attr searches
+ -yr   adds year of release to titles and group results by year
+
+
+8.4 Examples
+============
+
+alist -dir -aa -aan -yr
+ -- search directors database for academy award winners/nominees and sort
+     by year
+
+alist -title -aa -aan -yr
+ -- search for best picture academy award winners/nominees and sort by year
+
+alist -aa -dir -yr -yrfrom 1940 -yrto 1949
+ -- lists all best director oscar winners of the 1940s by year
+
+-------------------------------------------------------------------------------
+9. MKBALLOT PROGRAM
+===================
+
+This program generates a movie rating ballot for all the movies a particular 
+person has been involved with. The options conform to the standards used in the
+list program:
+
+ -acr      actor
+ -acs      actress
+ -dir      director
+ -write    writer
+ -comp     composer
+ -cine     cinematographer
+ -edit     editor
+ -prodes   production designer
+ -costdes  costume designer
+ -prdcr    producer
+ -misc     miscellaneous
+
+The results should be redirected to a file where you can add in votes for
+the movies you have seen and then mail the file to the vote tabulator. For
+further details on taking part in the movie ratings poll see the weekly
+postings in rec.arts.movies.
+
+Example:
+
+  mkballot -acr "Bogart, Humphrey"
+   -- generate a ballot for all Bogie's movies
+
+-------------------------------------------------------------------------------
+10. LFORMAT PROGRAM
+===================
+
+This program provides a number of features for formatting whole databases, 
+combining the information with the movies list or the movie ratings report. 
+
+
+10.1 Database options
+=====================
+
+These options specify which database you would like to format:
+
+ -acr       actors database
+ -acs       actresses database
+ -dir       directors database
+ -write     writers database
+ -comp      composers database
+ -cine      cinematographers database
+ -edit      editors database
+ -prodes    production designers database
+ -costdes   costume designers database
+ -prdcr     producers database
+ -misc      miscellaneous database
+
+
+10.2 Format Options
+===================
+
+ -yr    Adds the year of release information and sorts each person's entries
+	into chronological order.
+
+ -yru   Adds the year of release information, but leaves entries in
+	alphabetical order.
+
+ -mrr   Adds the information from the movie ratings report to each title.
+
+ -smrr  Adds the information from the movie ratings report to each title and
+	sorts each person's entries by average rating.
+
+ -vmrr  Adds the information from the movie ratings report to each title and
+	sorts each person's entries by number of votes.
+
+If no format option is given, the program formats the results in the style of
+the published lists.
+
+
+10.3 Output Options
+===================
+
+      -r  raw mode, don't format results
+      -m  movies only, ignores TV-series
+
+10.4 Examples
+=============
+
+   lformat -acr
+     -- regenerates published form of actors list
+
+   lformat -dir -yr
+     -- formats directors database & adds year information
+
+   lformat -acs -mrr
+     -- formats actress list and adds ratings report information
+
+-------------------------------------------------------------------------------
+11. LSEEN PROGRAM
+=================
+
+This program is for use in conjunction with my movie ratings report voting 
+support scripts. This program counts/sorts/formats lists, extracting films you 
+have seen based on data from your votelog file.
+
+If you don't use the voting support scripts, they are available via anonymous
+FTP from uiarchive.cso.uiuc.edu in pub/info/imdb/tools/voting_scripts.gz
+
+If you'd like a copy of your votelog file from the movie ratings database,
+contact me via e-mail and I'll send it to you.
+
+11.1 Creating the Votes Database
+================================
+
+Place a copy of the votelog file in:
+
+   moviedb-3.4/lists/votelog
+
+then from the moviedb-3.4 directory type:
+
+   make votes
+
+In order to get maximum benefit from 'lseen', titles in votelog need to be
+compatible with those in the movies list (moviedb-3.4/lists/movies.list). A
+list of the incompatible titles will be displayed each time you do a 
+'make votes'. Titles are considered compatible if they match apart from 
+their case (titles in votelog should be in lowercase) and (TV)/(V) tags
+are not needed in votelog.
+
+
+11.2 Database Options
+=====================
+
+These options specify which database you would like to use:
+
+ -acr       actors database
+ -acs       actresses database
+ -dir       directors database
+ -write     writers database
+ -comp      composers database
+ -cine      cinematographers database
+ -edit      editors database
+ -prodes    production designers database
+ -costdes   costume designers database
+ -prdcr     producers database
+ -misc      miscellaneous database
+
+11.3 Output Options
+===================
+
+   -us  unsorted, don't sort data by total movies you have seen
+
+   -yr  add the year of release to each title, and sort chronologically
+  -yru  add the year of release, but leave unsorted
+
+  -mrr  add movie ratings report info 
+ -smrr  add movie ratings report info, sort by average ratings
+ -vmrr  add movie ratings report info, sort by number of votes
+
+11.4 Control Options
+====================
+
+  -min <value>  limit output to people who you've seen at least <value> 
+		 of their movies
+
+11.5 Examples
+=============
+
+ lseen -dir 
+  -- count directors
+
+ lseen -acr -mrr -yr
+  -- count actors and display ratings report and year info for each movie
+
+-------------------------------------------------------------------------------
+12. MAINTAINING THE DATABASE 
+============================
+
+The database can be maintained entirely via the Makefile in the top level
+moviedb-3.4 directory. All the 'make' commands in this section should be run 
+from this directory. See the comments at the top of the file for a full list 
+of all the options supported, including installing the man pages. Many thanks 
+to Phil Queinnec <queinnec@enseeiht.fr> for the Makefiles.
+
+
+12.1 Ready Made Database Files
+==============================
+
+The program which generates the internal database files from the ascii text
+list files requires quite a bit memory and processing power to run. I've tried
+to keep the requirements to a minimum, but there may be problems on some
+machines. I've therefore arranged for ready made database files to be 
+available via FTP in addition to the source list files. You can now choose
+whether to install from the list files and run the generation process locally,
+or to just install the ready made databases instead. The files have been
+wrapped in a 'tar' archive and are available via anonymous FTP:
+ 
+ uiarchive.cso.uiuc.edu  in /pub/info/imdb/tools/ready-made-data.tar.gz
+
+ ftp.funet.fi in /pub/culture/tv+film/database/tools/ready-made-data.tar.gz
+
+The ready made database files will only be updated at most monthly so if you 
+want the latest data available, I recommend continuing to use the list files 
+(the default). If you do want to use the ready made files, follow these 
+alternative installation instructions:
+
+ (1) follow steps (1) to (4) as described in section 1.2
+
+ (2) from the moviedb-3.4 directory run:
+
+       make all
+
+ (3) get the ready made database file from the nearest FTP site as listed 
+     above, place it in your moviedb-3.4 directory and run:
+
+       gzip -cd ready-made-data.tar | tar -xvf -
+
+ (4) The files should now be installed so continue to follow the standard
+      installation instructions from step (6) in section 1.2
+
+
+12.2 Updating via FTP
+=====================
+
+If you have open access to the internet via FTP, the database can be maintained
+completely automatically. Simply type:
+
+  make update
+
+and the system will check the FTP site to see if any of the files have been
+modified since you last did an update, get them automatically and regenerate
+the appropriate database files. Doing this every couple of weeks or whenever
+you see an announcement in r.a.movies about a list being updated will ensure
+that you always have the latest files.
+
+If you don't have direct access to the FTP site or aren't comfortable with
+the system initiating FTP transfers behind your back: manually place copies
+of the updated list files in the database directory and type:
+
+  make update-local
+
+NOTE: Writing an automatic FTP program that runs on most machines has proved
+      very difficult so on some systems you'll have to manually get the files.  
+
+
+12.3 Customized Installation
+============================
+
+The standard installation assumes that you have direct and open access to
+the FTP site via the 'ftp' command and that you have 47Mb of free disk-space to 
+store the database. In reality, I don't expect these assumptions to be true
+in the majority of cases. This section describes how to modify the 
+configuration and how to reduce the disk-space requirements.
+
+12.3.1 Reducing Space Requirements
+----------------------------------
+
+By default the system uncompresses all the list files before processing them.
+To leave them in their compressed form, set the top-level Makefile variable
+AUTOUNCOMPRESS as described in the comments. This represents a saving of 16Mb
+and only affects the performance at database generation time - it doesn't
+affect the searching of the database later.
+
+Once a database file has been created, you do not need to keep the 
+corresponding source list file. The surplus list files can be deleted by:
+
+  make cleanlists
+
+This step reduces the space requirements by a further 11Mb. If you set the
+variable KEEPLIST in the top-level Makefile as directed in the comments, the 
+system will automatically delete the lists each time it has processed them. 
+
+The next thing to consider is compressing some or all of the databases. The
+programs can all search compressed databases transparently although 
+performance does suffer as a result. Many thanks to Timo Lamminjoki 
+<lamminjo@fltxa.helsinki.fi> for the code to do this. To compress the main
+database files use:
+
+  make compress
+
+This saves an additional 7Mb. If space is an absolute premium you can save a
+further 500K by using:
+
+  make maxcompress
+
+to compress the index files too (at the cost of a further performance hit).
+These figures assume you are using 'gzip' to compress the database - it is
+faster and compresses better than 'compress'. 
+
+All these steps bring the disk-space requirements for the database files down 
+to just 12Mb. The following steps now save space by reducing the amount of
+information in the database.
+
+Another saving of about 1Mb (uncompressed) can be made if you are not 
+interested in storing TV-series information: edit the Makefile changing the
+line:
+
+  MKDBOPT = 
+
+to
+
+  MKDBOPT = -m
+
+A saving of 2Mb (uncompressed) can be made if you aren't interested in 
+the character names information: edit the Makefile and add the option 
+-nochar to the MKDBOPT variable:
+
+  MKDBOPT = -nochar
+
+Finally, to remove any databases you aren't interested in, 'cd' into 
+moviedb-3.4/dbs and delete the associated files, for example to eliminate 
+the editors:
+
+  rm editors.*
+
+then from the top-level directory do:
+
+  make touch-dbs
+
+to create empty versions of the deleted files. Please make sure you delete 
+all the files associated with a particular list by using the wildcard '*' 
+for the filename extension as above.
+
+12.3.2 FTP set-up
+-----------------
+
+If you only have access to FTP via indirect commands such as 'gate-ftp' or
+wish to modify the ftp parameters in some way, edit the file 'lfetch'. In
+the area after the initial comment block there are some variable assignments
+which you can edit to suit your system.
+
+
+12.4 Troubleshooting
+====================
+
+This section will be expanded according to the feedback I receive on how
+easy the package is to install and what the common problems are. I recommend
+reading section 12.3 first! If you are still having problems with the package
+after reading this section, contact me via e-mail: <col@imdb.com>.
+
+(Q1) The automatic list collection doesn't work on my machine even after
+     adjusting the configuration variables?
+
+(A1) Get the files manually and run:
+
+       make update-local
+
+
+(Q2) The system fails to create the database files from the compressed list
+     files?
+
+(A2) Get the files automatically (if you can) by running:
+
+       make do-lfetch
+
+     or get the files manually and then run:
+
+       gzip -d *.gz
+       make update-local
+
+
+(Q3) The FTP transfer failed part-way through an update?
+
+(A3) Enter the following (in the moviedb-3.4/lists directory):
+
+       mv filesizes.old filesizes
+
+     to reset the local state and start the update again.
+
+
+(Q4) How do I make the auto-fetch program get a file from the FTP site even
+     when it thinks the local and remote files are the same?
+
+(A4) From the lists directory run: 
+
+       ../etc/lfetch -force -user <e-mail address>
+
+     together with the appropriate option(s) as described in the comments in
+     the 'lfetch' file.
+
+
+(Q5) I deleted all the list and database files but when I do a "make update"
+     the program says that all the local files are up to date?
+
+(A5) The system keeps track of which lists you have updated by recording their
+     sizes in a file when they are downloaded. To reset this file use:
+
+       make reset-ftp
+
+(Q6) Whenever I do a search the programs don't return any results or I get
+     several error messages of the form:
+
+      ../moviedb-3.4/dbs/actors.dbs.gz: No such file or directory
+
+(A6) The automatic fetching program probably failed to collect the list
+     files and therefore the databases could not be created. See (A1) to
+     fix this.
+
+(Q7) The database generation program 'mkdb' fails to create the database files
+
+(A7) Check to see that your shell has not placed limits on your stack size.
+     If that doesn't solve the problem, use the ready made database files
+     instead (see section 12.1 for details)
+
+
+12.5 Logfiles
+=============
+
+If the database is installed on a multi-user machine and you'd like to keep
+track of the usage, the programs can append various details to a system
+log file. To enable this feature see the "LOGFILENAME" variable in the top
+level makefile.
+
+
+-------------------------------------------------------------------------------
+13. CHANGES FOR USERS OF VERSION 3.2
+====================================
+
+This section describes changes for users of the previous version.
+
+13.1 Upgrading to version 3.4
+=============================
+
+There are two upgrade options:
+
+(1) If you have all the .list files
+    -------------------------------
+
+   (i) follow steps (1), (2), (3) and (4) in section 1.2
+
+  (ii) copy all the list files (.list extensions) and the 'filesizes' file
+       from moviedb-3.3/lists to the directory moviedb-3.4/lists. 
+
+ (iii) to compile all the programs, fetch the new/updated list files and create 
+       the databases run:
+
+          make install
+
+       from the top level moviedb-3.4 directory.
+
+  (iv) the search programs will be installed in the moviedb-3.4/bin directory,
+       therefore you need to either add this directory to your path or run
+       all the programs from this directory.
+
+   (v) if all goes well you can now delete the old moviedb-3.3 directory
+
+If the automatic FTP fetching script fails to work in step (iii) you will need
+to manually get the new and updated files from one of the FTP sites, put
+them in the lists directory and do 'make install-local' from the top-level
+moviedb-3.4 directory.
+
+(2) If you just have the database files
+    -----------------------------------
+
+   (i) follow steps (1), (2), (3) and (4) in section 1.2
+
+  (ii) copy all the database files (everything in moviedb-3.3/dbs *except* the
+       file moviedb-3.3/dbs/Makefile - you MUST delete or rename this file 
+       before issuing the copy command) to the directory moviedb-3.4/dbs. 
+
+ (iii) copy the file moviedb-3.3/lists/filesizes to moviedb-3.4/lists/filesizes
+
+  (iv) to compile all the programs, fetch the new/updated list files and create 
+       the databases run:
+
+          make install
+
+       from the top level moviedb-3.4 directory.
+
+   (v) force a rebuild of a couple of changed databases:
+
+          cd moviedb-3.4/etc
+          ./mkdb -bio -create
+
+  (vi) the search programs will be installed in the moviedb-3.4/bin directory,
+       therefore you need to either add this directory to your path or run
+       all the programs from this directory.
+
+ (vii) if all goes well you can now delete the old moviedb-3.3 directory
+
+If the automatic FTP fetching script fails to work in step (iv) you will need
+to manually get the new and updated files from one of the FTP sites, put
+them in the lists directory and do 'make install-local' from the top-level
+moviedb-3.4 directory.
+
+See section 12 for details on how to maintain the databases in this version.
+
+-------------------------------------------------------------------------------
+14. ADDING TO THE DATABASE
+==========================
+
+The database depends on its users to keep it accurate and up to date. A copy
+of the complete additions guide is included with the software in the file:
+
+  moviedb-3.4/docs/ADDS-GUIDE
+
+Mark Harding's template generation software is also included in the
+distribution. The programs are 'template' for title based templates and 
+'templist' for name based templates. The usage is:
+
+  title -t <title> -full | template
+
+  list -name <name> -full | templist
+
+The output from these commands should be redirected to a file which can then
+be edited to include your changes. The updated files should be mailed to
+the additions processor <mail-server@imdb.com> with the subjects:
+
+  UPDATE TITLE  
+
+  UPDATE NAME
+
+for title and name based additions respectively.
+
+For example:
+
+  title -t "Vertigo" -full | template > adds.vertigo
+
+  vi adds.vertigo
+ 
+  mail -s "UPDATE TITLE" mail-server@imdb.com < adds.vertigo
+
+
+-------------------------------------------------------------------------------

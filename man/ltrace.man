@@ -1,0 +1,93 @@
+.\" 3.2
+.\"  /*******************************************************************\
+.\"   * Copyright (C) 1995 Lars J Aas <larsa@colargol.stud.idb.hist.no> *
+.\"   * based on documentation by C J Needham <col@imdb.com> 1995,      *
+.\"   * permission is granted by the authors to freely distribute       *
+.\"   *                        providing no fee of any kind is charged. *
+.\"  \*******************************************************************/
+.\"
+.TH LTRACE 1 "RELEASEDATE" " " "The Internet Movie Database vVERSIONNUMBER"
+.SH NAME
+ltrace \- display information about all movies a person has worked on.
+.SH SYNOPSYS
+.B
+ltrace <searchmode> "name" [options]
+.PP
+The options are similar to those for
+.BR list (1).
+.SH DESCRIPTION
+This program displays all the information about each of the movies that someone
+has worked on.
+.SH SEARCHMODES
+.TP
+.B \-acr <name>
+Search for actor.
+.TP
+.B \-acs <name>
+Search for actress.
+.TP
+.B \-cast <name>
+Search both cast lists.
+.TP
+.B \-dir <name>
+Search for director.
+.TP
+.B \-write <name>
+Search for writer.
+.TP
+.B \-comp <name>
+Search for composer.
+.TP
+.B \-cine <name>
+Search for cinematographer.
+.TP
+.B \-edit <name>
+Search for editor.
+.TP
+.B \-prodes <name>
+Search for production designer.
+.TP
+.B \-costdes <name>
+Search for costume designer.
+.TP
+.B \-prdcr <name>
+Search for producer.
+.TP
+.B \-misc <name>
+Search miscellaneous database.
+.TP
+.B \-name <name>
+Search all filmography databases.
+.SH OPTIONS
+.TP
+.B \-yr
+Adds year of release information.
+.TP
+.B \-mrr
+Adds movie ratings report information.
+.TP
+.B \-pl
+Add plot summary.
+.TP
+.B \-triv
+Add movie trivia and formats results.
+.TP
+.B \-chr
+Add character names.
+.TP
+.B \-aka
+List any alternative titles.
+.TP
+.B \-full
+Combines all the options above in this section.
+.SH EVEN MORE OPTIONS
+.TP
+.B \-m
+Movies only, ignore TV-series.
+.TP
+.B \-i
+Case insensitive search.
+.SH EXAMPLE
+This is a good one:
+.PP
+ltrace -d "Hitchcock, Alfred" -full

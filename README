@@ -1,0 +1,198 @@
+MOVIE DATABASE v3.4
+===================
+
+This file is extracted from the main documentation file (docs/INSTRUCTIONS) and 
+contains basic information on the package. See the file docs/CONTENTS for a 
+description of all the files in the package.
+
+See section 12 in the INSTRUCTIONS file for troubleshooting information.
+
+Contact the IMDb via http://www.imdb.com/contact if you're still having 
+problems *after* reading the documentation.
+
+
+1. INTRODUCTION
+===============
+
+The Internet Movie Database is an international operation whose 
+objective is to provide useful and up to date movie information *freely* 
+available on-line, across as many systems and platforms as possible. It 
+currently covers over 150,000 movies with over 2,100,000 filmography entries
+and is expanding continuously. 
+
+The database includes filmographies for actors, directors, writers, composers,
+cinematographers, editors, production designers, costume designers, producers
+and a miscellaneous catch all section; plot summaries; character names; movie
+ratings; year of release; running times; movie trivia; quotes; goofs;
+soundtracks; personal trivia; alternative names; certificates; color
+information; country of production; genres; production companies; sound mix;
+reference literature; filming locations; sequel/remake information; release
+dates; advertising tag lines; detailed technical data; alternative versions;
+laserdisc availability; and Academy Award information. 
+
+The database aims to capture any and all information associated with movies 
+from across the world, starting with the earliest cinema, going through to the
+very latest releases and even movies still in production. Many thousands of 
+movies are covered completely from the major actors to the minor bit players
+and crew members. All the information comes from the users of the database so
+please continue to support it and help it to grow. The database is updated 
+weekly and is available over the world wide web, an e-mail interface or for
+local installation on Unix, Amiga and MS-DOS machines.
+
+In its eight year history the IMDb has grown from a small informal project to a
+major Internet resource. The WWW interface to the database is one of the most 
+popular and well-known sites of any class on the web. It is frequently cited 
+as a model for how to create and organise a major web site and has received 
+numerious awards and honours over the years.
+
+The movie database frequently asked questions list contains more information
+on the whole movie database project and the different ways to access it. A 
+copy is included in the package, alternatively send an e-mail message with the
+subject:
+
+  HELP FAQ
+
+to <mail-server@imdb.com> and the movie mail-server will send a copy back. The
+database is available via an e-mail interface and on the World Wide Web and
+full details are given in this FAQ.
+
+
+1.1 Requirements
+================
+
+This version requires a Un*x like operating system, an ANSI C compiler and 
+approximately 150Mb of disk-space for the full standard version. The package 
+includes support for compressed database files using 'compress' or 'gzip', 
+bringing the requirements down to 30Mb of disk-space. There are options to
+reduce the space further by discarding some of the databases that you might
+not be interested in, so disk-space requirements can be as low as 20Mb.
+
+You will need an ANSI compatible C compiler to compile the programs. If one 
+wasn't supplied with your machine, I recommend the GNU C compiler 'gcc'. 
+You can pick up a source code distribution of 'gcc' from ftp.gnu.ai.mit.edu
+in pub/gnu which can be installed on a wide range of machines. NOTE FOR
+USERS OF SUN MACHINES: the standard Sun C compiler is *not* ANSI compliant
+so you will need a copy of 'gcc' to install this package.
+
+An Amiga version is also available both on AMINET (under biz/dbase) and from
+the main anonymous FTP sites (see later)
+
+An MS-DOS interface to the same data, but based on different software is also 
+available from the FTP sites.
+
+
+1.2 Installation
+================
+
+ (1) The database software is available from the FTP sites:
+
+ uiarchive.cso.uiuc.edu  in  /pub/info/imdb/tools/moviedb-3.4.tar.gz
+
+ ftp.funet.fi in  /pub/culture/tv+film/lists/tools/moviedb-3.4.tar.gz
+
+ ftp.fu-berlin.de  in  /pub/misc/movies/database/tools/moviedb-3.4.tar.gz
+
+ sunsite.mff.cuni.cz  in  /MultiMedia/Movies/Database/tools/moviedb-3.4.tar.gz
+
+ (2) get the file using anonymous FTP and unpack by typing:
+
+       gzip -cd moviedb-3.4.tar | tar -xvf -
+
+     this will install the software in the directory moviedb-3.4, 'cd' into
+     the directory to continue.
+
+ (3) since the package includes a program to automatically get the data files
+     from the FTP site (and to keep them up to date), you need to give the
+     package your e-mail address to use as the password for FTP. Edit the
+     file Makefile and change the following line:
+
+	LFETCHOPT = -auto
+     
+     to 
+
+	LFETCHOPT = -auto -user <address>
+
+     where <address> is your e-mail address.
+
+ (4) follow the comments in the Makefile for further changes that might be
+     required for installation on your system. In particular, don't forget to
+     set CC and/or CFLAGS to enable ANSI compatible compilation.
+
+     Also, pay close attention to the variables which describe how to handle
+     the compressed list files (ZLISTCATCOM etc.) and how to enable support
+     for compressed database files (ZDBSCATCOM etc.)
+
+     The variables AUTOUNCOMPRESS and KEEPLISTS affect the amount of disk 
+     space used by the package if your resources are limited. Please refer
+     to section 12.2 for more information.
+
+ (5) to compile all the programs, fetch the list files and create the 
+     databases run:
+
+	make install
+
+     See section 12 if anything goes wrong with this process.
+
+     NOTE: the database generation process does require quite a bit memory 
+     and processing power to run. I've arranged to have ready made data
+     files available on the FTP sites for people who have problems generating
+     them locally. See section 12.1 for more details.
+
+ (6) the search programs will be installed in the moviedb-3.4/bin directory,
+     therefore you need to either add this directory to your path or run
+     all the programs from this directory.
+
+The package is now installed and you're ready to try it out, see the next
+section for a quick introduction.
+
+Section 12.2 has details on the one line command that you can use to ensure
+the database is always up to date with respect to the FTP site.
+
+If you do not have direct access to anonymous FTP or you have some special
+configuration requirements, see section 12 for more details on a customized
+set-up procedure and on fixing general problems.
+
+ 
+1.3 Quick Introduction
+======================
+
+If any of these commands fails to work, see section 12 for details of
+potential problems and how to resolve them.
+
+The database supports many different kinds of queries and I refer you to the
+rest of this manual for more information. This section is provided as a 
+very simple introduction to searching:
+
+To generate a filmography for a particular person including any personal
+trivia, use:
+
+  list -name <name> -full
+
+where <name> is in "<surname>, <first name>" format. 
+
+Examples:
+
+  list -name "Hitchcock, Alfred" -full
+
+  list -name "Hamilton, Linda" -full
+
+  list -name "Grant, Cary" -full
+
+
+To search for all the data on a particular movie (plot summary, year of
+release, rating, cast, crew and trivia), use:
+
+  title -t <title> -full
+
+Examples:
+
+  title -t "Vertigo" -full
+
+  title -t "Aliens" -full
+
+  title -t "Jurassic Park" -full
+
+The remainder of this document describes the search programs and maintenance
+process in more detail. All the programs in the package output a brief usage 
+description if run with no arguments.
+
