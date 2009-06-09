@@ -68,7 +68,7 @@
 # YOU MUST SET THE -user option to your e-mail address 
 # for example: LFETCHOPT = -auto -user userid@machine.domain
 # Note: -auto is a special option for lfetch, do not delete it!
-LFETCHOPT = -auto
+LFETCHOPT = -auto -user userid@machine.domain
 
 # Your C Compiler
 # NOTE: must be ANSI compatible, use gcc if your standard compiler isn't!
@@ -114,12 +114,12 @@ LDFLAGS = $(CFLAGS)
 # definition COMPRESS from the CFLAGS variable
 
 ZLISTEXT = .gz
-ZLISTCAT = /usr/bin/gzip
+ZLISTCAT = /bin/gzip
 ZLISTCATOPTS = -cd
 
 ZDBSCOMPRESS = gzip
 ZDBSEXT = .gz
-ZDBSCAT = /usr/bin/gzip
+ZDBSCAT = /bin/gzip
 ZDBSCATOPTS = -cd
 
 
@@ -264,7 +264,7 @@ compile :
 do-compile : $(ZSANITYCHECK)
 	cd $(SRCDIR); $(MAKE) CC="$(CC)" \
 		CFLAGS="$(CFLAGS) -DHAVE_TEMPNAM=$(TEMPNAM) \
-                -DLOGFILE=$(LOGFILE)" LOGFILENAME="$(LOGFILENAME)" \
+                -DLOGFILE=$(LOGFILE) -g" LOGFILENAME="$(LOGFILENAME)" \
                 LD="$(LD)" LDFLAGS="$(LDFLAGS)" \
                 ZLISTCAT="$(ZLISTCAT)" ZDBSCAT="$(ZDBSCAT)" \
                 ZLISTCATOPTS="$(ZLISTCATOPTS)" ZDBSCATOPTS="$(ZDBSCATOPTS)" \
