@@ -24,12 +24,12 @@
 #define	  AKABYTES		    9
 /* Size of a naka record: name+name = 3+3 */
 #define	  NAKABYTES		    6
-#define   MXLINELEN               700
+#define   MXLINELEN               1023
 #define   FSEP                    '|'
 #define   MAXZCATARGS              10
 #define   MAXLSEEN              65534
-#define   MAXTITLES            750000
-#define   MAXFILMOGRAPHIES       2047
+#define   MAXTITLES            1700000
+#define   MAXFILMOGRAPHIES       20470
 #define   MAXWITHATTRS           4095
 #define   MAXTITLERESULTS       16383
 #define   MAXALISTRESULTS        5000
@@ -51,14 +51,14 @@
 #define   AKASTART             200000
 #define   AKAGROW               50000
 /* and links */
-#define   LINKSTART            500000
+#define   LINKSTART            1000000
 #define   LINKGROW             100000
 /* (under-)Estimate of movie ratings average line; assumes 1-letter titles */
 #define   MRRSIZE                  41
 /* Following constants used only by mkdb (hence, more easily programmed out) */
-#define   MAXNAKAENTRIES       250000
+#define   MAXNAKAENTRIES       700000
 #define   MAXTITLEINFO         500000
-#define   MAXBIOENTRIES        350000
+#define   MAXBIOENTRIES        500000
 
 #ifndef DBDIR
 #define   DBDIR
