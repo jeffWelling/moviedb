@@ -29,7 +29,7 @@
 #define   MAXZCATARGS              10
 #define   MAXLSEEN              65534
 #define   MAXTITLES            1700000
-#define   MAXFILMOGRAPHIES       20470
+#define   MAXFILMOGRAPHIES       40470
 #define   MAXWITHATTRS           4095
 #define   MAXTITLERESULTS       16383
 #define   MAXALISTRESULTS        5000
