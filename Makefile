@@ -76,7 +76,7 @@ LFETCHOPT = -auto -user userid@machine.domain
 CC = cc
 
 # C flags
-CFLAGS = -O -DCOMPRESS
+CFLAGS = -O -DCOMPRESS -L/usr/lib/mysql -lmysqlclient
 
 # Linker
 LD = $(CC)

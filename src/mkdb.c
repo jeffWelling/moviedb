@@ -76,6 +76,7 @@
 #include <limits.h>
 #include "moviedb.h"
 #include "dbutils.h"
+#include <mysql/mysql.h>
 
 #define MKDB_USAGE1 "usage: mkdb [-acr|-acs|-dir|-write|-comp|-cine|-edit|-prodes|-costdes|-prdcr|"
 #define MKDB_USAGE2 "            -misc|-movie|-time|-plot|-bio|-triv|-crazy|-goof|-quote|-strack|"
@@ -840,15 +841,26 @@ void makeCastDatabaseTitlesIndex ( int listId, long nentries )
 void writeCastEntry (struct castFilmography *currentEntry, FILE *stream)
 {
   int i ;
-
+	MYSQL mysql;
+	MYSQL_RES *res;
+	MYSQL_ROW *row;
+	char query[100];
+	
   if ( currentEntry -> noWithAttr == 0 && currentEntry -> noWithoutAttr == 0 )
     return ;
   else
   {
+		mysql_init(&mysql);
+		mysql_real_connect(&mysql, SERVER, USER, PASSWORD, DATABASE, 0, NULL, 0);
+
     putName ( currentEntry -> nameKey, stream ) ;
     putFilmographyCounts ( currentEntry -> noWithAttr, currentEntry -> noWithoutAttr, stream ) ;
     for ( i = 0 ; i < currentEntry -> noWithAttr ; i++ )
     {
+			sprintf(query, "INSERT INTO actors_data (nameKey, titleKey, attrKey) VALUES ('%d', '%d', '%d')", 
+				currentEntry -> nameKey, currentEntry -> withAttrs[i].titleKey, currentEntry->withAttrs[i].attrKey);
+			puts(query);
+			mysql_real_query(&mysql, query, (unsigned int)strlen(query));
       putTitle ( currentEntry -> withAttrs [ i ] . titleKey, stream ) ;
       putAttr ( currentEntry -> withAttrs [ i ] . attrKey, stream ) ;
       if ( currentEntry -> withAttrs [ i ] . cname == NULL )
@@ -868,6 +880,7 @@ void writeCastEntry (struct castFilmography *currentEntry, FILE *stream)
         putByte ( 0, stream ) ;
       else
       {
+//				sprintf(
         putByte ( strlen ( currentEntry -> withoutAttrs [ i ] . cname ), stream ) ;
         putString ( currentEntry -> withoutAttrs [ i ] . cname, stream ) ;
         free ( (void*) currentEntry -> withoutAttrs [ i ] . cname ) ;
@@ -875,6 +888,7 @@ void writeCastEntry (struct castFilmography *currentEntry, FILE *stream)
       putPosition ( currentEntry -> withoutAttrs [ i ] . position, stream ) ;
     }
   }
+	mysql_close(&mysql);
 }
 
 

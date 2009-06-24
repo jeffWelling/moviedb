@@ -18,6 +18,12 @@
  *============================================================================
  */
 
+//Sql info
+#define DATABASE "imdb_data"
+#define SERVER "mysql.osnetwork"
+#define USER "imdb_user"
+#define PASSWORD "OMGPASSWORD"
+
 /* Size of the master title record: title+int+int+attr = 3+2+2+3 */
 #define	  RECBYTES		   10
 /* Size of an aka record: title+title+attr = 3+3+3 */
