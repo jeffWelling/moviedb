@@ -79,7 +79,7 @@
 # LOCAL CONFIGURATION VARIABLES
 #
 ftpcmd=ftp                           # ftp command (eg ftp, gate-ftp)
-ftpopts="-i -n -v"                   # ftp options 
+ftpopts="-p -i -n -v"                   # ftp options 
 ftphost=ftp.funet.fi                 # ftp host
 ftpdir=pub/mirrors/ftp.imdb.com/pub  # lists directory on host
 ftpuser=anonymous                    # ftp userid
